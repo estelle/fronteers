@@ -11,7 +11,7 @@ body {
   left: 0px;
   top: 0px;
   background: no-repeat url(../img/instartlogo.svg) white;
-  background-position: 10px 90vh; }
+  background-position: 10px 92vh; }
 
 #presentation {
   position: absolute;
@@ -40,42 +40,28 @@ body {
   left: auto;
   right: 5px; }
 
-.slide {
-  width: 900px;
-  height: 700px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  margin-top: -350px;
-  margin-left: -450px;
-  display: none;
-  overflow: hidden;
-  padding: 20px;
-  display: none;
-  transition: margin-left 1s, transform 1s, opacity 2s;
-  opacity: 0.5;
-  transform: scale(0.8);
-  box-sizing: border-box; }
-  .slide .objectlink {
-    right: 0; }
-
 .past, .current, .future, .far-past, .far-future {
   display: block; }
 
 .slide {
+  opacity: 0.15;
+  box-sizing: border-box;
   display: none;
   position: absolute;
   overflow: hidden;
   width: 900px;
   height: 700px;
+  margin-left: -450px;
+  margin-top: -350px;
+  padding-left: 20px;
+  padding-top: 10px;
   left: 50%;
   top: 50%;
-  margin-top: -350px;
   background-color: transparent;
   transition: all 0.25s ease-in-out;
-  transform: scale(1);
-  padding-left: 20px;
-  padding-top: 10px; }
+  transform: scale(1); }
+  .slide .objectlink {
+    right: 0; }
   .slide.far-past {
     margin-left: -2400px; }
   .slide.past {
@@ -94,6 +80,12 @@ body {
     font-size: 2rem; }
   .slide.intro hgroup {
     margin-top: 200px; }
+
+.slide.cui object {
+  display: none; }
+
+.slide.cui.current object {
+  display: block; }
 
 .slides {
   padding-top: 10px;
@@ -261,7 +253,7 @@ ol {
 .resizeimg img {
   width: 100%; }
 
-p.small {
+p.small, sup {
   font-size: small; }
 
 .object object, .object .img {
@@ -465,5 +457,19 @@ section td, section th {
 
   #presentation-counter, #info, #topinfo, .counter {
     display: none; } }
+.cloudfour {
+  display: flex;
+  align-items: flex-end;
+  list-style-type: none; }
+  .cloudfour li {
+    text-align: center; }
+    .cloudfour li pre {
+      font-size: 1em; }
+  .cloudfour img {
+    text-align: center;
+    margin: 0 10px 0 0;
+    border: 1px solid;
+    padding: 20px 20px 0 0;
+    background-color: #226DAA; }
 
 /*# sourceMappingURL=index.css.map */

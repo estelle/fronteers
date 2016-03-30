@@ -33,11 +33,11 @@ Based on: http://instartlogic.github.com/fronteers
 
 <div class="slide normal">
 <section class="content">
-<h1 class="textmask">Estelle Weyl</h1>
+<h1>Estelle Weyl</h1>
 <h2><a href="http://www.standardista.com">www.standardista.com</a><br>
 <a href="http://www.instartlogic.com/blog">www.instartlogic.com/blog</a></h2><h2><a href="http://www.twitter.com/webdevtips">@webdevtips</a><br><a href="http://www.twitter.com/estellevw">@estellevw</a><br><a href="http://www.twitter.com/standardista">@standardista</a></h2>
 <div class="floatright">
-  <img src="http://akamaicovers.oreilly.com/images/9780980846904/cat.gif" alt="HTML5 and CSS3 for the Real World">
+  <img src="http://akamaicovers.oreilly.com/images/9780987467485/cat.gif" alt="HTML5 and CSS3 for the Real World">
   <img src="http://akamaicovers.oreilly.com/images/0636920018063/cat.gif" alt="HTML5: The Definitive Guide"/>
   <img src="http://akamaicovers.oreilly.com/images/0636920021711/cat.gif" alt="MObile HTML5" />
   \<img src="http://akamaicovers.oreilly.com/images/0636920025955/cat.gif" alt="Web Performance Daybook"/></div>
@@ -124,6 +124,19 @@ Based on: http://instartlogic.github.com/fronteers
 <div class="slide object resize resizemeta">
   <div class="img" style="background-image: url(screenshots/godaddy.png);"></div>
 </div>
+
+<!--GMAIL-->
+<div class=slide>
+<header><h1>Don't be a jerk like GMail</h1></header>
+<pre>&lt;meta name="viewport" 
+  content="initial-scale=1.0, 
+           maximum-scale=1.0, 
+           minimum-scale=1.0, 
+           user-scalable=no, 
+           width=device-width"></pre>
+<img src="images/gmail.png" alt="Gmail doesn't allow resizing" style="margin: auto; display: block; width: 320px"/>
+</div>
+
 
 <!-- scalable -->
 <div class="slide intro">
@@ -275,7 +288,10 @@ Responsive design is an approach to web page creation that makes use of flexible
 
 </div>
 
-
+<div class="slide">
+<img style="display: block; height: 95vh; margin: auto" src="images/speedcurve.png" alt="histogram of 100 sites showing 38% do nothing in terms of RWD"/>
+<a href="" class="objectlink">SpeedCurve</a>
+</div>
 
 
 
@@ -340,12 +356,8 @@ Responsive design is an approach to web page creation that makes use of flexible
 <div class="slide object resize">
   <object data="http://wired.com/"></object>
   <a href="http://wired.com/" target="play" class="objectlink">WIRED</a>
-</div>
-
-<div class="slide">
-  <header><h1>Wired</h1></header>
     <section class="content">
-      <table>
+      <table style="position: absolute; top: 50px; right: 0; background-color: rgba(255,255,255,0.5)">
         <thead>
           <tr>
             <th></th>
@@ -551,8 +563,8 @@ A complex page means more bytes to download, and it also means slower DOM access
         </li>
         <li>Only load the size you need
           <ul>
-            <li>&lt;picture></li>
-            <li>&lt;img srcset> <sup>[<a href="https://www.webkit.org/blog/2910/improved-support-for-high-resolution-displays-with-the-srcset-image-attribute/">1</a>, <a href="http://dev.opera.com/blog/opera-21/">2</a>]</sup></li>
+            <li>&lt;picture> <sup><a href="http://caniuse.com/#search=picture" target="play">caniuse</a></sup></li>
+            <li>&lt;img srcset> <sup>[<a href="http://caniuse.com/#search=srcset" target="play">caniuse</a>, <a href="https://www.webkit.org/blog/2910/improved-support-for-high-resolution-displays-with-the-srcset-image-attribute/">1</a>, <a href="http://dev.opera.com/blog/opera-21/">2</a>]</sup></li>
             <li><a href="https://github.com/scottjehl/picturefill">picturefill</a></li>
             <li>Clowncar technique</li>
           </ul>
@@ -564,16 +576,6 @@ A complex page means more bytes to download, and it also means slower DOM access
 
 
 
-<div class="slide object">
-  <object data="http://caniuse.com/#search=picture"></object>
-  <a href="http://caniuse.com/#search=picture" target="play" class="objectlink">caniuse</a>
-</div>
-
-
-<div class="slide object">
-  <object data="http://caniuse.com/#search=srcset"></object>
-  <a href="http://caniuse.com/#search=srcset" target="play" class="objectlink">caniuse</a>
-</div>
 
 
 
@@ -631,6 +633,20 @@ A complex page means more bytes to download, and it also means slower DOM access
 </div>
 
 
+<div class="slide">
+<header><h1><code>&lt;picture>, &lt;source> &amp; srcset</code></h1></header>
+<pre>&lt;picture>
+  &lt;source srcset="large.jpg" 
+          media="(min-width: 1000px)">
+  &lt;source srcset="small.jpg" 
+          media="(min-width: 500px)">
+  &lt;img src="default.jpg"
+       srcset="highresolution.jpg 2x" 
+       alt="do not forget the alt">
+&lt;/picture></pre>
+
+</div>
+
 
  <div class="slide resize resizeimg">
    <header><h1>Right-size your images</h1></header>
@@ -649,6 +665,9 @@ A complex page means more bytes to download, and it also means slower DOM access
   <a class="objectlink" href="http://physicsoffast.io/demos/">PhysicsOfFast</a>
     <footer><a href="https://twitter.com/tobint">Tobin Titus, Microsoft</a></footer> </section>
  </div>
+
+
+
 
  <div class="slide">
   <header><h1>background-size</h1></header>
@@ -675,6 +694,30 @@ A complex page means more bytes to download, and it also means slower DOM access
         </table>
     </section>
 </div>
+
+
+<div class="slide">
+<header><h1>Right Size Your Images</h1></header>
+
+
+<ul class="cloudfour">
+<li><pre style="margin-left: -120px">240 x 240 = 57,600
+200 x 200 = 40,000
+            17,600</pre>
+<img src="images/small.png" width="100"></li>
+<li><pre>440 x 440 = 193,600
+400 x 400 = 160,000
+             33,600</pre><img src="images/medium.png" width="200"></li>
+<li><pre>640 x 640 = 409,600
+600 x 600 = 360,000
+             49,000</pre><img src="images/big.png" width="300"></li>
+<li><pre>840 x 840 = 705,600
+800 x 800 = 640,000
+             65,600</pre><img src="images/huge.png" width="400"></li>
+</ul>
+<p><a href="http://blog.cloudfour.com/responsive-images-101-part-9-image-breakpoints/" class="objectlink">CloudFour: image breakpoints</a>
+</div>
+
 
 
 <div class="slide">
@@ -1021,20 +1064,15 @@ el.addEventListener('touchend', myFunction);<b style="color:#900">*</b></pre>
 
 <div class="slide normal">
 <section class="content">
-  <h1>Thank you</h1>
-<h2>Estelle Weyl</h2>
-<h2><a href="http://www.standardista.com">www.standardista.com</a></h2>
-<h2><a href="http://www.twitter.com/estellevw">@estellevw</a></h2>
+<h1>Thank you</h1>
+<h2><a href="http://www.standardista.com">www.standardista.com</a><br>
+<a href="http://www.instartlogic.com/blog">www.instartlogic.com/blog</a></h2><h2><a href="http://www.twitter.com/webdevtips">@webdevtips</a><br><a href="http://www.twitter.com/estellevw">@estellevw</a><br><a href="http://www.twitter.com/standardista">@standardista</a></h2>
 <div class="floatright">
-  <img src="http://akamaicovers.oreilly.com/images/9780980846904/cat.gif" alt="HTML5 and CSS3 for the Real World">
+  <img src="http://akamaicovers.oreilly.com/images/9780987467485/cat.gif" alt="HTML5 and CSS3 for the Real World">
   <img src="http://akamaicovers.oreilly.com/images/0636920018063/cat.gif" alt="HTML5: The Definitive Guide"/>
   <img src="http://akamaicovers.oreilly.com/images/0636920021711/cat.gif" alt="MObile HTML5" />
   \<img src="http://akamaicovers.oreilly.com/images/0636920025955/cat.gif" alt="Web Performance Daybook"/></div>
 </section>
-</div>
-
-<div class="slide normal" style="background: transparent">
-
 </div>
 
 
