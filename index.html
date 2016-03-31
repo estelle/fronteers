@@ -105,8 +105,8 @@ Based on: http://instartlogic.github.com/fronteers
 <div class="slide">
   <header><h1>Viewport</h1></header>
     <section class="content"><pre>&lt;meta name="viewport"
-  content="width=device-width,
-     user-scalable=yes"&gt;</pre>
+  content="<span class="hoverhilite">width=device-width</span>,
+     <span class="hoverhilite">user-scalable=yes</span>"&gt;</pre>
 
      <pre>@viewport { viewport-properties }</pre>
 
@@ -132,11 +132,11 @@ Based on: http://instartlogic.github.com/fronteers
 <div class=slide>
 <header><h1>Don't be a jerk like GMail</h1></header>
 <pre>&lt;meta name="viewport" 
-  content="initial-scale=1.0, 
-           maximum-scale=1.0, 
-           minimum-scale=1.0, 
-           user-scalable=no, 
-           width=device-width"></pre>
+  content="<span class="hoverhilite">initial-scale=1.0</span>, 
+           <span class="hoverhilite bad"><u>maximum-scale=1.0</u>, 
+           <u>minimum-scale=1.0</u>, 
+           <u>user-scalable=no</u></span>, 
+           <span class="hoverhilite">width=device-width</span>"></pre>
 <img src="images/gmail.png" alt="Gmail doesn't allow resizing" style="margin: auto; display: block; width: 320px"/>
 </div>
 
@@ -145,9 +145,9 @@ Based on: http://instartlogic.github.com/fronteers
 <div class="slide intro">
 <header><h1>user-scalable=yes</h1></header>
   <div><pre>&lt;meta name="viewport"
-  content="width=device-width, 
-           user-scalable=yes,
-           initial-scale=1"&gt;</pre>
+  content="<span class="hoverhilite">width=device-width</span>, 
+           <span class="hoverhilite">user-scalable=yes</span>,
+           <span class="hoverhilite">initial-scale=1</span>"&gt;</pre>
   </div>
 </div>
 
@@ -175,9 +175,6 @@ Based on: http://instartlogic.github.com/fronteers
         <li>flexible images, and </li>
         <li>media queries</li>
       </ol>
-     <!-- <blockquote>
-Responsive design is an approach to web page creation that makes use of flexible layouts, flexible images and cascading style sheet media queries. The goal of responsive design is to build web pages that detect the visitor's screen size and orientation and change the layout accordingly.
-<cite><a href="https://www.google.com/search?q=responsive+web+design&oq=responsive+web+design&aqs=chrome..69i57j0l2j69i59j69i60l2.6990j0j7&sourceid=chrome&es_sm=119&ie=UTF-8#q=what%20is%20responsive%20design">Google</a></cite></blockquote>-->
     </section>
 </div>
 
@@ -232,12 +229,6 @@ Responsive design is an approach to web page creation that makes use of flexible
             <td><a href="http://mobile.httparchive.org/viewsite.php?pageid=335728" target="_play">mobile stats</a></td>
         </tbody>
       </table>
-      <!--<dl>
-        <dt>Wide: </dt>
-        <dd>153 requests, 5.4 MB Transferred, 21.14s load, 3.00s DOMContentLoaded</dd>
-        <dt>Narrow: </dt>
-        <dd>141 requests, 5.2 MB Transferred, 20.60 load, 5.50s DOMContnetLoaded</dd>
-      </dl>-->
     </section>
 </div>
 
@@ -277,19 +268,10 @@ Responsive design is an approach to web page creation that makes use of flexible
 
 
 
-<!--
- <div class="slide tweet">
-<blockquote class="twitter-tweet" lang="en"><p>Hi i’ve been on one to two bars of 3G service for the past week and let me tell you, your website sucks. Yes yours.</p>&mdash; Winston Hearn (@suchwinston) <a href="https://twitter.com/suchwinston/statuses/456526761044357121">April 16, 2014</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-</div>
-
-
--->
-
 <div class="slide intro">
   <header><h1>RWD !== Squishyness</h1></header>
-
 </div>
+
 
 <div class="slide">
 <img style="display: block; height: 95vh; margin: auto" src="images/speedcurve.png" alt="histogram of 100 sites showing 38% do nothing in terms of RWD"/>
@@ -347,64 +329,9 @@ Responsive design is an approach to web page creation that makes use of flexible
         </tbody>
       </table>
       <p><a href="http://www.webpagetest.org/result/160325_ME_137E/">WebPage Test Hell</a>
-      <!--<dl>
-        <dt>Wide: </dt>
-        <dd>153 requests, 5.4 MB Transferred, 21.14s load, 3.00s DOMContentLoaded</dd>
-        <dt>Narrow: </dt>
-        <dd>141 requests, 5.2 MB Transferred, 20.60 load, 5.50s DOMContnetLoaded</dd>
-      </dl>-->
-    </section>
-</div>
-<!--
-<div class="slide object resize">
-  <object data="http://wired.com/"></object>
-  <a href="http://wired.com/" target="play" class="objectlink">WIRED</a>
-    <section class="content">
-      <table style="position: absolute; top: 50px; right: 0; background-color: rgba(255,255,255,0.5)">
-        <thead>
-          <tr>
-            <th></th>
-            <th>Desktop/WiFi</th>
-            <th>Mobile/Network</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Requests</td>
-            <td>341</td>
-            <td>196</td>
-          </tr>
-          <tr>
-            <td>Assets</td>
-            <td>5,208 kB</td>
-            <td>3,023 kB</td>
-          </tr>
-
-          <tr>
-            <td>Load</td>
-            <td>22.7s</td>
-            <td>34.9s</td>
-          </tr>
-
-            <tr>
-            <td></td>
-            <td><a href="http://www.webpagetest.org/result/160326_HV_45K/" aria-label="Web Page Test results for desktop">WebPageTest</a></td>
-            <td><a href="http://www.webpagetest.org/result/160326_CA_45Z/" aria-label="Web Page Test results for mobile">WebPageTest</a></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td><a href="http://httparchive.org/viewsite.php?pageid=37980121" aria-label="HTTPArchive results for desktop">HTTPArchive</a></td>
-            <td><a href="http://mobile.httparchive.org/viewsite.php?pageid=520097" aria-label="HTTPArchive results for mobile">HTTPArchive</a></td>
-          </tr>
-        </tbody>
-      </table>
-      <p><a href="http://www.webpagetest.org/result/160325_ME_137E/">WebPage Test Hell</a>
-      <p class="wholepoint">
-    2014: UA sniffing / different experiences:<br/>&nbsp; Desktop: 86 requests/1.9 MB<br/>&nbsp; Mobile: &nbsp; 89 requests/2.0 MB</p>
     </section>
 </div>
 
--->
 
 
 <div class="slide object">
@@ -419,19 +346,8 @@ Responsive design is an approach to web page creation that makes use of flexible
     <section class="content"><p>By keeping your client side code small and lightweight, you can literally open your product up to new markets.</p>
     </section>
 </div>
-<!--
-<div class="slide tweet">
-  <blockquote class="twitter-tweet" lang="en"><p>Just because no one visits your mobile site doesn't mean you don't need to improve it. Maybe no one uses it because its too slow.</p>&mdash; Estelle Weyl (@estellevw) <a href="https://twitter.com/estellevw/status/655052815862231040">October 16, 2015</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-</div>-->
 
 
-<!--
-<div class="slide" style="background-image: url(images/weightperf.jpg); background-repeat: no-repeat; background-position: center; background-size: contain">
-  <header><h1>Duh!</h1></header>
-    <section class="content">
-    </section>
-</div>-->
 
 <div class="slide">
   <header><h1></h1></header>
@@ -451,13 +367,7 @@ Responsive design is an approach to web page creation that makes use of flexible
       </ol>
     </section>
 </div>
-<!--
-<div class="slide object">
-  <object data="http://www.webpagetest.org/breakdown.php?test=140506_W1_5NA&run=2&cached=0"></object>
-  <a href="http://www.webpagetest.org/breakdown.php?test=140506_W1_5NA&run=2&cached=0" target="play" class="objectlink">WebPageTest.org</a>
-</div>
 
--->
 
 
 <!--YSLOW -->
@@ -605,38 +515,6 @@ A complex page means more bytes to download, and it also means slower DOM access
 
 
 <div class="slide">
-    <section class="content"><pre  style="margin-top: 0px; font-size: 1rem;" contenteditable>
-&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 300 329&quot;
-  preserveAspectRatio=&quot;xMidYMid meet&quot;&gt;
- &lt;title&gt;Clown Car&lt;/title&gt;
- &lt;style&gt;
-  svg {
-    <strong>background-size: 100%;</strong> background-repeat: no-repeat;
-  }
- @media screen and (max-width: 300px) {
-  svg {background-image: url(images/small.png);
-  }
- }
- @media screen and (min-width: 301px) and (max-width: 600px) {
-  svg {background-image: url(images/medium.png);
-  }
- }
- @media screen and (min-width: 601px) and (max-width: 900px) {
-  svg {background-image: url(images/big.png);
-  }
- }
- @media screen and (min-width: 901px) {
-  svg {background-image: url(images/huge.png);
-  }
- }
- &lt;/style&gt;
-&lt;/svg&gt;</pre>
-<p class="resources">Resource: <a href="http://www.smashingmagazine.com/2013/06/02/clown-car-technique-solving-for-adaptive-images-in-responsive-web-design/">Clown Car Technique</a>
-    </section>
-</div>
-
-
-<div class="slide">
 <header><h1><code>&lt;picture>, &lt;source> &amp; srcset</code></h1></header>
 <pre>&lt;picture>
   &lt;source srcset="large.jpg" 
@@ -671,37 +549,9 @@ A complex page means more bytes to download, and it also means slower DOM access
 
 
 
-<!--
- <div class="slide">
-  <header><h1>background-size</h1></header>
-    <section class="content">
-      <table>
-        <tr><th>auto</th><th>cover</th><th>contain</th></tr>
-        <tr>
-          <td><img src="images/visa.jpg" style="width: 250px"></td>
-          <td><img src="images/visa.jpg" style="width: 250px"></td>
-          <td><img src="images/visa.jpg" style="width: 250px"></td>
-        </tr>
-        <tr>
-          <td><img src="images/auto.gif" alt="auto"></td>
-          <td><img src="images/cover.gif" alt="cover"></td>
-          <td><img src="images/contain.gif" alt="contain"></td>
-        </tr>
-
-        <tr>
-          <td>44ms</td>
-          <td>182ms</td>
-          <td>203ms</td>
-        </tr>
-
-        </table>
-    </section>
-</div>
--->
 
 <div class="slide">
 <header><h1>Right Size Your Images</h1></header>
-
 
 <ul class="cloudfour">
 <li><pre style="margin-left: -120px">240 x 240 = 57,600
@@ -746,11 +596,6 @@ A complex page means more bytes to download, and it also means slower DOM access
     </section>
 </div>
 
-
-<!--
-<div class="slide tweet tweetparent">
-  <blockquote class="twitter-tweet" lang="en"><p>As ISPs promote ever faster download speeds, remember latency is the real performance killer <a href="https://twitter.com/search?q=%23perfmatters&amp;src=hash">#perfmatters</a> <a href="http://t.co/hfoYvHANQb">pic.twitter.com/hfoYvHANQb</a></p>&mdash; Andy Davies (@AndyDavies) <a href="https://twitter.com/AndyDavies/statuses/459716093993447424">April 25, 2014</a></blockquote>
-</div> -->
 
 <div class="slide">
     <header>
@@ -821,11 +666,6 @@ A complex page means more bytes to download, and it also means slower DOM access
   <blockquote class="twitter-tweet" lang="en"><p>Is your battery draining too fast? Turn off everything that makes your smart phone smart. That&#39;ll fix it.</p>&mdash; Scott Hanselman (@shanselman) <a href="https://twitter.com/shanselman/statuses/463069042182332416">May 4, 2014</a></blockquote>
 </div>
 
-<!--
-<div class="slide tweet">
-  <blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">If your web app makes your laptop fan go crazy, imagine what your app is doing to the batteries and CPU of your mobile visitors.</p>&mdash; Estelle Weyl (@estellevw) <a href="https://twitter.com/estellevw/status/655613169763651585">October 18, 2015</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-</div> -->
 
 
 <div class="slide">
@@ -839,11 +679,7 @@ A complex page means more bytes to download, and it also means slower DOM access
 <li><em title="(like XMLHttpRequest)">Dynamic JS:</em> ⬆ rendering cost (can't be cached). </li>
 <li>AJAX: waking up the radio communications</li>
 </ul>
-<!--<h2>Images</h2>
-<ul>
-<li>Consume energy</li>
-<li>Rendering energy is proportional to # and size of images.</li>
-</ul>-->
+
     </section>
 </div>
 
@@ -894,20 +730,6 @@ development, but increase energy use.</li>
     </div>
 
 
-<!--
-<div class="slide resizeimg">
-  <header><h1>CSS Animation, not JavaScript</h1></header>
-    <section class="content">
-
-      <p style="margin-top:0">JavaScript Animation</p>
-      <img src="img/bad-trimmed-small_anim.png">
-
-      <p>CSS3 Animation</p>
-      <img src="img/good-trimmed-small_anim.png">
-    <a class="objectlink" href="http://physicsoffast.io/demos/">PhysicsOfFast</a>
-
-    </section>
-</div> -->
 
 <div class="slide">
  <header><h1>Memory</h1></header>
@@ -933,55 +755,6 @@ development, but increase energy use.</li>
     </table>
     <p>Website shares CPU shared with browser, OS and other running apps</p>
   </div>
-
-
-
-<!-- HTC Inspire: How much CPU is used without anything running
-<div class="slide normal">
-     <header><h1>Browser shares Memory</h1></header>
-     <section>
-    <table class="htc">
-    <thead><tr><td colspan="3">Running Services</td></tr></thead>
-    <tfoot><tr><td style="background-color:#FCC">Other</td><td colspan="2" style="background-color:#6C9">73MB Avail: 255MB + 182MB in 21</td></tr></tfoot>
-    <tbody>
-      <tr><td colspan="2">Calendar</td><td>8.4MB</td></tr>
-        <tr><td colspan="3">Process:com.htc.bgp</td></tr>
-
-      <tr><td rowspan="2"></td><td>ObexService</td><td>31:52:14</td></tr>
-        <tr><td colspan="2">Started by application: Touch to stop</td></tr>
-
-      <tr><td colspan="2">AT&amp;T Navigator</td><td>8.4MB</td></tr>
-        <tr><td colspan="3">Process: com.telnav.app.android.congular</td></tr>
-
-      <tr><td rowspan="2"></td><td>ResoucePreLoader</td><td>Restarting</td></tr>
-        <tr><td colspan="2">Started by application: Touch to stop</td></tr>
-
-
-      <tr><td colspan="2">AT&amp;T Spots</td><td>2.4MB</td></tr>
-        <tr><td colspan="3">Process: com.matchboxmobile.wasp</td></tr>
-
-      <tr><td rowspan="2"></td><td>WispService</td><td>31:52:14</td></tr>
-        <tr><td colspan="2">Started by application: Touch to stop</td></tr>
-
-
-
-      <tr><td colspan="2">Media</td><td>4.1MB</td></tr>
-        <tr><td colspan="3">Process: android.process.media</td></tr>
-
-      <tr><td rowspan="2"></td><td>DownloadService</td><td>31:52:14</td></tr>
-        <tr><td colspan="2">Started by application: Touch to stop</td></tr>
-
-
-
-      <tr><td colspan="2">PVWmdrmService</td><td>2.2MB</td></tr>
-        <tr><td colspan="3">Process: com.pv.wmdrmservice</td></tr>
-
-      <tr><td rowspan="2"></td><td>PVWmdrmService</td><td>31:52:14</td></tr>
-        <tr><td colspan="2">Started by application: Touch to stop</td></tr>
-    </tbody>
-    </table>
-     </section>
-    </div> -->
 
 
 
@@ -1012,12 +785,6 @@ development, but increase energy use.</li>
     </section>
   </div>
 
-<!--
-<div class="slide tweet">
-<blockquote class="twitter-tweet" lang="en"><p>Load times on mobile have improved drastically by moving from client-side to server-side JavaScript logic for injecting content. <a href="https://twitter.com/search?q=%23nodejs&amp;src=hash">#nodejs</a> ❤</p>&mdash; Web Platform Daily (@openwebdaily) <a href="https://twitter.com/openwebdaily/statuses/458146923221102594">April 21, 2014</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-</div>
--->
 
 
 <div class="slide title">

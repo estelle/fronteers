@@ -345,6 +345,18 @@ div .slash {
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3), -3px -3px 3px rgba(0, 0, 0, 0.3);
   background-color: white; }
 
+.hoverhilite {
+  letter-spacing: 1; }
+  .hoverhilite:hover {
+    color: #226DAA;
+    letter-spacing: initial;
+    font-weight: bold; }
+  .hoverhilite u {
+    text-decoration: none; }
+  .hoverhilite.bad:hover u {
+    color: #f00;
+    text-decoration: line-through; }
+
 table {
   margin: auto;
   border: 1px solid #dedede;
