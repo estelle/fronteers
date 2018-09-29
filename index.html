@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8" />
-    <title>RWD is not a Panacea</title>
+    <title>Fast to Code / Fast to Load</title>
 <!--
 Made by: Estelle Weyl
 Copyright:  CC-SA-NC-BY - Creative Commons Attribution-NonCommercial-ShareAlike
@@ -11,43 +11,189 @@ Based on: http://instartlogic.github.com/fronteers
 <link rel="stylesheet" href="css/index.css">
 <meta name="twitter:widgets:link-color" content="#4682B4">
 <meta name="twitter:widgets:theme" content="light">
+<meta name="viewport" content="width=device-width,user-scalable=yes">
 <base target="_play">
 <style>
-.xtweet a {opacity: 0;}
-</style>
+  .intro .foo {
+    color: magenta;
+  }
+  .intro em.foo {
+    display: inline-block;
+    width: 2.2em;
+  }
+  .intro .myname {
+     text-align: left; 
+     margin-bottom: 4vh;
+  }
+  .intro.halved.current {
+    display: flex;
+    height: 100vh;
+    justify-content: space-between;
+    flex-flow: column;
+  }
+  .books img {
+    max-width: 13vw;
+  }
+  .intro header h1 {
+    font-size: 10vh;
+  }
+  .large header h1 {
+    font-size: 15vh;
+  }
 
+</style>
 </head>
 
 <body>
 <div id="presentation">
-   <div id="slides">
+   <div class="slides">
 
 
-<div class="slide intro">
-    <section class="content">
-    <h1 style="font-size: 3rem; margin-top: 10%;">RWD is not a Panacea</h1>
-      <h2 style="margin-top: 25%;">Estelle Weyl</h2>
-      <p><a href="http://estelle.github.io/rwdpanacea">http://instartlogic.github.io/fronteers</a></p>
+<div class="slide intro halved">
+    <header>
+    <h1>&nbsp;<br>Fast to Code <em class="foo"> : </em> Fast to Load</h1>
+  </header>
+    <section class="content"><button id="killCSS" class="skiplink">Enable Screen Reader Access</button>
+      <div class="myname"><h2>Estelle Weyl</h2>
+      <p><a href="http://estelle.github.io/fronteers">http://estelle.github.io/fronteers</a></p></div>
     </section>
 </div>
 
-<div class="slide normal">
-<section class="content">
-<h1>Estelle Weyl</h1>
-<h2><a href="http://www.standardista.com">www.standardista.com</a><br>
-<a href="http://www.instartlogic.com/blog">www.instartlogic.com/blog</a></h2><h2><a href="http://www.twitter.com/webdevtips">@webdevtips</a><br><a href="http://www.twitter.com/estellevw">@estellevw</a><br><a href="http://www.twitter.com/standardista">@standardista</a></h2>
-<div class="floatright">
-  <img src="http://akamaicovers.oreilly.com/images/9780987467485/cat.gif" alt="HTML5 and CSS3 for the Real World">
-  <img src="http://akamaicovers.oreilly.com/images/0636920041658/rc_cat.gif" alt="Animations and Transitions with CSS"/>
-  <img src="http://akamaicovers.oreilly.com/images/0636920021711/cat.gif" alt="MObile HTML5" />
-  \<img src="http://akamaicovers.oreilly.com/images/0636920025955/cat.gif" alt="Web Performance Daybook"/></div>
+<div class="slide intro halved">
+    <header><h1>&nbsp;<br>Fast to Code <em class="foo"> > </em> Fast to Load</h1></header>
+    <section class="content" aria-hidden="true">
+      <div class="myname"><h2>Estelle Weyl</h2>
+      <p><a href="http://estelle.github.io/fronteers">http://estelle.github.io/fronteers</a></p></div>
+    </section>
+</div>
+<div class="slide intro halved">
+    <header>
+      <h1>&nbsp;<br>Fast to Code <em class="foo"> &lt; </em> Fast to Load</h1>
+    </header>
+    <section class="content" aria-hidden="true">
+      <div class="myname"><h2>Estelle Weyl</h2>
+      <p><a href="http://estelle.github.io/fronteers">http://estelle.github.io/fronteers</a></p></div>
+    </section>
+</div>
+<div class="slide intro halved">
+    <header>
+      <h1><span class="foo">Pick one: </span><br/>Fast to Code <em class="foo">OR</em> Fast to Load</h1>
+      </header>
+    <section class="content" aria-hidden="true">
+      <div class="myname"><h2>Estelle Weyl</h2>
+      <p><a href="http://estelle.github.io/fronteers">http://estelle.github.io/fronteers</a></p></div>
+    </section>
+</div>
+
+<div class="slide intro halved">
+  <header>
+    <h1><span class="foo">Pick Both: </span>  <br/>Fast to Code <em class="foo">AND</em> Fast to Load</h1>
+    <h1 class="temphidden"><span class="foo">and</span> Usable <span class="foo">and</span> Accessible</h1>
+  </header>
+    <section class="content" aria-hidden="true">
+      <div class="myname"><h2>Estelle Weyl</h2>
+      <p><a href="http://estelle.github.io/fronteers">http://estelle.github.io/fronteers</a></p></div>
+    </section>
+</div>
+
+<div class="slide normal" style="background-image: url(images/FF.png); background-size: cover">
+<section class="content" style="display: flex; flex-flow: column; justify-content: space-between; height: calc(100vh - 50px);">
+<div>
+    <h1>Estelle Weyl</h1>
+    <h2><a href="http://www.standardista.com">www.standardista.com</a><br>
+    </h2><h2><a href="http://www.twitter.com/estellevw">@estellevw</a><br><a href="http://www.twitter.com/standardista">@standardista</a></h2>
+ </div>
+ <div>
+    <div class="floatright books">
+      <img src="https://akamaicovers.oreilly.com/images/9780987467485/cat.gif" alt="HTML5 and CSS3 for the Real World">
+      <img src="https://akamaicovers.oreilly.com/images/0636920041658/cat.gif" alt="Animations and Transitions with CSS"/>
+      <img src="https://akamaicovers.oreilly.com/images/0636920021711/cat.gif" alt="Mobile HTML5" />
+      <img src="https://akamaicovers.oreilly.com/images/0636920025955/cat.gif" alt="Web Performance Daybook"/>
+      <img src="https://covers.oreillystatic.com/images/0636920066682/cat.gif" alt="Flexbox in CSS"/>
+      <img src="https://covers.oreillystatic.com/images/0636920012726/cat.gif" alt="CSS: The Definitive Guide">
+    </div>
+</div>
+
 </section>
 </div>
 
-<div class="slide tweet">
-  <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Just because no one uses your mobile site, doesn&#39;t mean you don&#39;t need to improve it. Maybe no one uses it because the experience is awful.</p>&mdash; Dawn Parzych (@dparzych) <a href="https://twitter.com/dparzych/status/710650338596884481">March 18, 2016</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<div class="slide intro large">
+    <header><h1>Languages of the Web</h1></header>
+ <section class="content">
+  <ul class="centered">
+    <li class="temphidden">HTML</li>
+    <li class="temphidden">Other XML based markup (XML, SVG, etc)</li>
+    <li class="temphidden">CSS</li>
+    <li class="temphidden">JavaScript</li>
+  </ul>
+</section>
 </div>
+
+
+<div class="slide intro large">
+    <header><h1>Coding</h1></header>
+     <section class="content">
+  <ul class="centered">
+    <li class="temphidden">Frameworks</li>
+    <li class="temphidden">Libraries</li>
+    <li class="temphidden">Post processors</li>
+    <li class="temphidden">Pre processors</li>
+    <li class="temphidden">Builds</li>
+    <li class="temphidden"></li>
+  </ul>
+</section>
+</div>
+
+<div class="slide intro large">
+    <header><h1>Front End Engineering</h1></header>
+     <section class="content">
+  <ul class="centered">
+    <li class="temphidden">HTML</li>
+    <li class="temphidden">CSS</li>
+    <li class="temphidden">JavaScript</li>
+  </ul>
+</section>
+</div>
+
+
+<div class="slide intro large">
+    <header><h1>Engineering</h1></header>
+     <section class="content">
+  <ul class="centered">
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+    <li>Tools</li>
+    <li class="temphidden">Communication</li>
+    <li class="temphidden">Relationships</li>
+  </ul>
+</section>
+</div>
+
+<div class="slide intro large">
+    <header><h1>Engineering</h1></header>
+<section class="content">
+  <ul class="centered">
+    <li class="temphidden">User experience</li>
+    <li class="temphidden">Accessibility</li>
+    <li class="temphidden">Performance</li>
+    <li class="temphidden">Security</li>
+    <li class="temphidden">Privacy</li>
+    <li class="temphidden">Internationalization</li>
+  </ul>
+</section>
+</div>
+
+
+
+
+
+<div class="slide intro">
+  <h1 style="font-size: 8vw">Web Performance</h1>
+  <h2 style="font-size: 6.5vw">"Fast to Load"</h2>
+</div>
+
 
 
 <div class="slide tweet">
@@ -56,282 +202,10 @@ Based on: http://instartlogic.github.com/fronteers
 </div>
 
 
-
-
-<div class="slide tweet">
-  <blockquote class="twitter-tweet"  lang="en"><p>Our report found some big changes in the past year on how audiences access BBC News Online: <a href="http://t.co/8zYSoYmP5D">pic.twitter.com/8zYSoYmP5D</a></p>&mdash; BBC Trust Info (@bbctrust) <a href="https://twitter.com/bbctrust/statuses/461092563991019521">April 29, 2014</a>
-    <p style="text-align: center"><img src="https://pbs.twimg.com/media/BmYhPnWCQAEl9Zl.jpg"></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-</div>
-
-
-
-<div class="slide">
-  <header><h1 style="text-align: center;">Device Fragmentation</h1></header>
-    <section class="content">
-
-<img src="img/android.png" style="width: 100%;">
-<a href="http://opensignal.com/reports/2015/08/android-fragmentation/">OpenSignal.com</a>
-    </section>
-</div>
-
-
-<div class="slide">
-  <header><h1></h1></header>
-    <section class="content">
-<img src="img/aspectratio.svg">
-<a href="http://opensignal.com/reports/fragmentation.php">OpenSignal.com</a>
-<small style="opacity: 0.25;">breakpoints</small>
-    </section>
-</div>
-
-<div class="slide">
-  <header><h1></h1></header>
-    <section class="content">
-      <p>"The principles of universality of access irrespective of <strong class="hilite">hardware</strong> or software platform, <strong class="hilite">network</strong> infrastructure, language, culture, <strong class="hilite">geographical location</strong>, or physical or mental <strong class="hilite">impairment</strong> are core values in Web design"</p>
-      <p>&mdash; <a href="http://www.w3.org/DesignIssues/old/Architecture.html">Tim Berners-Lee</a>, Sept. 1998</p>
-    </section>
-</div>
-
-
-
-<!-- Oracle - large -->
-<div class="slide object resize">
-  <div class="img" style="background-image: url(screenshots/godaddy.png);"></div>
-</div>
-
-
-
-<div class="slide">
-  <header><h1>Viewport</h1></header>
-    <section class="content"><pre>&lt;meta name="viewport"
-  content="<span class="hoverhilite">width=device-width</span>,
-     <span class="hoverhilite">user-scalable=yes</span>"&gt;</pre>
-
-     <pre>@viewport { viewport-properties }</pre>
-
-     <p>Specifies:
-     <ol> 
-       <li>viewport size</li>
-       <li>zoom factor</li>
-       <li>orientation</li>
-     </ol>
-     </p>
-<p class="resources small">
-     Resource: <a href="http://www.quirksmode.org/mobile/viewports2.html" target="_blank">A tale of 2 viewports</a><br/>
-      Tutorial: <a href="http://estelle.github.io/CSS-Workshop/part_04_media.html" target="_blank">Media Queries slide deck</a></p>
-    </section>
-</div>
-
-<!-- Godaddy - large -->
-<div class="slide object resize resizemeta">
-  <div class="img" style="background-image: url(screenshots/godaddy.png);"></div>
-</div>
-
-<!--GMAIL-->
-<div class=slide>
-<header><h1>Don't be a jerk like GMail</h1></header>
-<pre>&lt;meta name="viewport" 
-  content="<span class="hoverhilite">initial-scale=1.0</span>, 
-           <span class="hoverhilite bad"><u>maximum-scale=1.0</u>, 
-           <u>minimum-scale=1.0</u>, 
-           <u>user-scalable=no</u></span>, 
-           <span class="hoverhilite">width=device-width</span>"></pre>
-<img src="images/gmail.png" alt="Gmail doesn't allow resizing" style="margin: auto; display: block; width: 320px"/>
-</div>
-
-
-<!-- scalable -->
-<div class="slide intro">
-<header><h1>user-scalable=yes</h1></header>
-  <div><pre>&lt;meta name="viewport"
-  content="<span class="hoverhilite">width=device-width</span>, 
-           <span class="hoverhilite">user-scalable=yes</span>,
-           <span class="hoverhilite">initial-scale=1</span>"&gt;</pre>
-  </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-<div class="slide">
-  <header><h1 class="slash">Responsive Design</h1></header>
-    <section class="content"><img src="http://www.flexiblewebbook.com/images/cover.jpg" style="height: 220px; float: right;">
-    </section>
-</div>
-
-
-<div class="slide">
-  <header><h1>Responsive Design</h1></header>
-    <section class="content">
-      <ol class=large>
-        <li>fluid grids</li>
-        <li>flexible images, and </li>
-        <li>media queries</li>
-      </ol>
-    </section>
-</div>
-
 <div class="slide tweet">
   <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">I remember when 3G was primary mobile speed. It was slow but still worked, so why now when my phone says 3G it becomes completely useless.</p>&mdash; Stephen Gundee (@StephenGundee) <a href="https://twitter.com/StephenGundee/status/712650972133138433">March 23, 2016</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
-
-<div class="slide object resize">
-  <object data="http://disney.com/"></object>
-  <a href="http://disney.com/" target="play" class="objectlink">Disney</a>
-</div>
-
-
-<div class="slide">
-  <header><h1>Network Resources</h1></header>
-    <section class="content">
-      <table>
-        <thead>
-          <tr>
-            <th></th>
-            <th>Wide / Desktop</th>
-            <th>Narrow / Mobile</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Requests</td>
-            <td>77</td>
-            <td>123</td>
-          </tr>
-          <tr>
-            <td>Assets</td>
-            <td>3752kB</td>
-            <td>3344kB</td>
-          </tr>
-
-          <tr>
-            <td>Load</td>
-            <td>10.62s</td>
-            <td>34.10s</td>
-          </tr>
-
-          <tr>
-            <td>DOMContentLoaded</td>
-            <td>&nbsp;9.74s</td>
-            <td>30.94s</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td><a href="http://httparchive.org/viewsite.php?u=http%3A%2F%2Fwww.disney.com%2F" target="_play">desktop stats</a></td>
-            <td><a href="http://mobile.httparchive.org/viewsite.php?pageid=335728" target="_play">mobile stats</a></td>
-        </tbody>
-      </table>
-    </section>
-</div>
-
-
-
-<div class="slide">
-  <header><h1>Responsive Web Design</h1></header>
-    <section class="content"  style="font-size: 1.5rem">To see RWD in action, open a responsive site in a desktop browser and slowly make the browser thinner and wider. The layout magically adjusts itself to more comfortably fit the new width of the browser, even if you make the page as skinny as the resolution of a mobile phone.
-      <cite><a href="http://google.com">Google</a></cite>
-    </section>
-</div>
-
-
-<div class="slide">
-
-    <header><h1>Responsive Web Design</h1></header>
-    <section class="content"  style="font-size: 1.5rem">To see RWD in action, open a responsive site in a desktop browser and slowly make the browser thinner and wider. The layout magically adjusts itself to more comfortably fit the new width of the browser, even if you make the page as skinny as the resolution of a mobile phone.
-      <cite><a href="http://google.com">Google</a></cite>
-    </section>
-    <div style="position: absolute; width: 100%; height: 100%; top: 20px; left: 20px; background-color: rgba(255,255,255,0.5)">
-    <header><h1 class="slash" style="font-size: 7rem;">Squishy!!!</h1></header>
-    <section class="content" style="transform: translatey(150px);"><a href="http://twitter.com/snugug">@snugug</a>
-    </section>
-  </div>
-</div>
-
-
-<div class="slide">
-  <header><h1>Size matters</h1></header>
-    <section class="content">
-      <h1 style="text-align: center; font-size: 5rem; text-shadow: 5px 5px 0 orange">339%</h1>
-      <p>According to the HTTP Archive, the average top 1,000 web page is <a href="http://httparchive.org/interesting.php?a=All&s=Top1000">2,123 KB</a>, compared to <a href="">626 KB in 2010</a>.</p>
-
-<p class="resources"><a href="http://httparchive.org/compare.php?&r1=Mar%2015%202016&s1=All&r2=Nov%2015%202010&s2=All">HTTPArchive</a><br/>Images: 1253 KB v. 372 KB<!-- (v. 76KB)--><br/>JS: 425 KB v. 103 KB <!--(v. 342KB)--><br/>CSS: 64KB v. 24KB <!--(v. 81KB)--></p>
-    </section>
-</div>
-
-
-
-<div class="slide intro">
-  <header><h1>RWD !== Squishyness</h1></header>
-</div>
-
-
-<div class="slide">
-<img style="display: block; height: 95vh; margin: auto" src="images/speedcurve.png" alt="histogram of 100 sites showing 38% do nothing in terms of RWD"/>
-<a href="" class="objectlink">SpeedCurve</a>
-</div>
-
-
-
-
-
-<div class="slide object resize">
-  <object data="http://newsweek.com/"></object>
-  <a href="http://newsweek.com/" target="play" class="objectlink">Newsweek</a>
-</div>
-
-
-<div class="slide">
-  <header><h1>Newsweek Network Resources</h1></header>
-    <section class="content">
-      <table>
-        <thead>
-          <tr>
-            <th></th>
-            <th>Desktop/WiFi</th>
-            <th>Mobile/Network</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Requests</td>
-            <td>147</td>
-            <td>173</td>
-          </tr>
-          <tr>
-            <td>Assets</td>
-            <td>2.6 MB</td>
-            <td>3.0 MB</td>
-          </tr>
-
-          <tr>
-            <td>Load</td>
-            <td>4.27s</td>
-            <td>34.21s</td>
-          </tr>
-
-          <tr>
-            <td>DOMContentLoaded</td>
-            <td>1.66s</td>
-            <td>6.91s</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td><a href="http://www.webpagetest.org/result/160325_WN_d91489a1b5ba47fc1c47884240646d60/"aria-label="Web Page Test results for desktop">WebPageTest</a></td>
-            <td><a href="http://www.webpagetest.org/result/160325_WN_d91489a1b5ba47fc1c47884240646d60/"aria-label="Web Page Test results for mobile">WebPageTest</a></td>
-        </tbody>
-      </table>
-      <p><a href="http://www.webpagetest.org/result/160325_ME_137E/">WebPage Test Hell</a>
-    </section>
-</div>
-
 
 
 <div class="slide object">
@@ -842,26 +716,22 @@ With VoiceOver, touch reads tapped item. Double tap acivates.. </b>
 
 <div class="slide intro">
     <section class="content">
-    <h1 style="font-size: 3rem; margin-top: 10%;">RWD is not a Panacea</h1>
-      <h2 style="margin-top: 25%;">Estelle Weyl</h2>
-      <p><a href="http://estelle.github.io/fronteers">http://<img src="/img/instartlogo.svg" alt="instartlogic" style="position: relative; top: 12px">.github.io/fronteers</a></p>
+    <h1>
+      <span class="temphidden">Fast to Code</span><br/>
+      <span class="temphidden">Fast to Load</span><br/>
+      <span class="temphidden">Usable</span><br/>
+      <span class="temphidden">Accessible</span><br/>
+      <span class="temphidden">Internationalizable</span><br/>
+      <span class="temphidden">Secure</span></h1>
+      <h2 class="temphidden" style="margin-top: 25%;">Estelle Weyl</h2>
+      <p class="temphidden"><a href="https://estelle.github.io/fronteers">https://estelle.github.io/fronteers</a></p>
     </section>
 </div>
 
    </div>
 </div>
-<script src="slides.js"></script>
-<!-- Google Analytics -->
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-30010510-4', 'auto');
-  ga('send', 'pageview');
-
-</script>
+<script src="slides.js" class="removeForAT"></script>
 <!-- End Google Analytics -->
 </body>
 </html>

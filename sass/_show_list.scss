@@ -1,0 +1,15 @@
+  ul.centered {
+    list-style-type: none;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    li {
+    	text-align: left;
+    	&::before {
+     	  content: "▷ ";
+     	}
+    }
+}
+.temphidden {
+	visibility: hidden;
+}
