@@ -96,6 +96,12 @@ ol {
   background-color: rgba(255,255,255,0.3);*/
   background-color: rgba(0,0,0,0.4);
 }
+.slide.invert {
+  background: white;
+  p, li, h1 {
+    color: black;
+  }
+}
 
 .contrast_text {
   color: magenta;
