@@ -14,26 +14,7 @@ Based on: http://instartlogic.github.com/fronteers
 <meta name="viewport" content="width=device-width,user-scalable=yes">
 <base target="_play">
 <style>
-  .intro .foo {
-    color: magenta;
-  }
-  .intro em.foo {
-    display: inline-block;
-    width: 2.2em;
-  }
-  .intro .myname {
-     text-align: left; 
-     margin-bottom: 4vh;
-  }
-  .intro.halved.current {
-    display: flex;
-    height: 100vh;
-    justify-content: space-between;
-    flex-flow: column;
-  }
-  .books img {
-    max-width: 13vw;
-  }
+
   .intro header h1 {
     font-size: 10vh;
   }
@@ -51,7 +32,13 @@ Based on: http://instartlogic.github.com/fronteers
 
 <div class="slide intro halved">
     <header>
-    <h1>&nbsp;<br>Fast to Code <em class="foo"> : </em> Fast to Load</h1>
+    <h1>&nbsp;<br>Fast to Code 
+      <em class="foo bar">
+        <span> : </span>
+        <span class="temphidden"> &lt; </span>
+        <span class="temphidden"> &gt; </span>
+    </em> 
+  Fast to Load</h1>
   </header>
     <section class="content"><button id="killCSS" class="skiplink">Enable Screen Reader Access</button>
       <div class="myname"><h2>Estelle Weyl</h2>
@@ -59,22 +46,7 @@ Based on: http://instartlogic.github.com/fronteers
     </section>
 </div>
 
-<div class="slide intro halved">
-    <header><h1>&nbsp;<br>Fast to Code <em class="foo"> > </em> Fast to Load</h1></header>
-    <section class="content" aria-hidden="true">
-      <div class="myname"><h2>Estelle Weyl</h2>
-      <p><a href="https://estelle.github.io/fronteers">https://estelle.github.io/fronteers</a></p></div>
-    </section>
-</div>
-<div class="slide intro halved">
-    <header>
-      <h1>&nbsp;<br>Fast to Code <em class="foo"> &lt; </em> Fast to Load</h1>
-    </header>
-    <section class="content" aria-hidden="true">
-      <div class="myname"><h2>Estelle Weyl</h2>
-      <p><a href="https://estelle.github.io/fronteers">https://estelle.github.io/fronteers</a></p></div>
-    </section>
-</div>
+
 <div class="slide intro halved">
     <header>
       <h1><span class="foo">Pick one: </span><br/>Fast to Code <em class="foo">OR</em> Fast to Load</h1>
@@ -198,7 +170,46 @@ Based on: http://instartlogic.github.com/fronteers
 </section></div>
 
 
-<div class="slide intro large" style="background: left center / cover no-repeat url(images/eatcake.jpg) black; filter: saturate(8);">
+
+<!-- react button -->
+<div class="slide invert" style="background: no-repeat url(images/react_button.jpg) white;" role="img" aria-description="React developer tools showing infinite nesting to create a button instead of using a semantic button">
+  <header>
+    <h1>Developer Experience</h1>
+  </header>
+</div>
+
+
+<!-- file size for visa js -->
+<div class="slide invert">
+  <header>
+    <h1  style="text-align: center">Developer Experience</h1>
+  </header>
+  <section class="content">
+    <img src="images/v7.png" style="min-height: 80vh;" alt="http headers for a javascript file that is 2.264M">
+  </section>
+</div>
+
+
+
+<div class="slide invert">
+  <header>
+    <h1  style="text-align: center">Developer Experience</h1>
+  </header>
+  <section class="content">
+    <img src="images/v7.png" style="min-height: 80vh;" alt="http headers for a javascript file that is 2.264M">
+  </section>
+</div>
+
+
+<div class="slide invert" style="background: left / contain no-repeat url(images/push.jpg) hsl(359, 0%, 96%);" role="img" aria-description="a really long, convoluted if statement with a mind bender pushing in the indentation">
+  <header>
+    <h1 style="text-align: center">Developer Experience</h1>
+  </header>
+  <section class="content">
+  </section>
+</div>
+
+<div class="slide intro large" style="background: left center / cover no-repeat url(images/eatcake.jpg) black;">
     <header></header>
 <section class="content">
   <ul class="centered">
@@ -272,6 +283,26 @@ from 2007 to 2017 (in Mbps), by quarter</p>
 <div class="slide invert">
 <header><h1>JavaScript</h1></header>
 <section content="content">
+  <img src="images/visa_bytes.png" alt="timeline of Visa loading including a 5MB CSS file that blocks downloading for 14 seconds" class="temphidden">
+   &nbsp; <img src="images/visa_js.png" alt="timeline of DCWater loading including a 5MB CSS file that blocks downloading for 14 seconds">
+</section>
+</div>
+
+<div class="slide invert">
+<header><h1>JavaScript</h1></header>
+<section content="content">
+  <img src="images/visa_network.png" alt="timeline of Visa loading including a 5MB CSS file that blocks downloading for 14 seconds" style="margin-top: -60px;">
+    <a href="https://www.webpagetest.org/result/180930_RS_2d7278bf4409aa842e06cbd2833f5ae1/3/details/#waterfall_view_step1" class="objectlink" >WebPage Test</a>
+</section>
+</div>
+
+
+
+<div class="slide invert">
+<header><h1>CSS</h1></header>
+<section content="content">
+  <img src="images/dcwater.png" alt="timeline of DCWater loading including a 5MB CSS file that blocks downloading for 14 seconds">
+  <a href="https://www.webpagetest.org/result/180930_S7_483e7e29694ebd1ba9b1dcfb8f7781a3/1/details/#waterfall_view_step1" class="objectlink" >WebPage Test</a>
 </section>
 </div>
 
