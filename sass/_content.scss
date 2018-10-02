@@ -61,8 +61,9 @@ pre {
 cite {text-align: right; display: block; margin-top: 1rem;}
 cite:before {content: '-';}
 a {
-    color: rgb(122,128,144);
-    color: #FFA500;}
+    color: inherit;
+    opacity: 0.5;
+}
 .visibility {
   margin-top: 0;
 }

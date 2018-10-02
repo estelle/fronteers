@@ -21,6 +21,29 @@ Based on: http://instartlogic.github.com/fronteers
   .large header h1 {
     font-size: 15vh;
   }
+  .dollar {
+    transform: rotate(-20deg);
+    font-size: 17vh;
+    opacity: 0.5;
+    display: inline-block;
+    font-family: fantasy;
+  }
+  .dollar:nth-of-type(2n-1) {
+    transform: rotate(20deg);
+  }
+  .dollar:nth-of-type(3n-2) {
+    transform: rotate(0deg) translatey(-4vh);
+  }
+  .dollar:nth-of-type(5n) {
+    transform: rotate(10deg) translatey(8vh);
+  }
+  .dollar:nth-of-type(7n) {
+    transform: rotate(-10 deg) translatey(-8vh);
+  }
+
+  .bulleted.second{
+    align-items: flex-end;
+  }
 
 </style>
 </head>
@@ -69,161 +92,11 @@ Based on: http://instartlogic.github.com/fronteers
 </div>
 
 
-
-<div class="slide intro large" style="background: hsl(250, 68%, 21%);">
-    <header><h1>Languages of the Web</h1></header>
- <section class="content">
-  <ul class="centered">
-    <li class="temphidden">HTML</li>
-    <li class="temphidden">Other XML based markup (XML, SVG, etc)</li>
-    <li class="temphidden">CSS</li>
-    <li class="temphidden">JavaScript</li>
-  </ul>
-</section>
-</div>
-
-
-<div class="slide intro large" style="background: hsl(270, 90%, 59%);">
-    <header><h1>Developer</h1></header> 
-</div>
-
-
-
-<div class="slide object" style="background-color: hsl(270, 90%, 59%);">
-  <object data="http://amiarealdeveloper.com/"></object>
-  <a href="http://amiarealdeveloper.com/" target="play" class="objectlink">Open in separate window</a>
-</div>
-
-<div class="slide intro large" style="background: hsl(300, 68%, 21%);">
-    <header><h1>Coding</h1></header>
-     <section class="content">
-  <ul class="centered">
-    <li class="temphidden">Frameworks</li>
-    <li class="temphidden">Libraries</li>
-    <li class="temphidden">Post processors</li>
-    <li class="temphidden">Pre processors</li>
-    <li class="temphidden">Builds</li>
-    <li class="temphidden"></li>
-  </ul>
-</section>
-</div>
-
-<div class="slide intro large" style="background: hsl(260, 68%, 21%);">
-    <header><h1>Front End Engineering</h1></header>
-     <section class="content">
-  <ul class="centered">
-    <li class="temphidden">HTML</li>
-    <li class="temphidden">CSS</li>
-    <li class="temphidden">JavaScript</li>
-  </ul>
-</section>
-</div>
-
-
-<div class="slide intro large" style="background: hsl(260, 68%, 21%);">
-    <header><h1><span style="visibility: hidden">Front End</span> Engineering</h1></header>
-     <section class="content">
-  <ul class="centered">
-    <li>HTML</li>
-    <li>CSS</li>
-    <li>JavaScript</li>
-    <li class="temphidden">Tools</li>
-    <li class="temphidden">Communication</li>
-    <li class="temphidden">Relationships</li>
-  </ul>
-</section>
-</div>
-
-<div class="slide intro large" style="background: hsl(310, 68%, 21%);">
-    <header><h1>Front End <span style="visibility: hidden">Engineering</span></h1></header>
-<section class="content">
-  <ul class="centered">
-    <li class="temphidden">User experience</li>
-    <li class="temphidden">Accessibility</li>
-    <li class="temphidden">Performance</li>
-    <li class="temphidden">Security</li>
-    <li class="temphidden">Privacy</li>
-    <li class="temphidden">Internationalization</li>
-  </ul>
-</section>
-</div>
-
-
-<div class="slide intro large" style="background: hsl(310, 68%, 21%);">
-    <header><h1>Front End <span>Engineering</span></h1></header>
-<section class="content">
-  <ul class="centered">
-    <li>User experience</li>
-    <li>Accessibility</li>
-    <li>Performance</li>
-    <li>Security</li>
-    <li>Privacy</li>
-    <li>Internationalization</li>
-  </ul>
-</section>
-</div>
-
 <div class="slide"  style="background: center / 60% 80% no-repeat url(images/tightrope.svg) hsl(220, 68%, 21%);">
     <header><h1 style="opacity: 0.01">Engineering</h1></header>
 <section class="content" style="display: flex; align-items: center; justify-content: space-around; height: 50vh; text-align: center">
   <h1>User <br/>Experience</h1><h1>Developer<br/> Experience</h1>
 </section></div>
-
-
-
-<!-- react button -->
-<div class="slide invert" style="background: no-repeat url(images/react_button.jpg) white;" role="img" aria-description="React developer tools showing infinite nesting to create a button instead of using a semantic button">
-  <header>
-    <h1>Developer Experience</h1>
-  </header>
-</div>
-
-
-<!-- file size for visa js -->
-<div class="slide invert">
-  <header>
-    <h1  style="text-align: center">Developer Experience</h1>
-  </header>
-  <section class="content">
-    <img src="images/v7.png" style="min-height: 80vh;" alt="http headers for a javascript file that is 2.264M">
-  </section>
-</div>
-
-
-
-<div class="slide invert">
-  <header>
-    <h1  style="text-align: center">Developer Experience</h1>
-  </header>
-  <section class="content">
-    <img src="images/v7.png" style="min-height: 80vh;" alt="http headers for a javascript file that is 2.264M">
-  </section>
-</div>
-
-
-<div class="slide invert" style="background: left / contain no-repeat url(images/push.jpg) hsl(359, 0%, 96%);" role="img" aria-description="a really long, convoluted if statement with a mind bender pushing in the indentation">
-  <header>
-    <h1 style="text-align: center">Developer Experience</h1>
-  </header>
-  <section class="content">
-  </section>
-</div>
-
-<div class="slide intro large" style="background: left center / cover no-repeat url(images/eatcake.jpg) black;">
-    <header></header>
-<section class="content">
-  <ul class="centered">
-    <li class="invert_text temphidden">Developer Experience</li>
-    <li>User experience</li>
-    <li>Accessibility</li>
-    <li>Performance</li>
-    <li>Security</li>
-    <li>Privacy</li>
-    <li>Internationalization</li>
-  </ul>
-  <p style="text-align: right; margin-right: 4vw;">Image: Marcus Quigmire</p>
-</section>
-</div>
 
 <div class="slide normal" style="background-image: url(images/FF.png); background-size: cover">
 <section class="content" style="display: flex; flex-flow: column; justify-content: space-between; height: calc(100vh - 50px);">
@@ -247,17 +120,226 @@ Based on: http://instartlogic.github.com/fronteers
 </section>
 </div>
 
+<div class="slide intro large" style="background: hsl(250, 68%, 21%);">
+    <header><h1>Languages of the Web</h1></header>
+ <section class="content">
+  <ul class="bulleted">
+    <li class="temphidden">HTML</li>
+    <li class="temphidden">CSS</li>
+    <li class="temphidden">JavaScript</li>
+    <li class="temphidden">Other markup (XML, SVG, etc)</li>
+    <li class="temphidden">Media, etc.</li>
+  </ul>
+</section>
+</div>
 
-<div class="slide intro">
-  <h1 style="font-size: 8vw">Web Performance</h1>
-  <h2 style="font-size: 6.5vw;">"Fast to Load"</h2>
+
+<div class="slide intro large" style="background: hsl(270, 90%, 59%);">
+    <header><h1>Developer</h1></header> 
+</div>
+
+<div class="slide object" style="background-color: hsl(270, 90%, 59%);">
+  <object data="http://amiarealdeveloper.com/"></object>
+  <a href="http://amiarealdeveloper.com/" target="play" class="objectlink">Open in separate window</a>
+</div>
+
+<div class="slide intro large" style="background: hsl(300, 68%, 21%);">
+    <header><h1>Coding</h1></header>
+     <section class="content">
+  <ul class="bulleted">
+    <li class="temphidden">Frameworks</li>
+    <li class="temphidden">Libraries</li>
+    <li class="temphidden">Post processors</li>
+    <li class="temphidden">Pre processors</li>
+    <li class="temphidden">Build tools</li>
+    <li class="temphidden">3rd party scripts</li>
+    <li class="temphidden">APIs, widgets, etc.</li>
+  </ul>
+</section>
+</div>
+
+
+
+<div class="slide intro large" style="background: hsl(260, 68%, 21%);">
+    <header><h1>Front End Engineering</h1></header>
+     <section class="content">
+  <ul class="bulleted">
+    <li class="temphidden">HTML</li>
+    <li class="temphidden">CSS</li>
+    <li class="temphidden">JavaScript</li>
+    <li class="temphidden">Tools</li>
+    <li class="temphidden">Communication</li>
+    <li class="temphidden">Empathy</li>
+  </ul>
+</section>
 </div>
 
 
 
 
-<div class="slide tweet">
-  <blockquote class="twitter-tweet" data-lang="en"><q lang="en" dir="ltr">I remember when 3G was primary mobile speed. It was slow but still worked, so why now when my phone says 3G it becomes completely useless.</q>
+
+<div class="slide intro large" style="background: hsl(310, 68%, 21%);">
+    <header><h1>Front End <span style="visibility: hidden" aria-hidden="true">Engineering</span></h1></header>
+<section class="content">
+  <ul class="bulleted">
+    <li class="temphidden">User experience</li>
+    <li class="temphidden">Accessibility</li>
+    <li class="temphidden">Performance</li>
+    <li class="temphidden">Security</li>
+    <li class="temphidden">Privacy</li>
+    <li class="temphidden">Internationalization</li>
+  </ul>
+</section>
+</div>
+
+
+<div class="slide intro large" style="background: hsl(310, 68%, 21%);">
+    <header><h1>Front End <span>Engineering</span></h1></header>
+<section class="content">
+  <ul class="bulleted">
+    <li>User experience</li>
+    <li>Accessibility</li>
+    <li>Performance</li>
+    <li>Security</li>
+    <li>Privacy</li>
+    <li>Internationalization</li>
+  </ul>
+</section>
+</div>
+
+
+
+
+<!-- react button -->
+<div class="slide invert" style="background: 50% / contain no-repeat url(images/react_button.png) white; background-size: contain" role="img" aria-description="React developer tools showing infinite nesting to create a button instead of using a semantic button">
+  <header>
+    <h1>Developer Experience</h1>
+  </header>
+
+  <p style="text-align: right; margin-right: 4vw;">via @davidkpiano</p>
+</div>
+
+
+<!-- file size for visa js -->
+<div class="slide invert">
+  <header>
+    <h1  style="text-align: center">Developer Experience</h1>
+  </header>
+  <section class="content">
+    <img src="images/v7.png" style="min-height: 80vh;" alt="http headers for a javascript file that is 2.264M">
+  </section>
+</div>
+
+
+
+<div class="slide invert">
+  <header>
+    <h1  style="text-align: center">Developer Experience</h1>
+  </header>
+  <section class="content">
+    <img src="images/dcwater_httpheader2.png" style="min-height: 80vh;" alt="http headers for a CSS file that is 5MB and takes 14 seconds to download">
+
+  <p style="text-align: right; margin-right: 4vw;">via @</p>
+  </section>
+</div>
+
+
+<div class="slide invert" style="background: left / contain no-repeat url(images/push.jpg) hsl(359, 0%, 96%);" role="img" aria-description="a really long, convoluted if statement with a mind bender pushing in the indentation">
+  <header>
+  </header>
+  <section class="content">
+  </section>
+</div>
+
+<div class="slide intro large" style="background: left center / cover no-repeat url(images/eatcake.jpg) black;">
+    <header></header>
+<section class="content">
+  <ul class="bulleted">
+    <li class="temphidden">Developer Experience</li>
+    <li>User experience</li>
+    <li>Accessibility</li>
+    <li>Performance</li>
+    <li>Security</li>
+    <li>Privacy</li>
+    <li>Internationalization</li>
+  </ul>
+  <p style="text-align: right; margin-right: 4vw;">Image: Marcus Quigmire</p>
+</section>
+</div>
+
+
+
+
+<div class="slide intro large" style="background: left center / cover no-repeat url(images/eatcake.jpg) black;">
+    <header></header>
+<section class="content" style="display: flex">
+  <ul class="bulleted">
+    <li class="temphidden">User Experience</li>
+    <li>User experience</li>
+    <li>Accessibility</li>
+    <li>Performance</li>
+    <li>Security</li>
+    <li>Privacy</li>
+    <li>Internationalization</li>
+  </ul>
+  <ul class="bulleted second">
+    <li class="temphidden">Developer Experience</li>
+    <li>Frameworks</li>
+    <li>Libraries</li>
+    <li>Post processors</li>
+    <li>Pre processors</li>
+    <li>3rd party scripts</li>
+    <li>APIs, widgets, etc.</li>
+  </ul>
+</section>
+</div>
+
+
+
+<div class="slide intro"  style="background: hsl(320, 90%, 59%);">
+  <h1 style="font-size: 8vw">Web Performance</h1>
+  <h2 style="font-size: 6.5vw;">"Fast to Load"</h2>
+</div>
+
+
+<div class="slide"  style="background: hsl(220, 90%, 59%);">
+  <header>
+    <h1>Performance</h1>
+  </header>
+  <section class="content">
+  <ul class="bulleted">
+    <li>Time to Load</li>
+    <li>Time until usable</li>
+    <li>Jitter</li>
+    <li>Responsiveness</li>
+    <li>Smoothness</li> 
+    <li>Battery Life</li>
+  </ul></section>
+</div>
+
+
+<div class="slide" style="background: hsl(340, 90%, 59%);">
+  <header>
+    <h1>Web Performance</h1>
+  </header>
+  <section class="content">
+  <dl>
+  <dt>Download</dt>
+  <dd class="temphidden"># of resources: images, fonts, HTML, scripts, and CSS loaded</dd>
+  <dt class="temphidden">Parse</dt>
+  <dd class="temphidden">File size of above resources</dd>
+  <dt class="temphidden">Execute</dt>
+  <dd class="temphidden">Parsing &amp; Painting</dd>
+  <dt class="temphidden">Perceived Performance</dt>
+  <dd class="temphidden">Users perception of the speed of the load and reaction time.</dd> 
+  </dl>
+  <div>
+</div>
+  </section>
+</div>
+
+<div class="slide tweet" style="background: hsl(240, 90%, 59%);">
+  <blockquote class="twitter-tweet" data-lang="en"><q lang="en" dir="ltr">I remember when 3G was primary mobile speed. It was slow but still worked, so why now when my phone says 3G it becomes completely useless?</q>
     <cite>&mdash; Stephen Gundee     </cite>
 </blockquote>
 </div>
@@ -266,17 +348,18 @@ Based on: http://instartlogic.github.com/fronteers
 <div class="slide invert">
 <p>Average internet connection speed in the US <br/>
 from 2007 to 2017 (in Mbps), by quarter</p>
-<img src="images/connection.png" alt="US connection speed has gone up from 2.5Mbps to 18.5Mbps over the past 10 years">
+<img src="images/connection.png" alt="US connection speed has gone up from 2.5Mbps to 18.5Mbps over the past 10 years">4x
+
 </div>
 
 <div class="slide invert">
 <p>Total Kilobytes: Median site size of websites from 2011 to 2017 </p>
-<img src="images/kb.svg" alt="Median websites more than tripled in size over the past 8 years">
+<img src="images/kb.svg" alt="Median websites more than tripled in size over the past 8 years">3x
 </div>
 
 <div class="slide invert">
 <p>Total Kilobytes: Median site size of JavaScript from 2011 to 2017 </p>
-<img src="images/javascript.svg" alt="Median JavaScript weights have more than quadrupled in size over the past 8 years">
+<img src="images/javascript.svg" alt="Median JavaScript weights have more than quadrupled in size over the past 8 years">4x
 </div>
 
 
@@ -293,6 +376,15 @@ from 2007 to 2017 (in Mbps), by quarter</p>
 <section content="content">
   <img src="images/visa_network.png" alt="timeline of Visa loading including a 5MB CSS file that blocks downloading for 14 seconds" style="margin-top: -60px;">
     <a href="https://www.webpagetest.org/result/180930_RS_2d7278bf4409aa842e06cbd2833f5ae1/3/details/#waterfall_view_step1" class="objectlink" >WebPage Test</a>
+</section>
+</div>
+
+
+<div class="slide invert">
+<header><h1>Battery</h1></header>
+<section content="content">
+  <img src="images/battery-life.png" alt="">
+    <a href="https://www.phonearena.com/news/Smartphone-battery-life-over-the-years-A-surprising-study_id82315" class="objectlink" >Phone Arena Article</a>
 </section>
 </div>
 
@@ -334,6 +426,53 @@ from 2007 to 2017 (in Mbps), by quarter</p>
       <p>There is real empirical evidence that substantiates the fact that speed is more than a feature. It’s a requirement.</p>
       <p><cite><a href="http://www.slideshare.net/carsonified/fred-wilson-the-10-golden-principles-for-successful-web-apps">Fred Wilson</a></cite></p>
     </section>
+</div>
+
+
+
+
+<div class="slide tweet">
+<blockquote class="twitter-tweet" data-lang="en">Good performance is an asset. <br/>Bad performance is a liability. 
+</blockquote>
+</div>
+
+
+<div class="slide tweet">
+<blockquote class="twitter-tweet" data-lang="en">Poorly developed sites/apps <br/>can have real life consequences for users.</blockquote>
+<div class="dollar">€</div>
+<div class="dollar">£</div>
+<div class="dollar">¥</div>
+<div class="dollar">₹</div>
+<div class="dollar">$</div>
+<div class="dollar">₤</div>
+<div class="dollar">₱</div>
+<div class="dollar">＄</div>
+<div class="dollar">$</div>
+<div class="dollar">$</div>
+<div class="dollar">₤</div>
+<div class="dollar">¥</div>
+<div class="dollar">€</div>
+<div class="dollar">£</div>
+<div class="dollar">₹</div>
+<div class="dollar">₱</div>
+<div class="dollar">＄</div>
+<div class="dollar">$</div>
+<div class="dollar">€</div>
+<div class="dollar">₤</div>
+<div class="dollar">£</div>
+<div class="dollar">$</div>
+<div class="dollar">¥</div>
+<div class="dollar">₹</div>
+<div class="dollar">₱</div>
+<div class="dollar">€</div>
+<div class="dollar">£</div>
+<div class="dollar">₱</div>
+<div class="dollar">$</div>
+<div class="dollar">₤</div>
+<div class="dollar">＄</div>
+<div class="dollar">¥</div>
+<div class="dollar">$</div>
+<div class="dollar">₹</div>
 </div>
 
 
