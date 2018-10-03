@@ -53,6 +53,54 @@ Based on: http://instartlogic.github.com/fronteers
   font-size: 1.25em;
   color: magenta;
 }
+video {
+    width: calc(45vw - 100px);
+    min-width: 260px;
+}
+.flex {
+  display: flex;
+  list-style-type: none;
+}
+.takeSpace {
+  height: calc(100vh - 6em);
+}
+.notTheSame {
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+  }
+.notTheSame h2 {
+  text-align: center;
+  padding: 0 20px;
+  font-size: 10vh;
+}
+.list-of-images ul, 
+.list-of-images ol {
+    display: flex;
+    list-style-type: none;
+    align-content: flex-start;
+    margin: 0;
+}
+.list-of-images li {
+    min-width: 13vw;
+    flex: 0 0 150px;
+    text-align: center;
+    font-size: 0.5rem;
+    line-height: 1;
+}
+.list-of-images ol li {
+    font-size: 1rem;
+}
+.callout {
+  color: red; 
+  border: 1px solid; 
+  border-radius: 5px; 
+  padding: 5px 20px;
+  position: absolute; 
+  top: 50%; 
+  left: 30%; 
+  transform: rotate(-30deg);
+}
 </style>
 </head>
 
@@ -128,6 +176,9 @@ Based on: http://instartlogic.github.com/fronteers
 </section>
 </div>
 
+
+
+
 <div class="slide intro large" style="background: hsl(250, 68%, 21%);">
     <header><h1>Languages of the Web</h1></header>
  <section class="content">
@@ -142,6 +193,11 @@ Based on: http://instartlogic.github.com/fronteers
 </div>
 
 
+<div class="slide intro large" style="background: black;">
+    <header><h1>Coding &amp; Engineering</h1></header>
+  </div>
+
+
 <div class="slide intro large" style="background: hsl(270, 90%, 59%);">
     <header><h1>Developer</h1></header> 
 </div>
@@ -152,10 +208,6 @@ Based on: http://instartlogic.github.com/fronteers
 </div>
 
 
-
-<div class="slide intro large" style="background: black;">
-    <header><h1>Coding &amp; Engineering</h1></header>
-  </div>
 
 <div class="slide invert" style="background: left / contain no-repeat url(images/push.jpg) hsl(359, 0%, 96%);" role="img" aria-description="a really long, convoluted if statement with a mind bender pushing in the indentation">
   <header>
@@ -296,86 +348,6 @@ Based on: http://instartlogic.github.com/fronteers
 
 
 
-<div class="slide intro"  style="background: hsl(320, 90%, 59%);">
-  <h2 style="font-size: 6.5vw;">"Fast to Load"</h2>
-  <h1 style="font-size: 8vw">Web Performance</h1>
-</div>
-
-
-<div class="slide"  style="background: hsl(220, 90%, 59%);">
-  <header>
-    <h1>Performance</h1>
-  </header>
-  <section class="content">
-  <ul class="bulleted">
-    <li>Time to Load</li>
-    <li>Time until usable</li>
-    <li>Jitter</li>
-    <li>Responsiveness</li>
-    <li>Smoothness</li> 
-    <li>Battery Life</li>
-  </ul></section>
-</div>
-
-
-<div class="slide" style="background: hsl(340, 90%, 59%);">
-  <header>
-    <h1>Web Performance</h1>
-  </header>
-  <section class="content">
-  <dl>
-  <dt>Download</dt>
-  <dd class="temphidden"># of resources: images, fonts, HTML, scripts, and CSS loaded</dd>
-  <dt class="temphidden">Parse</dt>
-  <dd class="temphidden">File size of above resources</dd>
-  <dt class="temphidden">Execute</dt>
-  <dd class="temphidden">Parsing &amp; Painting</dd>
-  <dt class="temphidden">Perceived Performance</dt>
-  <dd class="temphidden">Users perception of the speed of the load and reaction time.</dd> 
-  </dl>
-  <div>
-</div>
-  </section>
-</div>
-
-
-
-<div class="slide tweet" style="background: hsl(240, 90%, 59%);">
-  <blockquote class="twitter-tweet" data-lang="en"><q lang="en" dir="ltr">I remember when 3G was primary mobile speed. It was slow but still worked, so why now when my phone says 3G it becomes completely useless?</q>
-    <cite>&mdash; Stephen Gundee     </cite>
-</blockquote>
-</div>
-
-
-<div class="slide invert">
-<p>Average internet connection speed in the US <br/>
-from 2007/2011 to 2017 (in Mbps), by quarter <span style="opacity: 0.3">4x</span></p>
-<img src="images/connection.png" alt="US connection speed has gone up from 2.5Mbps to 18.5Mbps over the past 10 years" style="height: calc(100vh - 6em);">
-
-</div>
-
-<div class="slide invert">
-<p>Total Kilobytes: Median site size of websites from 2011 to 2017 <span style="opacity: 0.3">3.5x</span></p>
-<img src="images/kb.svg" alt="Median websites more than tripled in size over the past 8 years" style="height: calc(100vh - 6em);">
-</div>
-
-<div class="slide invert">
-<p>Total Kilobytes: Median site size of JavaScript from 2011 to 2017 <span style="opacity: 0.3">4x</span></p>
-<img src="images/javascript.svg" alt="Median JavaScript weights have more than quadrupled in size over the past 8 years"  style="height: calc(100vh - 6em);">
-</div>
-
-
-
-
-<div class="slide"  style="background: center / 60% 80% no-repeat url(images/tightrope.svg) hsl(280, 68%, 21%);">
-    <header><h1 style="opacity: 0.01">Engineering</h1></header>
-<section class="content" style="display: flex; align-items: center; justify-content: space-between; height: 50vh; text-align: center">
-  <h1>User <br/>Experience</h1><h1>Developer<br/> Experience</h1>
-</section></div>
-
-
-
-
 
 <div class="slide intro"  style="background:  hsl(360, 68%, 21%);">
     <header>
@@ -386,64 +358,20 @@ from 2007/2011 to 2017 (in Mbps), by quarter <span style="opacity: 0.3">4x</span
 
 
 
-<!-- file size for visa js -->
-<div class="slide invert">
-  <header>
-    <h1  style="text-align: center">File Size</h1>
-  </header>
-  <section class="content">
-    <img src="images/v7.png" style="min-height: 80vh;" alt="http headers for a javascript file that is 2.264M">
-  </section>
+
+
+<div class="slide"  style="background: center / 60% 80% no-repeat url(images/tightrope.svg) hsl(190, 68%, 21%);">
+    <header><h1 style="opacity: 0.01">Engineering</h1></header>
+<section class="content" style="display: flex; align-items: center; justify-content: space-between; height: 50vh; text-align: center">
+  <h1>Web <br/>Performance</h1><h1>Developer<br/> Experience</h1>
+</section></div>
+
+
+
+<div class="slide intro"  style="background: hsl(320, 90%, 59%);">
+  <h2 style="font-size: 6.5vw;">"Fast to Load"</h2>
+  <h1 style="font-size: 8vw">Web Performance</h1>
 </div>
-
-
-
-<div class="slide invert">
-<header><h1>JavaScript</h1></header>
-<section content="content">
-  <img src="images/visa_bytes.png" alt="timeline of Visa loading including a 5MB CSS file that blocks downloading for 14 seconds" class="temphidden">
-   &nbsp; <img src="images/visa_js.png" alt="timeline of DCWater loading including a 5MB CSS file that blocks downloading for 14 seconds">
-</section>
-</div>
-
-<div class="slide invert">
-<header><h1>JavaScript</h1></header>
-<section content="content">
-  <img src="images/visa_network.png" alt="timeline of Visa loading including a 5MB CSS file that blocks downloading for 14 seconds" style="margin-top: -60px;">
-    <a href="https://www.webpagetest.org/result/180930_RS_2d7278bf4409aa842e06cbd2833f5ae1/3/details/#waterfall_view_step1" class="objectlink" >WebPage Test</a>
-</section>
-</div>
-
-
-<div class="slide invert">
-  <header>
-    <h1  style="text-align: center">File Size</h1>
-  </header>
-  <section class="content">
-    <img src="images/dcwater_httpheader2.png" style="min-height: 80vh;" alt="http headers for a CSS file that is 5MB and takes 14 seconds to download">
-  </section>
-</div>
-
-
-
-<div class="slide invert">
-<header><h1>CSS</h1></header>
-<section content="content">
-  <img src="images/dcwater.png" alt="timeline of DCWater loading including a 5MB CSS file that blocks downloading for 14 seconds">
-  <a href="https://www.webpagetest.org/result/180930_S7_483e7e29694ebd1ba9b1dcfb8f7781a3/1/details/#waterfall_view_step1" class="objectlink" >WebPage Test</a>
-</section>
-</div>
-
-
-
-<div class="slide intro"  style="background:  hsl(300, 68%, 21%);">
-<header><h1>Understand your dependencies and <br/>why you're adding them.</h1>
-  <div style="font-size: 34vh">⚖</div>
-  <p>
-</header>
-</div>
-
-  
 
 
 
@@ -516,17 +444,6 @@ from 2007/2011 to 2017 (in Mbps), by quarter <span style="opacity: 0.3">4x</span
 
 
 
-<div class="slide">
-  <header><h1></h1></header>
-    <section class="content"><blockquote><p>Speed is more than a feature. Speed is the most important feature. If your application is slow, people won’t use it... </p>
-      <p>There is real empirical evidence that substantiates the fact that speed is more than a feature. It’s a requirement.</p>
-      <p><cite><a href="http://www.slideshare.net/carsonified/fred-wilson-the-10-golden-principles-for-successful-web-apps">Fred Wilson</a></cite></p>
-    </section>
-</div>
-
-
-
-
 <div class="slide tweet">
   <blockquote class="twitter-tweet">
     <q lang="en" dir="ltr">Nothing pisses me off faster than a slow website. By the time the page loads, my patience is gone &amp; I don&#39;t wanna buy it anymore.</q>
@@ -536,20 +453,455 @@ from 2007/2011 to 2017 (in Mbps), by quarter <span style="opacity: 0.3">4x</span
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
 
+
+
+<div class="slide tweet">
+  <blockquote class="twitter-tweet" lang="en">Performance measurements are objective.<br/>Human perception of performance is subjective.</blockquote>
+</div>
+
+
+
+
+<script>
+  function playVideos() {
+    for(var count = 0; count < arguments.length; count++) {
+      document.getElementById(arguments[count]).play()
+    }
+  }
+  function explainSP(){
+    playVideos('test1', 'test2');
+    setTimeout(function() {
+      stopVideos('test1', 'test2');
+      }, 7800);
+  }
+  function stopVideos() {
+    for(var count = 0; count < arguments.length; count++) {
+      document.getElementById(arguments[count]).pause();
+    }
+  }
+</script>
+   
+
+<!-- What is FAST -->
+<div class="slide invert">
+  <header>
+    <h1>What is Fast?</h1>
+  </header>
+  <section>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2200 1200" version="1.1" style="width: 90vw"> <title>What is fast?</title> <style> .findings rect { stroke: #333; stroke-width: 1px; width: 15px; fill: #226DAA; } .findings text { } .grid rect{ stroke: #ccc; stroke-width:2px; stroke-linecap:butt; stroke-linejoin:miter; stroke-opacity:1; fill: #fff; } text { font-size: 40px; font-family:sans-serif; } .values text { font-size: 20px; } .rotate { transform: rotate(-90deg); } </style> 
+<g transform="translate(-20,-90)">
+  <g class="grid" transform="translate(31,-185)">  
+    <rect width="2100" height="2" y="500" x="50" /> 
+  </g> 
+  <g class="findings" transform="translate(80,-185)">
+    <rect height="15" width="15"  y="490" x="240" /> 
+    <text x="180" y="440" class="temphidden">Hello World</text>
+    <rect height="15" width="15" y="490" x="1820" class="temphidden" /> 
+    <text x="1700" y="440" class="temphidden">Lord of the Rings</text> 
+  </g> 
+  <g class="values"> 
+    <text x="100" y="390">0 s</text> 
+    <text x="200" y="390">1 s</text> 
+    <text x="300" y="390">2 s</text> 
+    <text x="400" y="390">3 s</text> 
+    <text x="500" y="390">4 s</text> 
+    <text x="600" y="390">5 s</text> 
+    <text x="700" y="390">6 s</text> 
+    <text x="800" y="390">7 s</text> 
+    <text x="900" y="390">8 s</text> 
+    <text x="1000" y="390">9 s</text> 
+    <text x="1100" y="390">10 s</text> 
+    <text x="1200" y="390">11 s</text> 
+    <text x="1300" y="390">12 s</text> 
+    <text x="1400" y="390">13 s</text> 
+    <text x="1500" y="390">14 s</text> 
+    <text x="1600" y="390">15 s</text> 
+    <text x="1700" y="390">16 s</text> 
+    <text x="1800" y="390">17 s</text> 
+    <text x="1900" y="390">18 s</text> 
+    <text x="2000" y="390">19 s</text> 
+    <text x="2100" y="390">20 s</text>
+  </g> 
+  <g class="axes"> 
+    <text x="600" y="460">Time to Load</text> 
+  </g>
+</g> 
+</svg> 
+  
+</section>
+</div>
+
+
+
+<!-- What is FAST -->
+<div class="slide invert">
+  <header>
+    <h1>What is Load Time?</h1>
+  </header>
+  
+<img src="images/what_is_fast.svg" alt="a made up histogram in a bell curve shape with a long tail" style="height: 120vh">
+
+</div>
+
+<!-- DO THIS -->
 <div class="slide">
-  <header><h1>Point being.....</h1></header>
+  <header>
+    <h1>Which feels faster?</h1>
+  </header>
+  <section>
+
+  <p class="center"><button onclick="explainSP();">Play</button>
+  <div class="testvids flex">
+    <section>
+      <video src="videos/orient.m4v" id="test1"></video>
+      
+    </section>
+    <section>
+      <video src="videos/auto.m4v" id="test2"></video>
+    </section>
+  </div>
+</section>
+</div>
+
+
+
+<div class="slide">
+  <header>
+    <h1>Load Time <span class="">v. Visually Complete</span></h1>
+  </header>
+  <section>
+  <p class="center">Load Times: 3,729ms v. 3,768ms <button onclick="playVideos('video1', 'video2')">Play</button>
+ </p><p class="center temphidden">Visually Complete: 16s v.
+8.7s </p>
+  <div style="display: flex; justify-content: space-between;">
+    <section>
+      <video src="videos/staples.mp4" id="video1"></video>
+      Staples
+    </section>
+    <section>
+      <video src="videos/wolfermans.mp4" id="video2"></video>
+      Wolferman's
+    </section>
+  </div>
+  </section>
+
+</div>
+
+<div class="slide wpt_fake">
+<header><h1>Active v. Passive Waiting</h1></header>
+<section class="list-of-images">
+<ol>
+<li>3.0s</li><li>4.0s</li><li>5.0s</li><li>6.0s</li><li>7.0s</li><li>8.0s</li>
+</ol>
+
+<ul>
+<li><img alt="" src="files/mlw/thumbnail.jpeg"><br>0%</li>
+<li><img alt="" src="files/mlw/thumbnail1.jpeg"><br>56%</li>
+<li><img alt="" src="files/mlw/thumbnail2.jpeg"><br>56%</li>
+<li><img alt="" src="files/mlw/thumbnail3.jpeg"><br>67%</li>
+<li><img alt="" src="files/mlw/thumbnail4.jpeg"><br>67%</li>
+<li><img alt="" src="files/mlw/thumbnail5.jpeg"><br>100%</li></ul>
+
+<ul>
+
+
+<li><img alt="" src="files/mlw/thumbnail.jpeg"><br>0%</li>
+<li><img alt="" src="files/mlw/thumbnail.jpeg"><br>56%</li>
+<li><img alt="" src="files/mlw/thumbnail.jpeg"><br>66%</li>
+<li><img alt="" src="files/mlw/thumbnail.jpeg"><br>66%</li>
+<li><img alt="" src="files/mlw/thumbnail5.jpeg"><br>100%</li>
+<li></li></ul>
+</section>
+</div>
+
+
+
+<div class="slide">
+  <header>
+    <h1></h1>
+  </header>
+  <section class="content">
+    <ol>
+      <li>Happening?</li>
+<li>Useful</li>
+<li>Usable</li>
+</ol>
+  </section>
+</div>
+
+
+
+<div class="slide invert">
+  <header>
+    <h1>Speed Index</h1>
+  </header>
+  <section>
+    <p>
+    Aggregate function on quickness of above-the-fold visual completion:</p>
+    <ul class="flex">
+      <li><img src="images/visualprogress_both.gif" alt="speed index graph for both sites" style="width: 30vw"></li>
+      <li><img src="images/visualprogress_both_staples.gif" alt="speed index graph for staples" style="width: 30vw"><span class="si">4,462</span></li>
+      <li><img src="images/visualprogress_both_wolf.gif" alt="speed index graph for wolfermans" style="width: 30vw"><span class="si">5,902</span></li>
+    </ul>
+    <p style="text-align: center"><img src="images/si.png" alt="equation for speed index" style="width: 30vw"></p>
+  </section>
+</div>
+
+
+
+<div class="slide"  style="background: hsl(220, 90%, 59%);">
+  <header>
+    <h1>Performance</h1>
+  </header>
+  <section class="content">
+  <ul class="bulleted">
+    <li>Time to Load</li>
+    <li>Time until usable</li>
+    <li>Jitter</li>
+    <li>Responsiveness</li>
+    <li>Smoothness</li> 
+    <li>Battery Life</li>
+  </ul></section>
+</div>
+
+
+<div class="slide" style="background: hsl(340, 90%, 59%);">
+  <header>
+    <h1>Web Performance</h1>
+  </header>
+  <section class="content">
+  <dl>
+  <dt>Download</dt>
+  <dd class="temphidden"># of resources: images, fonts, HTML, scripts, and CSS loaded</dd>
+  <dt class="temphidden">Parse</dt>
+  <dd class="temphidden">File size of above resources</dd>
+  <dt class="temphidden">Execute</dt>
+  <dd class="temphidden">Parsing &amp; Painting</dd>
+  <dt class="temphidden">Perceived Performance</dt>
+  <dd class="temphidden">Users perception of the speed of the load and reaction time.</dd> 
+  </dl>
+  <div>
+</div>
+  </section>
+</div>
+
+<div class="slide">
+  <header>
+    <h1>What's involved in a page load?</h1>
+  </header>
+  <section>
+<ul class="flex arrow">
+  <li>HTTP request</li>
+  <li>DNS lookup</li>
+  <li>TCP Connect</li>
+  <li>HTTP request sent</li>
+  <li>Server Magic</li>
+  <li>Server Sends response</li>
+  <li>Browser receives/<wbr>parses response</li>
+  <li>Resources fetched from Cache</li>
+  <li>Parse &amp; Execute Scripts</li>
+  <li>Render Site</li>
+</ul>
+<ul style="margin-top: 2em">
+  <li>Each request: go back to DNS lookup or HTTP Request</li>
+  <li>Stylesheets are blocking</li>
+  <li>Scripts are blocking.</li>
+</ul>
+</section>
+</div>
+
+<div class="slide tweet" style="background: hsl(240, 90%, 59%);">
+  <blockquote class="twitter-tweet" data-lang="en"><q lang="en" dir="ltr">I remember when 3G was primary mobile speed. It was slow but still worked, so why now when my phone says 3G it becomes completely useless?</q>
+    <cite>&mdash; Stephen Gundee     </cite>
+</blockquote>
+</div>
+
+
+<div class="slide invert">
+<p>Average internet connection speed in the US <br/>
+from 2007/2011 to 2017 (in Mbps), by quarter <span style="opacity: 0.3">4x</span></p>
+<img src="images/connection.png" alt="US connection speed has gone up from 2.5Mbps to 18.5Mbps over the past 10 years" class="takeSpace">
+
+</div>
+
+<div class="slide invert">
+<p>Total Kilobytes: Median site size of websites from 2011 to 2017 <span style="opacity: 0.3">3.5x</span></p>
+<img src="images/kb.svg" alt="Median websites more than tripled in size over the past 8 years" class="takeSpace">
+</div>
+
+<div class="slide invert">
+<p>Total Kilobytes: Median site size of JavaScript from 2011 to 2017 <span style="opacity: 0.3">4x</span></p>
+<img src="images/javascript.svg" alt="Median JavaScript weights have more than quadrupled in size over the past 8 years"  class="takeSpace">
+<h1 class="temphidden callout">Compressed</h1>
+</div>
+
+<div class="slide">
+  <header>
+    <h1>Median page JavaScript</h1>
+  </header>
+  <section class="content">
+    <ul>
+      <li>Downloads 350Kb of Javascript</li>
+      <li>Uncompressed to over 1MB of JavaScript</li>
+      <li>Taking 15s until interactive</li>
+      <li>Taking upto 36s on mobile devices</li>
+  </section>
+</div>
+
+<!--
+<div class="slide"  style="background: center / 60% 80% no-repeat url(images/tightrope.svg) hsl(280, 68%, 21%);">
+    <header><h1 style="opacity: 0.01">Engineering</h1></header>
+<section class="content" style="display: flex; align-items: center; justify-content: space-between; height: 50vh; text-align: center">
+  <h1>User <br/>Experience</h1><h1>Developer<br/> Experience</h1>
+</section></div>-->
+
+
+<div class="slide" style="background: center / 60% 80% no-repeat url(images/scale.svg) hsl(280, 68%, 21%);">
+
+     <h1 style="position: absolute; left: 10vw; top: 40%">User <br/>Experience</h1>
+     <h1 style="position: absolute; right: 10vw; top: 70%">Developer<br/> Experience</h1>
+     <h1 class="temphidden callout" style="font-size: 24vh; top: 25vh">R D D</h1>
+</div>
+
+
+
+<!-- file size for visa js -->
+<div class="slide invert">
+  <header>
+    <h1  style="text-align: center">File Size</h1>
+  </header>
+  <section class="content">
+    <img src="images/v7.png" style="min-height: 80vh;" alt="http headers for a javascript file that is 2.264M">
+  </section>
+</div>
+
+
+
+<div class="slide invert">
+<header><h1>JavaScript</h1></header>
+<section content="content">
+  <img src="images/visa_bytes.png" alt="timeline of Visa loading including a 5MB CSS file that blocks downloading for 14 seconds" class="temphidden">
+   &nbsp; <img src="images/visa_js.png" alt="timeline of DCWater loading including a 5MB CSS file that blocks downloading for 14 seconds">
+</section>
+</div>
+
+<div class="slide invert">
+<header><h1>JavaScript</h1></header>
+<section content="content">
+  <img src="images/visa_network.png" alt="timeline of Visa loading including a 5MB CSS file that blocks downloading for 14 seconds" style="margin-top: -60px;">
+    <a href="https://www.webpagetest.org/result/180930_RS_2d7278bf4409aa842e06cbd2833f5ae1/3/details/#waterfall_view_step1" class="objectlink" >WebPage Test</a>
+</section>
+</div>
+
+<div class="slide intro"  style="background:  hsl(200, 68%, 21%);">
+<header class="notTheSame">
+  <h2>JavaScript<br/>Bytes</h2>
+  <h2>!==</h2>
+  <h2>Media<br/>Bytes</h2>
+</header>
+</div>
+
+
+<div class="slide">
+     <section class="content">
+
+
+<h2>JavaScript</h2>
+<ul class="">
+<li><em>Render cost:</em> JS (and CSS <strong title="can be as expensive to render as">and images</strong>)</li>
+<li>JS (download, parsing &amp; executing) </li>
+<li><em title="(like XMLHttpRequest)">Dynamic JS:</em> ⬆ rendering cost (can't be cached). </li>
+<li>AJAX: waking up the radio communications</li>
+</ul>
+
+    </section>
+</div>
+
+
+
+<div class="slide">
+  <header><h1>JavaScript!</h1></header>
     <section class="content">
+<ul>
+<li>All scripts loaded and parsed (even if not used)</li>
+<li>Reduce JS to only what is needed</li>
+<li>Are libraries really necessary?
+<ul>
+  <li>Include only functions used by page</li>
+  <li>Original Goal: Equalize across browsers</li>
+<li>Simplify or increase complexity?</li>
+<li>Increase energy use.</li>
+<li><a href="http://estelle.github.com/jsframeworks">You don't need a framework for that</a></li></ul></li>
+<li>Don't let 3rd party scripts be your SPOF </ul>
+   </section>
+ </div>
+
+
+
+<div class="slide invert">
+  <header>
+    <h1  style="text-align: center">File Size</h1>
+  </header>
+  <section class="content">
+    <img src="images/dcwater_httpheader2.png" style="min-height: 80vh;" alt="http headers for a CSS file that is 5MB and takes 14 seconds to download">
+  </section>
+</div>
+
+
+
+<div class="slide invert">
+<header><h1>CSS</h1></header>
+<section content="content">
+  <img src="images/dcwater.png" alt="timeline of DCWater loading including a 5MB CSS file that blocks downloading for 14 seconds">
+  <a href="https://www.webpagetest.org/result/180930_S7_483e7e29694ebd1ba9b1dcfb8f7781a3/1/details/#waterfall_view_step1" class="objectlink" >WebPage Test</a>
+</section>
+</div>
+
+
+<div class="slide">
+  <header><h1>Goal:</h1>
+    <section class="content">
+      <p>Decrease ... </p>
       <ol class="large">
         <li>size of requests</li>
         <li>number of requests</li>
         <li>number of DNS lookups</li>
+        <li>impact of your scripts</li>
+      </ol>
+      <p>Increase ... </p>
+      <ol class="large">
+        <li>semantic HTML</li>
+        <li>thinking about front end engineering requirements</li>
       </ol>
     </section>
 </div>
 
 
 
-<
+<div class="slide intro"  style="background:  hsl(300, 68%, 21%);">
+<header><h1>Understand your dependencies and <br/>why you're adding them.</h1>
+  <div style="font-size: 30vh">⚖</div>
+  <p style="opacity: 0.1">full-stack/php</p>
+</header>
+</div>
+
+
+
+
+
+<div class="slide intro"  style="background: hsl(320, 90%, 59%);">
+  <h2 style="font-size: 6.5vw;">"Fast to Code"</h2>
+  <h1 style="font-size: 8vw">Engineering Performance</h1>
+</div>
+
+
+<div class="slide" style="background: center / 60% 80% no-repeat url(images/scale.svg) hsl(200, 68%, 21%);">
+
+     <h1 style="position: absolute; left: 20vw; top: 45%">Cost</h1>
+     <h1 style="position: absolute; right: 20vw; top: 60%">Benefit</h1>
+</div>
+
+
 <div class="slide intro">
   <header><h1 style="font-size: 3rem; margin: 100px auto 40px;">Responsive Images</h1></header>
     <section class="content"><p>It's more than just making them squishy!</p>
@@ -685,24 +1037,11 @@ from 2007/2011 to 2017 (in Mbps), by quarter <span style="opacity: 0.3">4x</span
           </ol>
         </section>
     </div>
- <div class="slide resizeimg">
-   <header><h1>CPU used to decode images</h1></header>
-     <section class="content">
 
-      <p>Scaled: 1,850 milliseconds</p>
-      <img src="img/bad-trimmed-2_resize_image.png">
 
-      <p>Right-sized: 625 milliseconds</p>
-      <img src="img/good-trimmed-2_resize_image.png">
-<ul>
-  <li>blue = CPU used to decode</lu>
-    <li>green = FPS (more is better)</li>
-    <li>purple = rendering</li>
-  </ul>
-  <a class="objectlink" href="http://physicsoffast.io/demos/">PhysicsOfFast</a>
-    <footer><a href="https://twitter.com/tobint">Tobin Titus, Microsoft</a></footer>
-     </section>
- </div>
+
+
+
 
 
 <div class="slide tweet">
@@ -712,52 +1051,21 @@ from 2007/2011 to 2017 (in Mbps), by quarter <span style="opacity: 0.3">4x</span
 </div>
 
 
-
-<div class="slide">
-     <section class="content">
-
-
-<h2>JavaScript</h2>
-<ul class="">
-<li><em>Render cost:</em> JS (and CSS <strong title="can be as expensive to render as">and images</strong>)</li>
-<li>JS (download, parsing &amp; executing) </li>
-<li><em title="(like XMLHttpRequest)">Dynamic JS:</em> ⬆ rendering cost (can't be cached). </li>
-<li>AJAX: waking up the radio communications</li>
-</ul>
-
-    </section>
+<div class="slide invert">
+<header><h1>Battery</h1></header>
+<section content="content">
+  <img src="images/battery-life.png" alt="">
+    <a href="https://www.phonearena.com/news/Smartphone-battery-life-over-the-years-A-surprising-study_id82315" class="objectlink" >Phone Arena Article</a>
+</section>
 </div>
 
-
-
-<div class="slide">
-  <header><h1>JavaScript!</h1></header>
-    <section class="content">
-<ul>
-<li>All scripts loaded and parsed (even if not used)</li>
-<li>Reduce JS to only what is needed</li>
-<li>Are libraries really necessary?
-<ul>
-  <li>Include only functions used by page to reduce
-
-energy use.</li>
-  <li>Goal of most libraries is equalize across browsers <br> (not necessry in mobile space)</li>
-<li>Libraries simplify web
-
-development, but increase energy use.</li>
-<li><a href="http://estelle.github.com/jsframeworks">You don't need a framework for that</a></li></ul></li>
-<li>Don't let 3rd party scripts be your SPOF </ul>
-   </section>
- </div>
-
-
 <!-- Battery consumption -->
-<div class="slide" style="background-image:url(images/batteries.jpg); background-size: cover;">
+<div class="slide invert" style="background-image:url(images/batteries.jpg); background-size: cover;">
      <header>
       <h1 style="color: #ffffff;">Battery Consumption</h1>
      </header>
      <section>
-     <div style="background-color: rgba(255,255,255,0.8); padding:20px;  margin-bottom: 40px; ">
+     <div style="background-color: rgba(255,255,255,0.9); padding:20px;  margin-bottom: 40px; border-radius: 10px; font-size: 1.5em;">
      <p>CPU Drains the battery. Avoid using it!</p>
      <ul>
       <li>Avoid Reflows (and repaints)</li>
@@ -776,30 +1084,6 @@ development, but increase energy use.</li>
 
 
 
-<div class="slide">
- <header><h1>Memory</h1></header>
- <section>
-    <table class="rowed">
-    <thead>
-    <tr>
-        <th>Device</th>
-        <th>Memory</th><th></th>
-    </tr>
-    </thead>
-    <tbody>
-        <tr><td>iPhone 3G</td><td>128MB</td><td rowspan="10"><img src="images/iphone.jpg" width="40" alt="iphone"><br>
-        <img src="images/htcinspire.jpg" width="40" alt="htc inspire"><br>
-        <img src="images/ipad.jpg" width="40" alt="iPad"></td></tr>
-        <tr><td>iPhone 5/5S/6</td><td>1 GB</td></tr>
-        <tr><td>iPad 1</td><td>256 MB</td></tr>
-        <tr><td>iPad 3/4</td><td>1 GB</td></tr>
-        <tr><td>Samsung Galaxy Note Edge</td><td>3GB</td></tr>
-        <tr><td>Intex Cloud FX</td><td>128 MB</td></tr>
-        <tr><td>MacBook Pro</td><td>16 GB</td></tr>
-    </tbody>
-    </table>
-    <p>Website shares CPU shared with browser, OS and other running apps</p>
-  </div>
 
 
 
@@ -841,36 +1125,6 @@ development, but increase energy use.</li>
 
 
 
-<!-- touch events -->
-<div class="slide" style="background-image:url(images/gestures.gif); background-size:80%; background-position: 50% 90%">
-<header>
-<h1>Touch Events</h1>
-</header>
-<section>
-<ul style="background-color: rgba(255,255,255, 0.95);  border: 1px solid #ccc;  border-radius: 10px;">
-    <li>Touch Event: 300ms delay</li>
-    <li>provide user feedback, fetch, update when ready</li>
-</ul>
-<pre contenteditable style="font-size: 1.4rem;background-color: rgba(255,255,255, 0.95);  border: 1px solid #ccc; clear: both; float: left;">el.addEventListener('click', myFunction);
-el.addEventListener('touchend', myFunction);<b style="color:#900">*</b></pre>
-<pre contenteditable style="font-size: 1.4rem;background-color: rgba(255,255,255, 0.95);  border: 1px solid #ccc;clear: both; float: left;">&lt;meta name="viewport"
- content="width=device-width;
-          initial-scale=1; maximum-scale=1;"></pre>
-
-</section>
-<b style="color:#900">* Scroll throws a touchend :(<br>
-With VoiceOver, touch reads tapped item. Double tap acivates.. </b>
-<a class="objectlink" href="http://www.lukew.com/touch/TouchGestureGuide.pdf">Luke W.</a>
-</div>
-
-
-<div class="slide invert">
-<header><h1>Battery</h1></header>
-<section content="content">
-  <img src="images/battery-life.png" alt="">
-    <a href="https://www.phonearena.com/news/Smartphone-battery-life-over-the-years-A-surprising-study_id82315" class="objectlink" >Phone Arena Article</a>
-</section>
-</div>
 
 
 <div class="slide">
