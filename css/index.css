@@ -472,7 +472,7 @@ ul.bulleted li::before {
 
 .bulleted.second {
   position: relative;
-  right: -10vw;
+  right: -8vw;
   align-items: flex-end;
 }
 .bulleted.second li {
@@ -487,17 +487,26 @@ ul.bulleted li::before {
   transform: rotate(180deg);
 }
 
+ul.bulleted li.nope {
+  padding: 0 3px;
+  outline: solid 3px magenta;
+}
+ul.bulleted li.nope::before, ul.bulleted li.nope::after {
+  content: none;
+}
+
 .temphidden {
   visibility: hidden;
 }
 
 dt::before {
-  content: "▷ ";
+  content: "♦ ";
 }
 
 dd {
-  opacity: 0.65;
-  margin-left: 1.2em;
+  opacity: 0.6;
+  margin-left: 1em;
+  font-size: 0.9em;
 }
 
 .intro .foo {

@@ -45,6 +45,14 @@ Based on: http://instartlogic.github.com/fronteers
     align-items: flex-end;
   }
 
+.tldr li {
+  font-size: 6vh;
+}
+.tldr li em {
+  display: inline-block;
+  font-size: 1.25em;
+  color: magenta;
+}
 </style>
 </head>
 
@@ -94,7 +102,7 @@ Based on: http://instartlogic.github.com/fronteers
 
 <div class="slide"  style="background: center / 60% 80% no-repeat url(images/tightrope.svg) hsl(220, 68%, 21%);">
     <header><h1 style="opacity: 0.01">Engineering</h1></header>
-<section class="content" style="display: flex; align-items: center; justify-content: space-around; height: 50vh; text-align: center">
+<section class="content" style="display: flex; align-items: center; justify-content: space-between; height: 50vh; text-align: center">
   <h1>User <br/>Experience</h1><h1>Developer<br/> Experience</h1>
 </section></div>
 
@@ -143,9 +151,24 @@ Based on: http://instartlogic.github.com/fronteers
   <a href="http://amiarealdeveloper.com/" target="play" class="objectlink">Open in separate window</a>
 </div>
 
+
+
+<div class="slide intro large" style="background: black;">
+    <header><h1>Coding &amp; Engineering</h1></header>
+  </div>
+
+<div class="slide invert" style="background: left / contain no-repeat url(images/push.jpg) hsl(359, 0%, 96%);" role="img" aria-description="a really long, convoluted if statement with a mind bender pushing in the indentation">
+  <header>
+  </header>
+  <section class="content">
+  </section>
+</div>
+
+
+
 <div class="slide intro large" style="background: hsl(300, 68%, 21%);">
     <header><h1>Coding</h1></header>
-     <section class="content">
+     <section class="content" style="margin-top: -1em;">
   <ul class="bulleted">
     <li class="temphidden">Frameworks</li>
     <li class="temphidden">Libraries</li>
@@ -239,33 +262,10 @@ Based on: http://instartlogic.github.com/fronteers
   <section class="content">
     <img src="images/dcwater_httpheader2.png" style="min-height: 80vh;" alt="http headers for a CSS file that is 5MB and takes 14 seconds to download">
 
-  <p style="text-align: right; margin-right: 4vw;">via @</p>
+  <p style="text-align: right; right: 4vw; position: absolute; bottom: 4vh;">via @jackfoust</p>
   </section>
 </div>
 
-
-<div class="slide invert" style="background: left / contain no-repeat url(images/push.jpg) hsl(359, 0%, 96%);" role="img" aria-description="a really long, convoluted if statement with a mind bender pushing in the indentation">
-  <header>
-  </header>
-  <section class="content">
-  </section>
-</div>
-
-<div class="slide intro large" style="background: left center / cover no-repeat url(images/eatcake.jpg) black;">
-    <header></header>
-<section class="content">
-  <ul class="bulleted">
-    <li class="temphidden">Developer Experience</li>
-    <li>User experience</li>
-    <li>Accessibility</li>
-    <li>Performance</li>
-    <li>Security</li>
-    <li>Privacy</li>
-    <li>Internationalization</li>
-  </ul>
-  <p style="text-align: right; margin-right: 4vw;">Image: Marcus Quigmire</p>
-</section>
-</div>
 
 
 
@@ -274,16 +274,16 @@ Based on: http://instartlogic.github.com/fronteers
     <header></header>
 <section class="content" style="display: flex">
   <ul class="bulleted">
-    <li class="temphidden">User Experience</li>
-    <li>User experience</li>
+    <li class="temphidden nope">User Experience</li>
+    <li>UX Design</li>
     <li>Accessibility</li>
     <li>Performance</li>
     <li>Security</li>
     <li>Privacy</li>
     <li>Internationalization</li>
   </ul>
-  <ul class="bulleted second">
-    <li class="temphidden">Developer Experience</li>
+  <ul class="bulleted second temphidden">
+    <li class="temphidden nope">Developer Experience</li>
     <li>Frameworks</li>
     <li>Libraries</li>
     <li>Post processors</li>
@@ -297,8 +297,8 @@ Based on: http://instartlogic.github.com/fronteers
 
 
 <div class="slide intro"  style="background: hsl(320, 90%, 59%);">
-  <h1 style="font-size: 8vw">Web Performance</h1>
   <h2 style="font-size: 6.5vw;">"Fast to Load"</h2>
+  <h1 style="font-size: 8vw">Web Performance</h1>
 </div>
 
 
@@ -338,6 +338,8 @@ Based on: http://instartlogic.github.com/fronteers
   </section>
 </div>
 
+
+
 <div class="slide tweet" style="background: hsl(240, 90%, 59%);">
   <blockquote class="twitter-tweet" data-lang="en"><q lang="en" dir="ltr">I remember when 3G was primary mobile speed. It was slow but still worked, so why now when my phone says 3G it becomes completely useless?</q>
     <cite>&mdash; Stephen Gundee     </cite>
@@ -347,20 +349,53 @@ Based on: http://instartlogic.github.com/fronteers
 
 <div class="slide invert">
 <p>Average internet connection speed in the US <br/>
-from 2007 to 2017 (in Mbps), by quarter</p>
-<img src="images/connection.png" alt="US connection speed has gone up from 2.5Mbps to 18.5Mbps over the past 10 years">4x
+from 2007/2011 to 2017 (in Mbps), by quarter <span style="opacity: 0.3">4x</span></p>
+<img src="images/connection.png" alt="US connection speed has gone up from 2.5Mbps to 18.5Mbps over the past 10 years" style="height: calc(100vh - 6em);">
 
 </div>
 
 <div class="slide invert">
-<p>Total Kilobytes: Median site size of websites from 2011 to 2017 </p>
-<img src="images/kb.svg" alt="Median websites more than tripled in size over the past 8 years">3x
+<p>Total Kilobytes: Median site size of websites from 2011 to 2017 <span style="opacity: 0.3">3.5x</span></p>
+<img src="images/kb.svg" alt="Median websites more than tripled in size over the past 8 years" style="height: calc(100vh - 6em);">
 </div>
 
 <div class="slide invert">
-<p>Total Kilobytes: Median site size of JavaScript from 2011 to 2017 </p>
-<img src="images/javascript.svg" alt="Median JavaScript weights have more than quadrupled in size over the past 8 years">4x
+<p>Total Kilobytes: Median site size of JavaScript from 2011 to 2017 <span style="opacity: 0.3">4x</span></p>
+<img src="images/javascript.svg" alt="Median JavaScript weights have more than quadrupled in size over the past 8 years"  style="height: calc(100vh - 6em);">
 </div>
+
+
+
+
+<div class="slide"  style="background: center / 60% 80% no-repeat url(images/tightrope.svg) hsl(280, 68%, 21%);">
+    <header><h1 style="opacity: 0.01">Engineering</h1></header>
+<section class="content" style="display: flex; align-items: center; justify-content: space-between; height: 50vh; text-align: center">
+  <h1>User <br/>Experience</h1><h1>Developer<br/> Experience</h1>
+</section></div>
+
+
+
+
+
+<div class="slide intro"  style="background:  hsl(360, 68%, 21%);">
+    <header>
+      <h1  style="font-size: 8vw;">Developer Experience</h1>
+      <h2  style="font-size: 6.5vw;"> Productivity</h2>
+    </header>
+</section></div>
+
+
+
+<!-- file size for visa js -->
+<div class="slide invert">
+  <header>
+    <h1  style="text-align: center">File Size</h1>
+  </header>
+  <section class="content">
+    <img src="images/v7.png" style="min-height: 80vh;" alt="http headers for a javascript file that is 2.264M">
+  </section>
+</div>
+
 
 
 <div class="slide invert">
@@ -381,11 +416,12 @@ from 2007 to 2017 (in Mbps), by quarter</p>
 
 
 <div class="slide invert">
-<header><h1>Battery</h1></header>
-<section content="content">
-  <img src="images/battery-life.png" alt="">
-    <a href="https://www.phonearena.com/news/Smartphone-battery-life-over-the-years-A-surprising-study_id82315" class="objectlink" >Phone Arena Article</a>
-</section>
+  <header>
+    <h1  style="text-align: center">File Size</h1>
+  </header>
+  <section class="content">
+    <img src="images/dcwater_httpheader2.png" style="min-height: 80vh;" alt="http headers for a CSS file that is 5MB and takes 14 seconds to download">
+  </section>
 </div>
 
 
@@ -398,43 +434,25 @@ from 2007 to 2017 (in Mbps), by quarter</p>
 </section>
 </div>
 
-<div class="slide tweet">
-<blockquote class="twitter-tweet" data-lang="en"><q lang="en" dir="ltr">Just because no one uses your mobile site, doesn&#39;t mean you don&#39;t need to improve it. Maybe no one uses it because the experience sucks.</q>
-    <cite>&mdash; Me    </cite>
-</blockquote>
+
+
+<div class="slide intro"  style="background:  hsl(300, 68%, 21%);">
+<header><h1>Understand your dependencies and <br/>why you're adding them.</h1>
+  <div style="font-size: 34vh">⚖</div>
+  <p>
+</header>
+</div>
+
+  
+
+
+
+<div class="slide intro">
+<header style="height: 100vh; display: flex; align-items: center; justify-content: center"><h1>Good performance is an asset. <br/>Bad performance is a liability. 
+</h1></header>
 </div>
 
 
-<div class="slide object">
-  <object style="background: url(screenshots/feathers.png) top center no-repeat white" data="http://blog.chriszacharias.com/page-weight-matters"></object>
-  <a href="http://blog.chriszacharias.com/page-weight-matters" target="play" class="objectlink">Open in separate window</a>
-  <p class="wholepoint">
-    Youtube Feathers:<br/>Regular:  &nbsp;58 requests/1200 kB<br/>Feathers: 14 requests/100 kB</p>
-</div>
-
-<div class="slide">
-  <header><h1>TL;DR;</h1></header>
-    <section class="content"><p>By keeping your client side code small and lightweight, you can literally open your product up to new markets.</p>
-    </section>
-</div>
-
-
-
-<div class="slide">
-  <header><h1></h1></header>
-    <section class="content"><blockquote><p>Speed is more than a feature. Speed is the most important feature. If your application is slow, people won’t use it... </p>
-      <p>There is real empirical evidence that substantiates the fact that speed is more than a feature. It’s a requirement.</p>
-      <p><cite><a href="http://www.slideshare.net/carsonified/fred-wilson-the-10-golden-principles-for-successful-web-apps">Fred Wilson</a></cite></p>
-    </section>
-</div>
-
-
-
-
-<div class="slide tweet">
-<blockquote class="twitter-tweet" data-lang="en">Good performance is an asset. <br/>Bad performance is a liability. 
-</blockquote>
-</div>
 
 
 <div class="slide tweet">
@@ -477,6 +495,39 @@ from 2007 to 2017 (in Mbps), by quarter</p>
 
 
 <div class="slide tweet">
+<blockquote class="twitter-tweet" data-lang="en"><q lang="en" dir="ltr">Just because no one uses your mobile site, doesn&#39;t mean you don&#39;t need to improve it. Maybe no one uses it because the experience sucks.</q>
+    <cite>&mdash; Me    </cite>
+</blockquote>
+</div>
+
+
+<div class="slide object">
+  <object style="background: url(screenshots/feathers.png) top center no-repeat white" data="http://blog.chriszacharias.com/page-weight-matters"></object>
+  <a href="http://blog.chriszacharias.com/page-weight-matters" target="play" class="objectlink">Open in separate window</a>
+  <p class="wholepoint">
+    Youtube Feathers:<br/>Regular:  &nbsp;58 requests/1200 kB<br/>Feathers: 14 requests/100 kB</p>
+</div>
+
+<div class="slide">
+  <header><h1>TL;DR;</h1></header>
+    <section class="content"><p>By keeping your client side code small and lightweight, you can literally open your product up to new markets.</p>
+    </section>
+</div>
+
+
+
+<div class="slide">
+  <header><h1></h1></header>
+    <section class="content"><blockquote><p>Speed is more than a feature. Speed is the most important feature. If your application is slow, people won’t use it... </p>
+      <p>There is real empirical evidence that substantiates the fact that speed is more than a feature. It’s a requirement.</p>
+      <p><cite><a href="http://www.slideshare.net/carsonified/fred-wilson-the-10-golden-principles-for-successful-web-apps">Fred Wilson</a></cite></p>
+    </section>
+</div>
+
+
+
+
+<div class="slide tweet">
   <blockquote class="twitter-tweet">
     <q lang="en" dir="ltr">Nothing pisses me off faster than a slow website. By the time the page loads, my patience is gone &amp; I don&#39;t wanna buy it anymore.</q>
     <cite>- @mommarazzi_     </cite>
@@ -498,85 +549,7 @@ from 2007 to 2017 (in Mbps), by quarter</p>
 
 
 
-<!--YSLOW -->
-<div class="slide normal">
-     <header>
-      <h1>YSLOW<img src="img/yslow.png" alt="" style="vertical-align:middle;  margin-left: 20px;"></h1>
-     </header>
-     <section>
-     <ul class="visibility">
-<li><strong class="hilite">Make fewer HTTP requests</strong>
-<p class="hidenotes">Decreasing the number of components on a page reduces the number of HTTP requests required to render the page, resulting in faster page loads. Some ways to reduce the number of components include: combine files, combine multiple scripts into one script, combine multiple CSS files into one style sheet, and use CSS Sprites and image maps.</p></li>
-
-<li>Avoid empty src or href
-<p class="hidenotes">You may expect a browser to do nothing when it encounters an empty image src. However, it is not the case in most browsers. IE makes a request to the directory in which the page is located; Safari, Chrome, Firefox 3 and earlier make a request to the actual page itself. This behavior could possibly corrupt user data, waste server computing cycles generating a page that will never be viewed, and in the worst case, cripple your servers by sending a large amount of unexpected traffic.</p></li>
-
-<li>Compress components with gzip
-<p class="hidenotes">Compression reduces response times by reducing the size of the HTTP response. Gzip is the most popular and effective compression method currently available and generally reduces the response size by about 70%. Approximately 90% of today's Internet traffic travels through browsers that claim to support gzip.</p></li>
-
-
-<li>Put CSS at top
-<p class="hidenotes">Moving style sheets to the document HEAD element helps pages appear to load quicker since this allows pages to render progressively.</p></li>
-
-<li>Put JavaScript at bottom
- <p class="hidenotes">JavaScript scripts block parallel downloads; that is, when a script is downloading, the browser will not start any other downloads. To help the page load faster, move scripts to the bottom of the page if they are deferrable.</p></li>
-
-
-
-<li><strong class="hilite">Reduce DNS lookups</strong>
-<p class="hidenotes">The Domain Name System (DNS) maps hostnames to IP addresses, just like phonebooks map people's names to their phone numbers. When you type URL www.yahoo.com into the browser, the browser contacts a DNS resolver that returns the server's IP address. DNS has a cost; typically it takes 20 to 120 milliseconds for it to look up the IP address for a hostname. The browser cannot download anything from the host until the lookup completes.
-</p></li>
-
-<li>Minify JavaScript and CSS
-<p class="hidenotes">
-Minification removes unnecessary characters from a file to reduce its size, thereby improving load times. When a file is minified, comments and unneeded white space characters (space, newline, and tab) are removed. This improves response time since the size of the download files is reduced.
-</p></li>
-
-<li>Avoid URL redirects
-<p class="hidenotes">
-URL redirects are made using HTTP status codes 301 and 302. They tell the browser to go to another location. Inserting a redirect between the user and the final HTML document delays everything on the page since nothing on the page can be rendered and no components can be downloaded until the HTML document arrives.
-</p></li>
-
-<li>Remove duplicate JavaScript and CSS
-<p class="hidenotes">
-Duplicate JavaScript and CSS files hurt performance by creating unnecessary HTTP requests (IE only) and wasted JavaScript execution (IE and Firefox). In IE, if an external script is included twice and is not cacheable, it generates two HTTP requests during page loading. Even if the script is cacheable, extra HTTP requests occur when the user reloads the page. In both IE and Firefox, duplicate JavaScript scripts cause wasted time evaluating the same scripts more than once. This redundant script execution happens regardless of whether the script is cacheable.
-</p></li>
-<li> Reduce the number of DOM elements
-<p class="hidenotes">
-A complex page means more bytes to download, and it also means slower DOM access in JavaScript. Reduce the number of DOM elements on the page to improve performance.</p>
-</li>
-
-<li>Avoid HTTP 404 (Not Found) error
-<p class="hidenotes">Making an HTTP request and receiving a 404 (Not Found) error is expensive and degrades the user experience. Some sites have helpful 404 messages (for example, "Did you mean ...?"), which may assist the user, but server resources are still wasted.</p></li>
-
-
-
-<li><strong class="hilite">Do not scale images in HTML</strong>
- <p class="hidenotes">Web page designers sometimes set image dimensions by using the width and height attributes of the HTML image element. Avoid doing this since it can result in images being larger than needed. For example, if your page requires image myimg.jpg which has dimensions 240x720 but displays it with dimensions 120x360 using the width and height attributes, then the browser will download an image that is larger than necessary.</p></li>
-
-<li>Make favicon small and cacheable
-<p class="hidenotes">A favicon is an icon associated with a web page; this icon resides in the favicon.ico file in the server's root. Since the browser requests this file, it needs to be present; if it is missing, the browser returns a 404 error (see "Avoid HTTP 404 (Not Found) error" above). Since favicon.ico resides in the server's root, each time the browser requests this file, the cookies for the server's root are sent. Making the favicon small and reducing the cookie size for the server's root cookies improves performance for retrieving the favicon. Making favicon.ico cacheable avoids frequent requests for it.
-</p>
-</li>
-
-<li>Avoid CSS expressions
-<p class="hidenotes">CSS expressions (supported in IE beginning with Version 5) are a powerful, and dangerous, way to dynamically set CSS properties. These expressions are evaluated frequently: when the page is rendered and resized, when the page is scrolled, and even when the user moves the mouse over the page. These frequent evaluations degrade the user experience.
-</p></li>
-
-
-<li> Avoid AlphaImageLoader filter
- <p class="hidenotes">The IE-proprietary AlphaImageLoader filter attempts to fix a problem with semi-transparent true color PNG files in IE versions less than Version 7. However, this filter blocks rendering and freezes the browser while the image is being downloaded. Additionally, it increases memory consumption. The problem is further multiplied because it is applied per element, not per image.
-</p>
-</li>
-
-</ul>
-     <a href="http://developer.yahoo.com/yslow/" class="objectlink">YSlow</a>
-     </section>
-    </div>
-
-
-
-
+<
 <div class="slide intro">
   <header><h1 style="font-size: 3rem; margin: 100px auto 40px;">Responsive Images</h1></header>
     <section class="content"><p>It's more than just making them squishy!</p>
@@ -618,30 +591,6 @@ A complex page means more bytes to download, and it also means slower DOM access
 
 
 
-
-
-
-<div class="slide object">
-  <header><h1>Object + Media Queries + SVG + CCimg</h1></header>
-  <section class="resize4">
-  <object data="cc3.svg">
-<!--[if lte IE 8]>
-<img src="images/medium.png" alt="Fall back for IE">
-<![endif]-->
-</object>
-</div>
-
-<div class="slide object">
-  <header><h1>background-size: auto;</h1></header>
-  <section class="resize4">
-  <object data="cc2.svg">
-<!--[if lte IE 8]>
-<img src="images/medium.png" alt="Fall back for IE">
-<![endif]-->
-</object>
-</div>
-
-
 <div class="slide">
 <header><h1><code>&lt;picture>, &lt;source> &amp; srcset</code></h1></header>
 <pre>&lt;picture>
@@ -656,24 +605,6 @@ A complex page means more bytes to download, and it also means slower DOM access
 
 </div>
 
-
- <div class="slide resize resizeimg">
-   <header><h1>Right-size your images</h1></header>
-     <section class="content">
-
-      <p>Scaled: 1,850 milliseconds</p>
-      <img src="img/bad-trimmed-2_resize_image.png">
-
-      <p>Right-sized: 625 milliseconds</p>
-      <img src="img/good-trimmed-2_resize_image.png">
-<ul>
-  <li>blue = CPU used to decode</lu>
-    <li>green = FPS (more is better)</li>
-    <li>purple = rendering</li>
-  </ul>
-  <a class="objectlink" href="http://physicsoffast.io/demos/">PhysicsOfFast</a>
-    <footer><a href="https://twitter.com/tobint">Tobin Titus, Microsoft</a></footer> </section>
- </div>
 
 
 
@@ -707,30 +638,13 @@ A complex page means more bytes to download, and it also means slower DOM access
     </section>
 </div>
 
-<div class="slide">
-  <header><h1>But, it was so fast for me ...</h1></header>
-    <section class="content">
-      <table style="border: none">
-        <tr>
-          <td rowspan=2><img src="images/computer.png" alt="computer" style="width: 250px"></td>
-          <td class="telecom"><div></div></td>
-          <td><img src="images/movistar.svg" alt="MoviStar" width="200"></td>
-        </tr>
-        <tr>
-          <td class="telecom"><div></div></td>
-          <td><img src="images/vodafone.svg" alt="Vodafone"  width="200"></td>
-        </tr>
-      </table>
-    </section>
-</div>
-
 
 <div class="slide">
     <header>
       <h1>Latency</h1>
     </header>
     <section>
-        <img src="img/latency.gif" style="margin: 40px auto; box-shadow: none;" alt="Computer asks DNS server for IP address, then goes to IP to get website">
+        <img src="images/latency.gif" style="margin: 40px auto; box-shadow: none;" alt="Computer asks DNS server for IP address, then goes to IP to get website">
         <ul>
             <li><strong>Issue:</strong> Requests take longer to complete</li>
             <li><strong>Solution:</strong> Reducing requests improves performance</li>
@@ -950,6 +864,15 @@ With VoiceOver, touch reads tapped item. Double tap acivates.. </b>
 </div>
 
 
+<div class="slide invert">
+<header><h1>Battery</h1></header>
+<section content="content">
+  <img src="images/battery-life.png" alt="">
+    <a href="https://www.phonearena.com/news/Smartphone-battery-life-over-the-years-A-surprising-study_id82315" class="objectlink" >Phone Arena Article</a>
+</section>
+</div>
+
+
 <div class="slide">
   <header><h1 class="slash">Performance Budget!</h1></header>
     <section class="content">
@@ -957,30 +880,39 @@ With VoiceOver, touch reads tapped item. Double tap acivates.. </b>
     </section>
 </div>
 
-<div class="slide normal">
-<section class="content">
-<h1>Thank you</h1>
-<h2><a href="http://www.standardista.com">www.standardista.com</a><br>
-<a href="http://www.instartlogic.com/blog">www.instartlogic.com/blog</a></h2><h2><a href="http://www.twitter.com/webdevtips">@webdevtips</a><br><a href="http://www.twitter.com/estellevw">@estellevw</a><br><a href="http://www.twitter.com/standardista">@standardista</a></h2>
-<div class="floatright">
-  <img src="http://akamaicovers.oreilly.com/images/9780987467485/cat.gif" alt="HTML5 and CSS3 for the Real World">
-  <img src="http://akamaicovers.oreilly.com/images/0636920041658/rc_cat.gif" alt="Animations and Transitions with CSS"/>
-  <img src="http://akamaicovers.oreilly.com/images/0636920021711/cat.gif" alt="MObile HTML5" />
-  \<img src="http://akamaicovers.oreilly.com/images/0636920025955/cat.gif" alt="Web Performance Daybook"/></div>
+
+
+<div class="slide normal" style="background-image: url(images/FF.png); background-size: cover">
+<section class="content" style="display: flex; flex-flow: column; justify-content: space-between; height: calc(100vh - 50px);">
+<div>
+    <h1>Estelle Weyl</h1>
+    <h2><a href="http://www.standardista.com">www.standardista.com</a><br>
+    <h2><a href="https://www.PerfMattersConf.com">www.PerfMattersConf.com</a><br>
+    </h2><h2><a href="http://www.twitter.com/estellevw">@estellevw</a><br><a href="http://www.twitter.com/standardista">@standardista</a></h2>
+ </div>
+ <div>
+    <div class="floatright books">
+      <img src="https://akamaicovers.oreilly.com/images/9780987467485/cat.gif" alt="HTML5 and CSS3 for the Real World">
+      <img src="https://akamaicovers.oreilly.com/images/0636920041658/cat.gif" alt="Animations and Transitions with CSS"/>
+      <img src="https://akamaicovers.oreilly.com/images/0636920021711/cat.gif" alt="Mobile HTML5" />
+      <img src="https://akamaicovers.oreilly.com/images/0636920025955/cat.gif" alt="Web Performance Daybook"/>
+      <img src="https://covers.oreillystatic.com/images/0636920066682/cat.gif" alt="Flexbox in CSS"/>
+      <img src="https://covers.oreillystatic.com/images/0636920012726/cat.gif" alt="CSS: The Definitive Guide">
+    </div>
+</div>
+
 </section>
 </div>
 
-<div class="slide intro">
+<div class="slide tldr">
+  <header>
+    <h1>TL;DR;</h1>
+  </header><!-- /header -->
     <section class="content">
-    <h1>
-      <span class="temphidden">Fast to Code</span><br/>
-      <span class="temphidden">Fast to Load</span><br/>
-      <span class="temphidden">Usable</span><br/>
-      <span class="temphidden">Accessible</span><br/>
-      <span class="temphidden">Internationalizable</span><br/>
-      <span class="temphidden">Secure</span></h1>
-      <h2 class="temphidden" style="margin-top: 25%;">Estelle Weyl</h2>
-      <p class="temphidden"><a href="https://estelle.github.io/fronteers">https://estelle.github.io/fronteers</a></p>
+   <ol>
+    <li><em>Understand</em> the <em>tools</em> you're adding to your code</li>
+    <li>Always think about <em>user experience</em>, <em>a11y</em>, <em>performance</em>, <em>security</em>, <em>privacy</em>, and <em>I18n</em> as you develop, and you won't have to retrofit.</li>
+  </ol>
     </section>
 </div>
 
