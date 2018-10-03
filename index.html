@@ -101,6 +101,10 @@ video {
   left: 30%; 
   transform: rotate(-30deg);
 }
+.future twitterwidget,
+.past  twitterwidget {
+  opacity: 0;
+}
 </style>
 </head>
 
@@ -198,8 +202,12 @@ video {
   </div>
 
 
-<div class="slide intro large" style="background: hsl(270, 90%, 59%);">
-    <header><h1>Developer</h1></header> 
+<div class="slide intro large tweet" style="background: hsl(270, 90%, 59%);">
+    <header><h1>Developer</h1></header>
+    <div style="display: flex; justify-content: center; align-items: center; align-content: center; height: 60vh; transform: scale(1.5)"> 
+    <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Remember when we had enough anger to spare that we argued about shit like &quot;should designers code?&quot; I miss those times.</p>&mdash; Karen VanHouten (@designinginward) <a href="https://twitter.com/designinginward/status/1047466993455120384?ref_src=twsrc%5Etfw">October 3, 2018</a></blockquote></div>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 </div>
 
 <div class="slide object" style="background-color: hsl(270, 90%, 59%);">
@@ -345,16 +353,6 @@ video {
   </ul>
 </section>
 </div>
-
-
-
-
-<div class="slide intro"  style="background:  hsl(360, 68%, 21%);">
-    <header>
-      <h1  style="font-size: 8vw;">Developer Experience</h1>
-      <h2  style="font-size: 6.5vw;"> Productivity</h2>
-    </header>
-</section></div>
 
 
 
@@ -886,6 +884,15 @@ from 2007/2011 to 2017 (in Mbps), by quarter <span style="opacity: 0.3">4x</span
 </div>
 
 
+
+
+<div class="slide" style="background: center / 60% 80% no-repeat url(images/scale.svg) hsl(200, 68%, 21%);">
+
+     <h1 style="position: absolute; left: 20vw; top: 45%">Cost</h1>
+     <h1 style="position: absolute; right: 20vw; top: 60%">Benefit</h1>
+</div>
+
+
 <div class="slide intro large" style="background: hsl(180, 68%, 21%);">
     <header><h1>Always think about...</h1></header>
 <section class="content">
@@ -901,20 +908,175 @@ from 2007/2011 to 2017 (in Mbps), by quarter <span style="opacity: 0.3">4x</span
 </div>
 
 
+
+
+
+
 <div class="slide intro"  style="background: hsl(320, 90%, 59%);">
   <h2 style="font-size: 6.5vw;">"Fast to Code"</h2>
   <h1 style="font-size: 8vw">Engineering Performance</h1>
 </div>
 
 
-<div class="slide" style="background: center / 60% 80% no-repeat url(images/scale.svg) hsl(200, 68%, 21%);">
+<div class="slide intro"  style="background:  hsl(360, 68%, 21%);">
+    <header>
+      <h1  style="font-size: 8vw;">Developer Experience</h1>
+      <h2  style="font-size: 6.5vw;" class="temphidden"> Productivity</h2>
+    </header>
+     <section class="content" style="display: flex; justify-content: center; align-items: center; align-content: center; height: 60vh; transform: scale(1.5)"> 
+    <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">So I&#39;m reading this <a href="https://twitter.com/TheAtlantic?ref_src=twsrc%5Etfw">@TheAtlantic</a> article and noticing the Chrome status bar is rapidly flickering lots of URLs. I opened the inspector network panel and see there&#39;s now over 9000 requests issued and 32MB used. I&#39;m not interacting with this page at all, just reading the text. <a href="https://t.co/91Pk0qX8uG">pic.twitter.com/91Pk0qX8uG</a></p>&mdash; Elliott Sprehn (@ElliottZ) <a href="https://twitter.com/ElliottZ/status/1047306006894497792?ref_src=twsrc%5Etfw">October 3, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-     <h1 style="position: absolute; left: 20vw; top: 45%">Cost</h1>
-     <h1 style="position: absolute; right: 20vw; top: 60%">Benefit</h1>
+</section></div>
+
+<div class="slide">
+  <header>
+    <h1>Biggest Bottleneck?</h1>
+  </header>
+  <section class="content">
+    <h2 class="temphidden">Developers (Ourselves)</h2>
+  </section>
 </div>
 
 
-<div class="slide intro">
+
+<div class="slide" style="background:  hsl(240, 68%, 21%);">
+  <header>
+    <h1>Biggest Bottleneck?</h1>
+  </header>
+  <section class="content">
+    <img style="float: right; image-rendering: pixelated; width: 40vw" src="images/architecture.jpeg" alt="architect looking at plans">
+    <ul class="bulleted">
+    <li class="temphidden">Architecture</li>
+    <li class="temphidden">Consistency</li>
+    <li class="temphidden">Comments</li>
+    <li class="temphidden">Refactoring</li>
+  </ul>
+
+  </section>
+</div>
+
+
+<div class="slide intro" style="background:  hsl(180, 68%, 21%);">
+  <header>   
+    <h1>Architecture</h1>
+  </header>
+  <section class="content"><div style="font-size: 30vh">⌛️</div>
+  </section>
+</div>
+
+
+
+
+
+<div class="slide object invert">
+  <object type="" data="https://codepen.io/estelle/full/LVQLRq/">
+  </object>
+  <a href="https://github.com/estelle/input-masking" class="objectlink">Input Masking repo</a>
+</div>
+
+
+
+
+
+<div class="slide invert" style="background: left / contain no-repeat url(images/push.jpg) hsl(359, 0%, 96%);" role="img" aria-description="a really long, convoluted if statement with a mind bender pushing in the indentation">
+  <header>
+  </header>
+  <section class="content">
+  </section>
+</div>
+
+
+
+<div class="slide" style="background: center / contain no-repeat url(images/fullstack.png) white;">
+  <section class="content">
+  </section>
+</div>
+
+
+
+
+<div class="slide intro" style="background:  hsl(180, 68%, 21%);">
+  <header>   
+    <h1>Refactoring</h1>
+  </header>
+  <section class="content"><div style="font-size: 30vh">⌛️</div>
+  </section>
+</div>
+
+
+
+
+<div class="slide intro"  style="background: hsl(10, 90%, 59%);">
+  <h2 style="font-size: 6.5vw;"></h2>
+  <h1 style="font-size: 8vw">display: grid;</h1>
+</div>
+
+
+
+<div class="slide object invert">
+  <object type="" data="https://codepen.io/estelle/full/RJpreX/">
+  </object>
+  <a href="https://codepen.io/estelle/full/RJpreX/" class="objectlink">Frozen Header Table</a>
+</div>
+
+
+<div class="slide"  style="background: hsl(350, 90%, 59%);">
+  <header>
+    <h1>ARIA as a backup</h1>
+  </header>
+  <section class="content">
+<pre style="height: calc(100vh - 200px); overflow: scroll;">&lt;table role="table" aria-label="Semantic Elements" aria-describedby="semantic_elements_table_desc" aria-rowcount="81"&gt; &nbsp; 
+  &lt;caption id="semantic_elements_table_desc"&gt;Semantic Elements to use instead of ARIA's roles&lt;/caption&gt;   
+  &lt;thead role="rowgroup"&gt;      
+     &lt;tr role="row"&gt;        
+       &lt;th role="columnheader" aria-sort="none"&gt;ARIA Role&lt;/th&gt;
+       &lt;th role="columnheader" aria-sort="none"&gt;Semantic Element&lt;/th&gt;      
+     &lt;/tr&gt;    
+  &lt;/thead&gt;
+  &lt;tbody role="rowgroup"&gt;     
+     &lt;tr role="row" aria-rowindex="11"&gt;        
+       &lt;td role="cell"&gt;header&lt;/td&gt;
+       &lt;td role="cell"&gt;h1&lt;/td&gt;
+     &lt;/tr&gt;
+     &lt;tr role="row" aria-rowindex="16"&gt;
+       &lt;td role="cell"&gt;header&lt;/td&gt;
+       &lt;td role="cell"&gt;h6&lt;/td&gt;
+     &lt;/tr&gt;
+     &lt;tr role="row" aria-rowindex="18"&gt;
+       &lt;td role="cell"&gt;rowgroup&lt;/td&gt;
+       &lt;td role="cell"&gt;thead&lt;/td&gt;
+     &lt;/tr&gt;
+     &lt;tr role="row" aria-rowindex="24"&gt;
+       &lt;td role="cell"&gt;term&lt;/td&gt;
+       &lt;td role="cell"&gt;dt&lt;/td&gt;
+     &lt;/tr&gt;
+   &lt;/tbody&gt;
+ &lt;/table&gt;</pre> </section>
+</div>
+
+
+<div class="slide tldr">
+  <header>
+    <h1>The point:</h1>
+  </header><!-- /header -->
+    <section class="content">
+   <ol>
+    <li><em>Understand</em> your tools, languages and features you are adding, or may add, to your code.</li>
+
+    <li><em>Always</em> consider all six tenets of user experience as you code. <span class="temphidden">(a.k.a. <em>Engineer</em>!)</span></li>
+
+    <li>Taking the time to <em>do it right the first time</em> is FAST TO CODE. Refactoring is NOT.</li>
+
+  </ol>
+    </section>
+</div>
+
+
+
+
+
+<div class="slide intro"  style="background: hsl(280, 90%, 59%);">
   <header><h1 style="font-size: 3rem; margin: 100px auto 40px;">Responsive Images</h1></header>
     <section class="content"><p>It's more than just making them squishy!</p>
     </section>
@@ -922,7 +1084,7 @@ from 2007/2011 to 2017 (in Mbps), by quarter <span style="opacity: 0.3">4x</span
 
 
 
-<div class="slide">
+<div class="slide"  style="background: hsl(250, 90%, 59%);">
   <header><h1>Improve performance</h1></header>
     <section class="content">
       <ol>
@@ -955,7 +1117,7 @@ from 2007/2011 to 2017 (in Mbps), by quarter <span style="opacity: 0.3">4x</span
 
 
 
-<div class="slide">
+<div class="slide"  style="background: hsl(220, 90%, 59%);">
 <header><h1><code>&lt;picture>, &lt;source> &amp; srcset</code></h1></header>
 <pre>&lt;picture>
   &lt;source srcset="large.jpg" 
@@ -973,7 +1135,7 @@ from 2007/2011 to 2017 (in Mbps), by quarter <span style="opacity: 0.3">4x</span
 
 
 
-<div class="slide">
+<div class="slide"  style="background: hsl(310, 90%, 59%);">
 <header><h1>Right Size Your Images</h1></header>
 
 <ul class="cloudfour">
@@ -996,14 +1158,14 @@ from 2007/2011 to 2017 (in Mbps), by quarter <span style="opacity: 0.3">4x</span
 
 
 
-<div class="slide">
+<div class="slide"  style="background: hsl(0, 90%, 59%);">
   <header><h1 class="slash">Make fewer <br/>HTTP requests &amp;<br/>DNS lookups</h1></header>
     <section class="content">
     </section>
 </div>
 
 
-<div class="slide">
+<div class="slide invert">
     <header>
       <h1>Latency</h1>
     </header>
@@ -1019,7 +1181,7 @@ from 2007/2011 to 2017 (in Mbps), by quarter <span style="opacity: 0.3">4x</span
 
 
 
-    <div class="slide">
+    <div class="slide"  style="background: hsl(30, 90%, 59%);">
       <header><h1>Yes, you want to...</h1></header>
         <section class="content">
           <ol>
