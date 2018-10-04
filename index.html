@@ -105,6 +105,21 @@ video {
 .past  twitterwidget {
   opacity: 0;
 }
+.cloudfour {
+    display: flex;
+    align-items: flex-end;
+    list-style-type: none;
+}
+.cloudfour img {
+    text-align: center;
+    margin: 0 10px 0 0;
+    border: 1px solid;
+    padding: 20px 20px 0 0;
+    background-color: #226DAA;
+  }
+.cloudfour pre {
+  letter-spacing: -5px;
+}
 </style>
 </head>
 
@@ -301,6 +316,37 @@ video {
 
   <p style="text-align: right; margin-right: 4vw;">via @davidkpiano</p>
 </div>
+
+
+
+
+
+<div class="slide">
+    <section>
+        <ul class="large">
+            <li>Minimize the DOM
+              <ul class="small">
+                  <li>Each node uses up memory &amp; time<br/>
+                  Measures each node for each repaint</li>
+                
+                  <li>Cache DOM lookups</li>
+                  <li>Minimize DOM manipulations: Batch queries &amp;  manipulations separately</li>
+                </ul>
+            </li>
+            <li>Use native semantic HTML
+              <ul class="small">
+                <li>Fast</li>
+                <li>accessible</li>
+                <li>Don't have to rewrite all the native interactions</li>
+                <li>works even when JS doesn't</li>
+        </ul></li></ul>
+
+    </section>
+  </div>
+
+
+
+
 
 
 <!-- file size for visa js -->
@@ -835,6 +881,135 @@ from 2007/2011 to 2017 (in Mbps), by quarter <span style="opacity: 0.3">4x</span
  </div>
 
 
+<div class="slide tweet">
+  <blockquote class="twitter-tweet" lang="en"><q>Is your battery draining too fast? Turn off everything that makes your smart phone smart. That&#39;ll fix it.</q>
+    <cite>&mdash; Scott Hanselman     </cite>
+</blockquote>
+</div>
+
+
+
+
+<div class="slide">
+  <header><h1>Responsiveness &amp; Smoothness</h1></header>
+  <ol class="large" style="margin-left: 100px; text-align: left"><li>User Interaction
+  <ul class="large"><li>Aim for a 100ms response time!</li></ul></li>
+  <li>Re-rendering time<ul><li>60FPS = 16.67ms per frame</li></ul></li></ol>
+</div>
+
+
+<div class="slide invert">
+<header><h1>Battery</h1></header>
+<section content="content">
+  <img src="images/battery-life.png" alt="">
+    <a href="https://www.phonearena.com/news/Smartphone-battery-life-over-the-years-A-surprising-study_id82315" class="objectlink" >Phone Arena Article</a>
+</section>
+</div>
+
+<!-- Battery consumption -->
+<div class="slide invert" style="background-image:url(images/batteries.jpg); background-size: cover;">
+     <header>
+      <h1 style="color: #ffffff;">Battery Consumption</h1>
+     </header>
+     <section>
+     <div style="background-color: rgba(255,255,255,0.9); padding:20px;  margin-bottom: 40px; border-radius: 10px; font-size: 1.5em;">
+     <p>CPU Drains the battery. Avoid using it!</p>
+     <ul>
+      <li>Avoid Reflows (and repaints)</li>
+      <li>Minimize JavaScript (size and activity)</li>
+        <li>Avoid loading resources you don't need</li>
+      <li>No JavaScript Animations<ul>
+      <li><code class="yes">requestAnimationFrame</code> (not <code>setInterval</code> or <code>setTimeout</code>)</li>
+      <li class="yes">CSS Animation</li></ul></li>
+
+        <li>Manage memory</li><li>Avoid waking up the radio - <b class="yes">prefetch</b></li>
+     </ul>
+     </div>
+     <footer class="credit">Image Credit: <a href="http://naiksaneet.wordpress.com">naiksaneet.wordpress.com</a></footer>
+     </section>
+    </div>
+
+
+
+
+
+
+
+<div class="slide"  style="background: hsl(250, 90%, 59%);">
+  <header><h1>Responsive Images: More than Squishy</h1></header>
+    <section class="content">
+      <ol>
+        <li>Decrease file size: easily decrease bytes by 70+%:
+          <ul>
+            <li>Compress all images</li>
+            <li>GZip everything</li>
+            <li>Include WebP as &lt;source> or <em>srcset</em></li>
+          </ul>
+         </li>
+        <li>Don't download what you won't use
+          <ul>
+            <li>Lazy load</li>
+            <li><code>display: none;</code> on parent of background image</li>
+
+          </ul>
+        </li>
+        <li>Only load the size you need
+          <ul>
+            <li>&lt;picture> <sup><a href="http://caniuse.com/#search=picture" target="play">caniuse</a></sup></li>
+            <li>&lt;img srcset> <sup>[<a href="http://caniuse.com/#search=srcset" target="play">caniuse</a>, <a href="https://www.webkit.org/blog/2910/improved-support-for-high-resolution-displays-with-the-srcset-image-attribute/">1</a>, <a href="http://dev.opera.com/blog/opera-21/">2</a>]</sup></li>
+          </ul>
+
+        </li>
+      </ol>
+    </section>
+</div>
+
+
+
+
+<div class="slide"  style="background: hsl(220, 90%, 59%);">
+<header><h1><code>&lt;picture>, &lt;source> &amp; srcset</code></h1></header>
+<pre>&lt;picture>
+  &lt;source type="image/webp"
+            srcset="small.webp 500w,
+                    large.webp 1000w">
+  &lt;source srcset="large.jpg" 
+          media="(min-width: 1000px)">
+  &lt;source srcset="small.jpg" 
+          media="(min-width: 500px)">
+  &lt;img src="default.jpg"
+       srcset="highresolution.jpg 2x" 
+       alt="do not forget the alt">
+&lt;/picture></pre>
+
+</div>
+
+
+
+
+
+<div class="slide"  style="background: hsl(310, 90%, 59%);">
+<header><h1>Right Size Your Images</h1></header>
+
+<ul class="cloudfour">
+<li style="transform: translatey(-300px)"><pre style="margin-right: -120px;">240 x 240 = 57,600
+200 x 200 = 40,000
+            17,600</pre>
+<img src="images/small.png" width="100"></li>
+<li style="transform: translatex(-30px)"><pre>440 x 440 = 193,600
+400 x 400 = 160,000
+             33,600</pre><img src="images/medium.png" width="200"></li>
+<li style="transform: translatex(-10px)"><pre>640 x 640 = 409,600
+600 x 600 = 360,000
+             49,000</pre><img src="images/big.png" width="300"></li>
+<li><pre>840 x 840 = 705,600
+800 x 800 = 640,000
+             65,600</pre><img src="images/huge.png" width="400"></li>
+</ul>
+<p><a href="http://blog.cloudfour.com/responsive-images-101-part-9-image-breakpoints/" class="objectlink">CloudFour: image breakpoints</a>
+</div>
+
+
 
 <div class="slide invert">
   <header>
@@ -1056,6 +1231,13 @@ from 2007/2011 to 2017 (in Mbps), by quarter <span style="opacity: 0.3">4x</span
 </div>
 
 
+<div class="slide">
+  <header><h1 class="slash">Performance Budget!</h1></header>
+    <section class="content">
+    <blockquote>Good design is not about making something pretty. It is about making something usable and intuitive – the beauty of the product will be a result of these things.</blockquote> <p>-- <a href="http://lukejones.me/archives/good-design-aint-pretty">Luke Jones</a></p>
+    </section>
+</div>
+
 <div class="slide tldr">
   <header>
     <h1>The point:</h1>
@@ -1072,89 +1254,6 @@ from 2007/2011 to 2017 (in Mbps), by quarter <span style="opacity: 0.3">4x</span
     </section>
 </div>
 
-
-
-
-
-<div class="slide intro"  style="background: hsl(280, 90%, 59%);">
-  <header><h1 style="font-size: 3rem; margin: 100px auto 40px;">Responsive Images</h1></header>
-    <section class="content"><p>It's more than just making them squishy!</p>
-    </section>
-</div>
-
-
-
-<div class="slide"  style="background: hsl(250, 90%, 59%);">
-  <header><h1>Improve performance</h1></header>
-    <section class="content">
-      <ol>
-        <li>Decrease file size: easily decrease bytes by 70+%:
-          <ul>
-            <li>Compress all images</li>
-            <li>GZip everything</li>
-          </ul>
-         </li>
-        <li>Don't download what you won't use
-          <ul>
-            <li>Lazy load</li>
-            <li><code>display: none;</code> on parent of background image</li>
-
-          </ul>
-        </li>
-        <li>Only load the size you need
-          <ul>
-            <li>&lt;picture> <sup><a href="http://caniuse.com/#search=picture" target="play">caniuse</a></sup></li>
-            <li>&lt;img srcset> <sup>[<a href="http://caniuse.com/#search=srcset" target="play">caniuse</a>, <a href="https://www.webkit.org/blog/2910/improved-support-for-high-resolution-displays-with-the-srcset-image-attribute/">1</a>, <a href="http://dev.opera.com/blog/opera-21/">2</a>]</sup></li>
-            <li><a href="https://github.com/scottjehl/picturefill">picturefill</a></li>
-            <li>Clowncar technique</li>
-          </ul>
-
-        </li>
-      </ol>
-    </section>
-</div>
-
-
-
-
-<div class="slide"  style="background: hsl(220, 90%, 59%);">
-<header><h1><code>&lt;picture>, &lt;source> &amp; srcset</code></h1></header>
-<pre>&lt;picture>
-  &lt;source srcset="large.jpg" 
-          media="(min-width: 1000px)">
-  &lt;source srcset="small.jpg" 
-          media="(min-width: 500px)">
-  &lt;img src="default.jpg"
-       srcset="highresolution.jpg 2x" 
-       alt="do not forget the alt">
-&lt;/picture></pre>
-
-</div>
-
-
-
-
-
-<div class="slide"  style="background: hsl(310, 90%, 59%);">
-<header><h1>Right Size Your Images</h1></header>
-
-<ul class="cloudfour">
-<li><pre style="margin-left: -120px">240 x 240 = 57,600
-200 x 200 = 40,000
-            17,600</pre>
-<img src="images/small.png" width="100"></li>
-<li><pre>440 x 440 = 193,600
-400 x 400 = 160,000
-             33,600</pre><img src="images/medium.png" width="200"></li>
-<li><pre>640 x 640 = 409,600
-600 x 600 = 360,000
-             49,000</pre><img src="images/big.png" width="300"></li>
-<li><pre>840 x 840 = 705,600
-800 x 800 = 640,000
-             65,600</pre><img src="images/huge.png" width="400"></li>
-</ul>
-<p><a href="http://blog.cloudfour.com/responsive-images-101-part-9-image-breakpoints/" class="objectlink">CloudFour: image breakpoints</a>
-</div>
 
 
 
@@ -1200,17 +1299,6 @@ from 2007/2011 to 2017 (in Mbps), by quarter <span style="opacity: 0.3">4x</span
         </section>
     </div>
 
-    <div class="slide">
-      <header><h1>... but also consider ...</h1></header>
-        <section class="content">
-          <ol>
-            <li>bandwidth and latency</li>
-            <li>memory</li>
-            <li>battery</li>
-            <li>responsiveness</li>
-          </ol>
-        </section>
-    </div>
 
 
 
@@ -1218,95 +1306,15 @@ from 2007/2011 to 2017 (in Mbps), by quarter <span style="opacity: 0.3">4x</span
 
 
 
-<div class="slide tweet">
-  <blockquote class="twitter-tweet" lang="en"><q>Is your battery draining too fast? Turn off everything that makes your smart phone smart. That&#39;ll fix it.</q>
-    <cite>&mdash; Scott Hanselman     </cite>
-</blockquote>
-</div>
-
-
-<div class="slide invert">
-<header><h1>Battery</h1></header>
-<section content="content">
-  <img src="images/battery-life.png" alt="">
-    <a href="https://www.phonearena.com/news/Smartphone-battery-life-over-the-years-A-surprising-study_id82315" class="objectlink" >Phone Arena Article</a>
-</section>
-</div>
-
-<!-- Battery consumption -->
-<div class="slide invert" style="background-image:url(images/batteries.jpg); background-size: cover;">
-     <header>
-      <h1 style="color: #ffffff;">Battery Consumption</h1>
-     </header>
-     <section>
-     <div style="background-color: rgba(255,255,255,0.9); padding:20px;  margin-bottom: 40px; border-radius: 10px; font-size: 1.5em;">
-     <p>CPU Drains the battery. Avoid using it!</p>
-     <ul>
-      <li>Avoid Reflows (and repaints)</li>
-      <li>Minimize JavaScript (size and activity)</li>
-        <li>Avoid loading resources you don't need</li>
-      <li>No JavaScript Animations<ul>
-      <li><code class="yes">requestAnimationFrame</code> (not <code>setInterval</code> or <code>setTimeout</code>)</li>
-      <li class="yes">CSS Animation</li></ul></li>
-
-        <li>Manage memory</li><li>Avoid waking up the radio - <b class="yes">prefetch</b></li>
-     </ul>
-     </div>
-     <footer class="credit">Image Credit: <a href="http://naiksaneet.wordpress.com">naiksaneet.wordpress.com</a></footer>
-     </section>
-    </div>
 
 
 
 
 
 
-<div class="slide">
-    <header>
-      <h1>Minimize the DOM</h1>
-    </header>
-    <section>
-        <ul class="large">
-            <li>Minimize number of nodes
-              <ul class="small">
-                  <li>Uses up memory &amp; time</li>
-                    <li>Measures each node for each repaint</li>
-                </ul></li>
-            <li>Cache DOM lookups
-            <ul class="small">
-                  <li>Store them!</li>
-                </ul>
-            </li>
-            <li>Minimize DOM manipulations
-              <ul class="small">
-                  <li>Batch DOM queries &amp; DOM manipulations separately </li>
-                </ul>
-            </li>
-        </ul>
-         <p class="notes" style="margin-top:50px">More nodes = more expensive! </p>
-
-    </section>
-  </div>
 
 
 
-<div class="slide title">
-  <header><h1>Responsiveness</h1></header>
-  <ol class="large" style="margin-left: 100px; text-align: left"><li>User Interaction
-  <ul class="large"><li>Aim for a 100ms response time!</li></ul></li>
-  <li>Re-rendering time<ul><li>60FPS = 16.67ms per frame</li></ul></li></ol>
-</div>
-
-
-
-
-
-<div class="slide">
-  <header><h1 class="slash">Performance Budget!</h1></header>
-    <section class="content">
-    <blockquote>Good design is not about making something pretty. It is about making something usable and intuitive – the beauty of the product will be a result of these things.</blockquote> <p>-- <a href="http://lukejones.me/archives/good-design-aint-pretty">Luke Jones</a></p>
-    </section>
-</div>
 
 
 
@@ -1329,8 +1337,7 @@ from 2007/2011 to 2017 (in Mbps), by quarter <span style="opacity: 0.3">4x</span
     </div>
 </div>
 
-</section>
-</div>
+
 
 <div class="slide tldr">
   <header>
@@ -1343,6 +1350,13 @@ from 2007/2011 to 2017 (in Mbps), by quarter <span style="opacity: 0.3">4x</span
   </ol>
     </section>
 </div>
+
+
+
+</section>
+</div>
+
+
 
    </div>
 </div>
