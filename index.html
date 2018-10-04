@@ -102,7 +102,9 @@ video {
   transform: rotate(-30deg);
 }
 .future twitterwidget,
-.past  twitterwidget {
+.past  twitterwidget,
+.future iframe,
+.past iframe {
   opacity: 0;
 }
 .cloudfour {
@@ -120,6 +122,10 @@ video {
 .cloudfour pre {
   letter-spacing: -5px;
 }
+ul.large > li:first-line,
+ol.large > li:first-line {
+  font-size: 1.5em;
+}
 </style>
 </head>
 
@@ -130,13 +136,13 @@ video {
 
 <div class="slide intro halved">
     <header>
-    <h1>&nbsp;<br>Fast to Code 
+    <h1>&nbsp;<br>Fast to Load 
       <em class="foo bar">
         <span> : </span>
-        <span class="temphidden"> &lt; </span>
         <span class="temphidden"> &gt; </span>
+        <span class="temphidden"> &lt; </span>
     </em> 
-  Fast to Load</h1>
+  Fast to Code</h1>
   </header>
     <section class="content"><button id="killCSS" class="skiplink">Enable Screen Reader Access</button>
       <div class="myname"><h2>Estelle Weyl</h2>
@@ -147,7 +153,7 @@ video {
 
 <div class="slide intro halved">
     <header>
-      <h1><span class="foo">Pick one: </span><br/>Fast to Code <em class="foo">OR</em> Fast to Load</h1>
+      <h1><span class="foo">Pick one: </span><br/>Fast to Load <em class="foo">OR</em> Fast to Code</h1>
       </header>
     <section class="content" aria-hidden="true">
       <div class="myname"><h2>Estelle Weyl</h2>
@@ -157,7 +163,7 @@ video {
 
 <div class="slide intro halved">
   <header>
-    <h1><span class="foo">Pick Both: </span>  <br/>Fast to Code <em class="foo">AND</em> Fast to Load</h1>
+    <h1><span class="foo">Pick Both: </span>  <br/>Fast to Load <em class="foo">AND</em> Fast to Code</h1>
     <h1 class="temphidden"><span class="foo">and</span> Usable <span class="foo">and</span> Accessible</h1>
   </header>
     <section class="content" aria-hidden="true">
@@ -176,19 +182,21 @@ video {
 <div class="slide normal" style="background-image: url(images/FF.png); background-size: cover">
 <section class="content" style="display: flex; flex-flow: column; justify-content: space-between; height: calc(100vh - 50px);">
 <div>
+
     <h1>Estelle Weyl</h1>
     <h2><a href="http://www.standardista.com">www.standardista.com</a><br>
     <h2><a href="https://www.PerfMattersConf.com">www.PerfMattersConf.com</a><br>
     </h2><h2><a href="http://www.twitter.com/estellevw">@estellevw</a><br><a href="http://www.twitter.com/standardista">@standardista</a></h2>
  </div>
- <div>
+ <div style="margin: 0 -70px;">
     <div class="floatright books">
+      <img src="https://akamaicovers.oreilly.com/images/0636920021711/cat.gif" alt="Mobile HTML5" />
+      <img src="images/fem.png" alt="Front End Masters">
       <img src="https://akamaicovers.oreilly.com/images/9780987467485/cat.gif" alt="HTML5 and CSS3 for the Real World">
       <img src="https://akamaicovers.oreilly.com/images/0636920041658/cat.gif" alt="Animations and Transitions with CSS"/>
-      <img src="https://akamaicovers.oreilly.com/images/0636920021711/cat.gif" alt="Mobile HTML5" />
       <img src="https://akamaicovers.oreilly.com/images/0636920025955/cat.gif" alt="Web Performance Daybook"/>
-      <img src="https://covers.oreillystatic.com/images/0636920066682/cat.gif" alt="Flexbox in CSS"/>
       <img src="https://covers.oreillystatic.com/images/0636920012726/cat.gif" alt="CSS: The Definitive Guide">
+      <img src="https://covers.oreillystatic.com/images/0636920066682/cat.gif" alt="Flexbox in CSS"/>
     </div>
 </div>
 
@@ -213,31 +221,8 @@ video {
 
 
 <div class="slide intro large" style="background: black;">
-    <header><h1>Coding &amp; Engineering</h1></header>
+    <header><h1>Coding v. Engineering</h1></header>
   </div>
-
-
-<div class="slide intro large tweet" style="background: hsl(270, 90%, 59%);">
-    <header><h1>Developer</h1></header>
-    <div style="display: flex; justify-content: center; align-items: center; align-content: center; height: 60vh; transform: scale(1.5)"> 
-    <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Remember when we had enough anger to spare that we argued about shit like &quot;should designers code?&quot; I miss those times.</p>&mdash; Karen VanHouten (@designinginward) <a href="https://twitter.com/designinginward/status/1047466993455120384?ref_src=twsrc%5Etfw">October 3, 2018</a></blockquote></div>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-</div>
-
-<div class="slide object" style="background-color: hsl(270, 90%, 59%);">
-  <object data="http://amiarealdeveloper.com/"></object>
-  <a href="http://amiarealdeveloper.com/" target="play" class="objectlink">Open in separate window</a>
-</div>
-
-
-<!--
-<div class="slide invert" style="background: left / contain no-repeat url(images/push.jpg) hsl(359, 0%, 96%);" role="img" aria-description="a really long, convoluted if statement with a mind bender pushing in the indentation">
-  <header>
-  </header>
-  <section class="content">
-  </section>
-</div>-->
 
 
 
@@ -324,6 +309,14 @@ video {
 <div class="slide">
     <section>
         <ul class="large">
+            <li>Use native semantic HTML
+              <ul class="small">
+                <li>Fast</li>
+                <li>accessible</li>
+                <li>Don't have to rewrite all the native interactions</li>
+                <li>works even when JS doesn't</li>
+              </ul>
+            </li>
             <li>Minimize the DOM
               <ul class="small">
                   <li>Each node uses up memory &amp; time<br/>
@@ -333,14 +326,7 @@ video {
                   <li>Minimize DOM manipulations: Batch queries &amp;  manipulations separately</li>
                 </ul>
             </li>
-            <li>Use native semantic HTML
-              <ul class="small">
-                <li>Fast</li>
-                <li>accessible</li>
-                <li>Don't have to rewrite all the native interactions</li>
-                <li>works even when JS doesn't</li>
-        </ul></li></ul>
-
+          </ul>
     </section>
   </div>
 
@@ -360,6 +346,13 @@ video {
 </div>
 
 
+<div class="slide intro" style="background: hsl(290, 90%, 59%);">
+  <header>
+    <h1 style="font-size: 8vw">The most performance JavaScript is omitted the omitted JavaScript.</h1>
+  </header>
+</div>
+
+
 
 <div class="slide invert">
   <header>
@@ -373,6 +366,12 @@ video {
 </div>
 
 
+
+<div class="slide intro" style="background: hsl(10, 90%, 59%);">
+  <header>
+    <h1 style="font-size: 8vw">Control your tools. Don't let them control you.</h1>
+  </header>
+</div>
 
 
 
@@ -404,11 +403,11 @@ video {
 
 
 
-<div class="slide"  style="background: center / 60% 80% no-repeat url(images/tightrope.svg) hsl(190, 68%, 21%);">
+<!--<div class="slide"  style="background: center / 60% 80% no-repeat url(images/tightrope.svg) hsl(190, 68%, 21%);">
     <header><h1 style="opacity: 0.01">Engineering</h1></header>
 <section class="content" style="display: flex; align-items: center; justify-content: space-between; height: 50vh; text-align: center">
   <h1>Web <br/>Performance</h1><h1>Developer<br/> Experience</h1>
-</section></div>
+</section></div>-->
 
 
 
@@ -416,6 +415,7 @@ video {
   <h2 style="font-size: 6.5vw;">"Fast to Load"</h2>
   <h1 style="font-size: 8vw">Web Performance</h1>
 </div>
+
 
 
 
@@ -480,9 +480,13 @@ video {
     Youtube Feathers:<br/>Regular:  &nbsp;58 requests/1200 kB<br/>Feathers: 14 requests/100 kB</p>
 </div>
 
-<div class="slide">
+
+
+
+<div class="slide tweet"  style="background: hsl(190, 68%, 21%);">
+  
   <header><h1>TL;DR;</h1></header>
-    <section class="content"><p>By keeping your client side code small and lightweight, you can literally open your product up to new markets.</p>
+    <section class="content"><p style="font-size: 4vw">By keeping your client side code small and lightweight, you can literally open your product up to new markets.</p>
     </section>
 </div>
 
@@ -498,10 +502,6 @@ video {
 </div>
 
 
-
-<div class="slide tweet"  style="background: hsl(230, 68%, 21%);">
-  <blockquote class="twitter-tweet" lang="en">Performance measurements are objective.<br/>Human perception of performance is subjective.</blockquote>
-</div>
 
 
 
@@ -532,7 +532,7 @@ video {
     <h1>What is Fast?</h1>
   </header>
   <section>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2200 1200" version="1.1" style="width: 90vw"> <title>What is fast?</title> <style> .findings rect { stroke: #333; stroke-width: 1px; width: 15px; fill: #226DAA; } .findings text { } .grid rect{ stroke: #ccc; stroke-width:2px; stroke-linecap:butt; stroke-linejoin:miter; stroke-opacity:1; fill: #fff; } text { font-size: 40px; font-family:sans-serif; } .values text { font-size: 20px; } .rotate { transform: rotate(-90deg); } </style> 
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2200 1200" version="1.1" style="width: 90vw"> <title>What is fast?</title> <style> .findings rect { stroke: #333; stroke-width: 1px; width: 15px; fill: #226DAA; } .findings text { } .grid rect{ stroke: #ccc; stroke-width:2px; stroke-linecap:butt; stroke-linejoin:miter; stroke-opacity:1; fill: #fff; } text { font-size: 40px; font-family:sans-serif; } .values text { font-size: 20px; } .rotate { transform: rotate(-90deg);} </style> 
 <g transform="translate(-20,-90)">
   <g class="grid" transform="translate(31,-185)">  
     <rect width="2100" height="2" y="500" x="50" /> 
@@ -541,7 +541,12 @@ video {
     <rect height="15" width="15"  y="490" x="240" /> 
     <text x="180" y="440" class="temphidden">Hello World</text>
     <rect height="15" width="15" y="490" x="1820" class="temphidden" /> 
-    <text x="1700" y="440" class="temphidden">Lord of the Rings</text> 
+    <text x="1700" y="440" class="temphidden">Lord of the Rings</text>
+    <g class="temphidden">
+      <rect y="490" x="540" fill="magenta" height="15" width="15"  /> 
+      <text x="490" y="370" fill="magenta">Time to </text>
+      <text x="460" y="425" fill="magenta">Interactive</text>
+    </g>  
   </g> 
   <g class="values"> 
     <text x="100" y="390">0 s</text> 
@@ -586,6 +591,38 @@ video {
 <img src="images/what_is_fast.svg" alt="a made up histogram in a bell curve shape with a long tail" style="height: 120vh">
 
 </div>
+
+<div class="slide tweet">
+
+<blockquote><q>Load is not a single moment in time — it’s an experience that no one metric can fully capture. There are multiple moments during the load experience that can affect whether a user perceives it as "fast" or "slow".</q>
+<br/>
+— Paint Timing spec</blockquote>
+
+</div>
+
+<div class="slide tweet"  style="background: hsl(230, 68%, 21%);">
+  <blockquote class="twitter-tweet" lang="en">Performance measurements are objective.<br/><br/>Human perception of performance is subjective.</blockquote>
+</div>
+
+
+<div class="slide"  style="background: hsl(270, 90%, 59%);">
+  <header>
+    <h1>Performance</h1>
+  </header>
+  <section class="content">
+  <ul class="bulleted">
+    <li>Time to Load</li>
+    <li>Time until usable</li>
+    <li>Jitter</li>
+    <li>Responsiveness</li>
+    <li>Smoothness</li> 
+    <li>Battery Life</li>
+  </ul></section>
+</div>
+
+
+
+
 
 <!-- DO THIS -->
 <div class="slide"  style="background: hsl(330, 68%, 21%);">
@@ -660,15 +697,29 @@ video {
 
 
 
+
+<div class="slide invert">
+  <header class="flex">
+    <h1>Objective Metrics: Navigation Timing API</h1>
+  </header>
+  <section style="height: 80vh; overflow: scroll">
+  <img src="images/perfmetrics.svg" alt="Navigation Timing API metrics" style="height: 80vh;">
+  </section>
+</div>
+
+
+
+
 <div class="slide"  style="background: hsl(350, 68%, 21%);">
   <header>
     <h1></h1>
   </header>
   <section class="content">
-    <ol>
-      <li>Happening?</li>
-<li>Useful</li>
-<li>Usable</li>
+    <ol class="large">
+      <li>Is it happening?  <br/>Between first paint and first contentful paint</li>
+<li>Is it useful<br/>
+Between first meaningful paint and visually ready</li>
+<li>Is it usable? <br/>Time to Interactive</li>
 </ol>
   </section>
 </div>
@@ -693,41 +744,8 @@ video {
 
 
 
-<div class="slide"  style="background: hsl(220, 90%, 59%);">
-  <header>
-    <h1>Performance</h1>
-  </header>
-  <section class="content">
-  <ul class="bulleted">
-    <li>Time to Load</li>
-    <li>Time until usable</li>
-    <li>Jitter</li>
-    <li>Responsiveness</li>
-    <li>Smoothness</li> 
-    <li>Battery Life</li>
-  </ul></section>
-</div>
 
 
-<div class="slide" style="background: hsl(340, 90%, 59%);">
-  <header>
-    <h1>Web Performance</h1>
-  </header>
-  <section class="content">
-  <dl>
-  <dt>Download</dt>
-  <dd class="temphidden"># of resources: images, fonts, HTML, scripts, and CSS loaded</dd>
-  <dt class="temphidden">Parse</dt>
-  <dd class="temphidden">File size of above resources</dd>
-  <dt class="temphidden">Execute</dt>
-  <dd class="temphidden">Parsing &amp; Painting</dd>
-  <dt class="temphidden">Perceived Performance</dt>
-  <dd class="temphidden">Users perception of the speed of the load and reaction time.</dd> 
-  </dl>
-  <div>
-</div>
-  </section>
-</div>
 
 <div class="slide"  style="background: hsl(290, 68%, 21%);">
   <header>
@@ -756,12 +774,32 @@ video {
 
 
 
+<div class="slide" style="background: hsl(340, 90%, 59%);">
+  <header>
+    <h1>Web Performance</h1>
+  </header>
+  <section class="content">
+  <dl>
+  <dt>Download</dt>
+  <dd class="temphidden"># of resources: images, fonts, HTML, scripts, and CSS loaded</dd>
+  <dt class="temphidden">Parse</dt>
+  <dd class="temphidden">File size of above resources</dd>
+  <dt class="temphidden">Execute</dt>
+  <dd class="temphidden">Parsing &amp; Painting</dd>
+  <dt class="temphidden">Perceived Performance</dt>
+  <dd class="temphidden">Users perception of the speed of the load and reaction time.</dd> 
+  </dl>
+  <div>
+</div>
+  </section>
+</div>
 
 
 
 
 
-    <div class="slide"  style="background: hsl(30, 90%, 59%);">
+
+   <!-- <div class="slide"  style="background: hsl(30, 90%, 59%);">
       <header><h1>Tips</h1></header>
         <section class="content">
           <ol>
@@ -778,7 +816,7 @@ video {
           </ol>
 
         </section>
-    </div>
+    </div> -->
 
 
 <div class="slide invert">
@@ -832,8 +870,8 @@ from 2007/2011 to 2017 (in Mbps), by quarter <span style="opacity: 0.3">4x</span
     <ul>
       <li>Downloads 350Kb of Javascript</li>
       <li>Uncompressed to over 1MB of JavaScript</li>
-      <li>Taking 15s until interactive</li>
-      <li>Taking upto 36s on mobile devices</li>
+      <li>Taking up to 15s until interactive</li>
+      <li>Taking up to 28s on mobile devices</li>
   </section>
 </div>
 
@@ -908,7 +946,7 @@ from 2007/2011 to 2017 (in Mbps), by quarter <span style="opacity: 0.3">4x</span
 
 
 
-<div class="slide"  style="background: hsl(260, 68%, 21%);">
+<div class="slide"  style="background: hsl(240, 68%, 21%);">
   <header><h1>JavaScript!</h1></header>
     <section class="content">
 <ul>
@@ -926,7 +964,49 @@ from 2007/2011 to 2017 (in Mbps), by quarter <span style="opacity: 0.3">4x</span
  </div>
 
 
-<div class="slide tweet">
+<div class="slide" style="background: hsl(280, 90%, 59%);">
+  <header>
+    <h1>Recommendation</h1>
+  </header>
+  <section class="content">
+    <ul>
+<li>Minimize JavaScript</li>
+<li>Give users a great experience -- 
+Initially download only what a page needs</li>
+<li>Split and defer code</li>
+</ul>
+  </section>
+</div>
+
+
+
+<div class="slide">
+  <header><h1>User Interaction</h1></header>
+  <ol style="font-size: 2em">
+    <li>Responsiveness
+      <ul>
+        <li>Aim for a 100ms response time!</li>
+      </ul>
+    </li>
+  <li>Smoothness
+    <ul><li>Scrolling</li>
+        <li>Re-rendering time
+            <ul>
+              <li>60FPS = 16.67ms per frame</li>
+            </ul>
+          </li>
+        </ul>
+      </ol>
+</div>
+
+
+<div class="slide intro"  style="background: hsl(320, 90%, 59%);">
+  <h2 style="font-size: 8vw;">Battery</h2>
+</div>
+
+
+
+<div class="slide tweet" style="background: hsl(370, 90%, 59%);">
   <blockquote class="twitter-tweet" lang="en"><q>Is your battery draining too fast? Turn off everything that makes your smart phone smart. That&#39;ll fix it.</q>
     <cite>&mdash; Scott Hanselman     </cite>
 </blockquote>
@@ -971,23 +1051,8 @@ from 2007/2011 to 2017 (in Mbps), by quarter <span style="opacity: 0.3">4x</span
 
 
 
-<div class="slide">
-  <header><h1>User Interaction</h1></header>
-  <ol style="font-size: 2em">
-    <li>Responsiveness
-      <ul class="large">
-        <li>Aim for a 100ms response time!</li>
-      </ul>
-    </li>
-  <li>Smoothness
-    <ul><li>Scrolling</li>
-        <li>Re-rendering time
-            <ul>
-              <li>60FPS = 16.67ms per frame</li>
-            </ul>
-          </li>
-        </ul>
-      </ol>
+<div class="slide intro"  style="background: hsl(20, 90%, 59%);">
+  <h2 style="font-size: 8vw;">Media</h2>
 </div>
 
 
@@ -1067,6 +1132,26 @@ from 2007/2011 to 2017 (in Mbps), by quarter <span style="opacity: 0.3">4x</span
 </div>
 
 
+<div class="slide invert">
+  <header>
+    <h1>Optimize Videos</h1>
+  </header>
+  <section class="content flex" >
+      <ol style="margin-right: -200px; z-index: 10; white-space: nowrap;">
+      <li>Omit videos</li>
+      <li>Compress them</li>
+      <li>Optimize source order</li>
+      <li>Remove muted audio</li>
+    </ol>
+  <img src="images/video.svg" alt="timeline of video weight on the web. Average of 2.5MB, with 10MB for top 10% of sites." style="z-index: 1">
+    
+  </style>>
+
+      
+  </section>
+</div>
+
+
 
 <div class="slide invert">
   <header>
@@ -1079,6 +1164,12 @@ from 2007/2011 to 2017 (in Mbps), by quarter <span style="opacity: 0.3">4x</span
 
 
 
+
+<div class="slide intro"  style="background: hsl(60, 90%, 59%);">
+  <h2 style="font-size: 8vw; color: black">CSS?</h2>
+</div>
+
+
 <div class="slide invert">
 <header><h1>CSS</h1></header>
 <section content="content">
@@ -1087,6 +1178,532 @@ from 2007/2011 to 2017 (in Mbps), by quarter <span style="opacity: 0.3">4x</span
 </section>
 </div>
 
+
+
+<div class="slide"   style="background: hsl(60, 68%, 21%); ">
+  <header>
+    <h1>Control Your Processors</h1>
+  </header>
+  <section class="content">
+<pre class="fadeout">@<b style="color:hsl(60, 68%, 21%)">-webkit-</b>keyframes fadeOutAndMoveDown {
+    0% {
+        top: 50%;
+        opacity: 1;
+        <b style="color:hsl(60, 68%, 21%)">-ms-</b>filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"
+    }
+
+    100% {
+        top: 55%;
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+    }
+}</pre>
+  </section>
+</div>
+
+
+<div class="slide">
+  <header>
+    <h1>Understand Your Output</h1>
+  </header>
+  <section class="content">
+    <p>821 selectors!</p>
+    <pre style="height: 50vh; overflow: scroll;">.btn-group .btn + .btn, .btn-group .pagination-classic > li > a + .btn, .btn-group
+.pagination-classic > li > span + .btn, .btn-group .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child a + .btn, .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child .btn-group a + .btn, .btn-group .page-careers .field-name-field-what-waiting-links .field-items .field-item a + .btn, .page-careers .field-name-field-what-waiting-links .field-items .field-item .btn-group a + .btn, .btn-group .page-careers .field-name-field-job-with-partners-link .field-items .field-item a + .btn, .page-careers .field-name-field-job-with-partners-link .field-items .field-item .btn-group a + .btn, .btn-group .custom-project .view-project-event .view-footer a + .btn, .custom-project .view-project-event .view-footer .btn-group a + .btn, .btn-group .project-call-to-action .field-item a + .btn, .project-call-to-action .field-item .btn-group a + .btn, .btn-group .page-node-add-problem input.form-submit + .btn, .page-node-add-problem .btn-group input.form-submit + .btn, .btn-group .page-node-add-problem .geolocation-client-location + .btn, .page-node-add-problem .btn-group .geolocation-client-location + .btn, .btn-group .page-node-add-problem .geolocation-address-geocode + .btn, .page-node-add-problem .btn-group .geolocation-address-geocode + .btn, .btn-group #block-conf-eform-caree-page-side-slide .owl-nav > div + .btn, #block-conf-eform-caree-page-side-slide .btn-group .owl-nav > div + .btn, .btn-group .pagination-classic > li > .btn + a, .btn-group .pagination-classic > li > a + a, .btn-group
+.pagination-classic > li > span + a, .btn-group .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child .pagination-classic > li > a + a, .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child .btn-group .pagination-classic > li > a + a, .btn-group .page-careers .field-name-field-what-waiting-links .field-items .field-item .pagination-classic > li > a + a, .page-careers .field-name-field-what-waiting-links .field-items .field-item .btn-group .pagination-classic > li > a + a, .btn-group .page-careers .field-name-field-job-with-partners-link .field-items .field-item .pagination-classic > li > a + a, .page-careers .field-name-field-job-with-partners-link .field-items .field-item .btn-group .pagination-classic > li > a + a, .btn-group .custom-project .view-project-event .view-footer .pagination-classic > li > a + a, .custom-project .view-project-event .view-footer .btn-group .pagination-classic > li > a + a, .btn-group .project-call-to-action .field-item .pagination-classic > li > a + a, .project-call-to-action .field-item .btn-group .pagination-classic > li > a + a, .btn-group .page-node-add-problem .pagination-classic > li > input.form-submit + a, .page-node-add-problem .btn-group .pagination-classic > li > input.form-submit + a, .btn-group .page-node-add-problem .pagination-classic > li > .geolocation-client-location + a, .page-node-add-problem .btn-group .pagination-classic > li > .geolocation-client-location + a, .btn-group .page-node-add-problem .pagination-classic > li > .geolocation-address-geocode + a, .page-node-add-problem .btn-group .pagination-classic > li > .geolocation-address-geocode + a, .btn-group #block-conf-eform-caree-page-side-slide .pagination-classic > li.owl-nav > div + a, #block-conf-eform-caree-page-side-slide .btn-group .pagination-classic > li.owl-nav > div + a, .btn-group
+.pagination-classic > li > .btn + span, .btn-group .pagination-classic > li > a + span, .btn-group
+.pagination-classic > li > span + span, .btn-group .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child
+.pagination-classic > li > a + span, .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child .btn-group
+.pagination-classic > li > a + span, .btn-group .page-careers .field-name-field-what-waiting-links .field-items .field-item
+.pagination-classic > li > a + span, .page-careers .field-name-field-what-waiting-links .field-items .field-item .btn-group
+.pagination-classic > li > a + span, .btn-group .page-careers .field-name-field-job-with-partners-link .field-items .field-item
+.pagination-classic > li > a + span, .page-careers .field-name-field-job-with-partners-link .field-items .field-item .btn-group
+.pagination-classic > li > a + span, .btn-group .custom-project .view-project-event .view-footer
+.pagination-classic > li > a + span, .custom-project .view-project-event .view-footer .btn-group
+.pagination-classic > li > a + span, .btn-group .project-call-to-action .field-item
+.pagination-classic > li > a + span, .project-call-to-action .field-item .btn-group
+.pagination-classic > li > a + span, .btn-group .page-node-add-problem
+.pagination-classic > li > input.form-submit + span, .page-node-add-problem .btn-group
+.pagination-classic > li > input.form-submit + span, .btn-group .page-node-add-problem
+.pagination-classic > li > .geolocation-client-location + span, .page-node-add-problem .btn-group
+.pagination-classic > li > .geolocation-client-location + span, .btn-group .page-node-add-problem
+.pagination-classic > li > .geolocation-address-geocode + span, .page-node-add-problem .btn-group
+.pagination-classic > li > .geolocation-address-geocode + span, .btn-group #block-conf-eform-caree-page-side-slide
+.pagination-classic > li.owl-nav > div + span, #block-conf-eform-caree-page-side-slide .btn-group
+.pagination-classic > li.owl-nav > div + span, .btn-group .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child .btn + a, .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child .btn-group .btn + a, .btn-group .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child .pagination-classic > li > a + a, .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child .btn-group .pagination-classic > li > a + a, .btn-group .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child
+.pagination-classic > li > span + a, .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child .btn-group
+.pagination-classic > li > span + a, .btn-group .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child a + a, .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child .btn-group a + a, .btn-group .page-careers .field-name-field-what-waiting-links .field-name-field-search-rotator-links .field-items .field-item:first-child a + a, .btn-group .page-careers .field-name-field-search-rotator-links .field-name-field-what-waiting-links .field-items .field-item:first-child a + a, .page-careers .field-name-field-what-waiting-links .field-name-field-search-rotator-links .field-items .field-item:first-child .btn-group a + a, .page-careers .field-name-field-search-rotator-links .field-name-field-what-waiting-links .field-items .field-item:first-child .btn-group a + a, .btn-group .page-careers .field-name-field-job-with-partners-link .field-name-field-search-rotator-links .field-items .field-item:first-child a + a, .btn-group .page-careers .field-name-field-search-rotator-links .field-name-field-job-with-partners-link .field-items .field-item:first-child a + a, .page-careers .field-name-field-job-with-partners-link .field-name-field-search-rotator-links .field-items .field-item:first-child .btn-group a + a, .page-careers .field-name-field-search-rotator-links .field-name-field-job-with-partners-link .field-items .field-item:first-child .btn-group a + a, .btn-group .custom-project .view-project-event .view-footer .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child a + a, .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child .btn-group .custom-project .view-project-event .view-footer a + a, .custom-project .view-project-event .view-footer .btn-group .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child a + a, .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child .custom-project .view-project-event .view-footer .btn-group a + a, .btn-group .project-call-to-action .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child a + a, .page-careers .field-name-field-search-rotator-links .field-items .btn-group .project-call-to-action .field-item:first-child a + a, .project-call-to-action .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child .btn-group a + a, .page-careers .field-name-field-search-rotator-links .field-items .project-call-to-action .field-item:first-child .btn-group a + a, .btn-group .page-node-add-problem .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child input.form-submit + a, .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child .btn-group .page-node-add-problem input.form-submit + a, .page-node-add-problem .btn-group .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child input.form-submit + a, .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child .page-node-add-problem .btn-group input.form-submit + a, .btn-group .page-node-add-problem .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child .geolocation-client-location + a, .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child .btn-group .page-node-add-problem .geolocation-client-location + a, .page-node-add-problem .btn-group .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child .geolocation-client-location + a, .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child .page-node-add-problem .btn-group .geolocation-client-location + a, .btn-group .page-node-add-problem .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child .geolocation-address-geocode + a, .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child .btn-group .page-node-add-problem .geolocation-address-geocode + a, .page-node-add-problem .btn-group .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child .geolocation-address-geocode + a, .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child .page-node-add-problem .btn-group .geolocation-address-geocode + a, .btn-group #block-conf-eform-caree-page-side-slide .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child .owl-nav > div + a, .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child .btn-group #block-conf-eform-caree-page-side-slide .owl-nav > div + a, #block-conf-eform-caree-page-side-slide .btn-group .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child .owl-nav > div + a, .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child #block-conf-eform-caree-page-side-slide .btn-group .owl-nav > div + a, .btn-group .page-careers .field-name-field-what-waiting-links .field-items .field-item .btn + a, .page-careers .field-name-field-what-waiting-links .field-items .field-item .btn-group .btn + a, .btn-group .page-careers .field-name-field-what-waiting-links .field-items .field-item .pagination-classic > li > a + a, .page-careers .field-name-field-what-waiting-links .field-items .field-item .btn-group .pagination-classic > li > a + a, .btn-group .page-careers .field-name-field-what-waiting-links .field-items .field-item
+.pagination-classic > li > span + a, .page-careers .field-name-field-what-waiting-links .field-items .field-item .btn-group
+.pagination-classic > li > span + a, .btn-group .page-careers .field-name-field-search-rotator-links .field-name-field-what-waiting-links .field-items .field-item:first-child a + a, .btn-group .page-careers .field-name-field-what-waiting-links .field-name-field-search-rotator-links .field-items .field-item:first-child a + a, .page-careers .field-name-field-search-rotator-links .field-name-field-what-waiting-links .field-items .field-item:first-child .btn-group a + a, .page-careers .field-name-field-what-waiting-links .field-name-field-search-rotator-links .field-items .field-item:first-child .btn-group a + a, .btn-group .page-careers .field-name-field-what-waiting-links .field-items .field-item a + a, .page-careers .field-name-field-what-waiting-links .field-items .field-item .btn-group a + a, .btn-group .page-careers .field-name-field-job-with-partners-link .field-name-field-what-waiting-links .field-items .field-item a + a, .btn-group .page-careers .field-name-field-what-waiting-links .field-name-field-job-with-partners-link .field-items .field-item a + a, .page-careers .field-name-field-job-with-partners-link .field-name-field-what-waiting-links .field-items .field-item .btn-group a + a, .page-careers .field-name-field-what-waiting-links .field-name-field-job-with-partners-link .field-items .field-item .btn-group a + a, .btn-group .custom-project .view-project-event .view-footer .page-careers .field-name-field-what-waiting-links .field-items .field-item a + a, .page-careers .field-name-field-what-waiting-links .field-items .field-item .btn-group .custom-project .view-project-event .view-footer a + a, .custom-project .view-project-event .view-footer .btn-group .page-careers .field-name-field-what-waiting-links .field-items .field-item a + a, .page-careers .field-name-field-what-waiting-links .field-items .field-item .custom-project .view-project-event .view-footer .btn-group a + a, .btn-group .project-call-to-action .page-careers .field-name-field-what-waiting-links .field-items .field-item a + a, .page-careers .field-name-field-what-waiting-links .field-items .btn-group .project-call-to-action .field-item a + a, .project-call-to-action .page-careers .field-name-field-what-waiting-links .field-items .field-item .btn-group a + a, .page-careers .field-name-field-what-waiting-links .field-items .project-call-to-action .field-item .btn-group a + a, .btn-group .page-node-add-problem .page-careers .field-name-field-what-waiting-links .field-items .field-item input.form-submit + a, .page-careers .field-name-field-what-waiting-links .field-items .field-item .btn-group .page-node-add-problem input.form-submit + a, .page-node-add-problem .btn-group .page-careers .field-name-field-what-waiting-links .field-items .field-item input.form-submit + a, .page-careers .field-name-field-what-waiting-links .field-items .field-item .page-node-add-problem .btn-group input.form-submit + a, .btn-group .page-node-add-problem .page-careers .field-name-field-what-waiting-links .field-items .field-item .geolocation-client-location + a, .page-careers .field-name-field-what-waiting-links .field-items .field-item .btn-group .page-node-add-problem .geolocation-client-location + a, .page-node-add-problem .btn-group .page-careers .field-name-field-what-waiting-links .field-items .field-item .geolocation-client-location + a, .page-careers .field-name-field-what-waiting-links .field-items .field-item .page-node-add-problem .btn-group .geolocation-client-location + a, .btn-group .page-node-add-problem .page-careers .field-name-field-what-waiting-links .field-items .field-item .geolocation-address-geocode + a, .page-careers .field-name-field-what-waiting-links .field-items .field-item .btn-group .page-node-add-problem .geolocation-address-geocode + a, .page-node-add-problem .btn-group .page-careers .field-name-field-what-waiting-links .field-items .field-item .geolocation-address-geocode + a, .page-careers .field-name-field-what-waiting-links .field-items .field-item .page-node-add-problem .btn-group .geolocation-address-geocode + a, .btn-group #block-conf-eform-caree-page-side-slide .page-careers .field-name-field-what-waiting-links .field-items .field-item .owl-nav > div + a, .page-careers .field-name-field-what-waiting-links .field-items .field-item .btn-group #block-conf-eform-caree-page-side-slide .owl-nav > div + a, #block-conf-eform-caree-page-side-slide .btn-group .page-careers .field-name-field-what-waiting-links .field-items .field-item .owl-nav > div + a, .page-careers .field-name-field-what-waiting-links .field-items .field-item #block-conf-eform-caree-page-side-slide .btn-group .owl-nav > div + a, .btn-group .page-careers .field-name-field-job-with-partners-link .field-items .field-item .btn + a, .page-careers .field-name-field-job-with-partners-link .field-items .field-item .btn-group .btn + a, .btn-group .page-careers .field-name-field-job-with-partners-link .field-items .field-item .pagination-classic > li > a + a, .page-careers .field-name-field-job-with-partners-link .field-items .field-item .btn-group .pagination-classic > li > a + a, .btn-group .page-careers .field-name-field-job-with-partners-link .field-items .field-item
+.pagination-classic > li > span + a, .page-careers .field-name-field-job-with-partners-link .field-items .field-item .btn-group
+.pagination-classic > li > span + a, .btn-group .page-careers .field-name-field-search-rotator-links .field-name-field-job-with-partners-link .field-items .field-item:first-child a + a, .btn-group .page-careers .field-name-field-job-with-partners-link .field-name-field-search-rotator-links .field-items .field-item:first-child a + a, .page-careers .field-name-field-search-rotator-links .field-name-field-job-with-partners-link .field-items .field-item:first-child .btn-group a + a, .page-careers .field-name-field-job-with-partners-link .field-name-field-search-rotator-links .field-items .field-item:first-child .btn-group a + a, .btn-group .page-careers .field-name-field-what-waiting-links .field-name-field-job-with-partners-link .field-items .field-item a + a, .btn-group .page-careers .field-name-field-job-with-partners-link .field-name-field-what-waiting-links .field-items .field-item a + a, .page-careers .field-name-field-what-waiting-links .field-name-field-job-with-partners-link .field-items .field-item .btn-group a + a, .page-careers .field-name-field-job-with-partners-link .field-name-field-what-waiting-links .field-items .field-item .btn-group a + a, .btn-group .page-careers .field-name-field-job-with-partners-link .field-items .field-item a + a, .page-careers .field-name-field-job-with-partners-link .field-items .field-item .btn-group a + a, .btn-group .custom-project .view-project-event .view-footer .page-careers .field-name-field-job-with-partners-link .field-items .field-item a + a, .page-careers .field-name-field-job-with-partners-link .field-items .field-item .btn-group .custom-project .view-project-event .view-footer a + a, .custom-project .view-project-event .view-footer .btn-group .page-careers .field-name-field-job-with-partners-link .field-items .field-item a + a, .page-careers .field-name-field-job-with-partners-link .field-items .field-item .custom-project .view-project-event .view-footer .btn-group a + a, .btn-group .project-call-to-action .page-careers .field-name-field-job-with-partners-link .field-items .field-item a + a, .page-careers .field-name-field-job-with-partners-link .field-items .btn-group .project-call-to-action .field-item a + a, .project-call-to-action .page-careers .field-name-field-job-with-partners-link .field-items .field-item .btn-group a + a, .page-careers .field-name-field-job-with-partners-link .field-items .project-call-to-action .field-item .btn-group a + a, .btn-group .page-node-add-problem .page-careers .field-name-field-job-with-partners-link .field-items .field-item input.form-submit + a, .page-careers .field-name-field-job-with-partners-link .field-items .field-item .btn-group .page-node-add-problem input.form-submit + a, .page-node-add-problem .btn-group .page-careers .field-name-field-job-with-partners-link .field-items .field-item input.form-submit + a, .page-careers .field-name-field-job-with-partners-link .field-items .field-item .page-node-add-problem .btn-group input.form-submit + a, .btn-group .page-node-add-problem .page-careers .field-name-field-job-with-partners-link .field-items .field-item .geolocation-client-location + a, .page-careers .field-name-field-job-with-partners-link .field-items .field-item .btn-group .page-node-add-problem .geolocation-client-location + a, .page-node-add-problem .btn-group .page-careers .field-name-field-job-with-partners-link .field-items .field-item .geolocation-client-location + a, .page-careers .field-name-field-job-with-partners-link .field-items .field-item .page-node-add-problem .btn-group .geolocation-client-location + a, .btn-group .page-node-add-problem .page-careers .field-name-field-job-with-partners-link .field-items .field-item .geolocation-address-geocode + a, .page-careers .field-name-field-job-with-partners-link .field-items .field-item .btn-group .page-node-add-problem .geolocation-address-geocode + a, .page-node-add-problem .btn-group .page-careers .field-name-field-job-with-partners-link .field-items .field-item .geolocation-address-geocode + a, .page-careers .field-name-field-job-with-partners-link .field-items .field-item .page-node-add-problem .btn-group .geolocation-address-geocode + a, .btn-group #block-conf-eform-caree-page-side-slide .page-careers .field-name-field-job-with-partners-link .field-items .field-item .owl-nav > div + a, .page-careers .field-name-field-job-with-partners-link .field-items .field-item .btn-group #block-conf-eform-caree-page-side-slide .owl-nav > div + a, #block-conf-eform-caree-page-side-slide .btn-group .page-careers .field-name-field-job-with-partners-link .field-items .field-item .owl-nav > div + a, .page-careers .field-name-field-job-with-partners-link .field-items .field-item #block-conf-eform-caree-page-side-slide .btn-group .owl-nav > div + a, .btn-group .custom-project .view-project-event .view-footer .btn + a, .custom-project .view-project-event .view-footer .btn-group .btn + a, .btn-group .custom-project .view-project-event .view-footer .pagination-classic > li > a + a, .custom-project .view-project-event .view-footer .btn-group .pagination-classic > li > a + a, .btn-group .custom-project .view-project-event .view-footer
+.pagination-classic > li > span + a, .custom-project .view-project-event .view-footer .btn-group
+.pagination-classic > li > span + a, .btn-group .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child .custom-project .view-project-event .view-footer a + a, .custom-project .view-project-event .view-footer .btn-group .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child a + a, .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child .btn-group .custom-project .view-project-event .view-footer a + a, .custom-project .view-project-event .view-footer .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child .btn-group a + a, .btn-group .page-careers .field-name-field-what-waiting-links .field-items .field-item .custom-project .view-project-event .view-footer a + a, .custom-project .view-project-event .view-footer .btn-group .page-careers .field-name-field-what-waiting-links .field-items .field-item a + a, .page-careers .field-name-field-what-waiting-links .field-items .field-item .btn-group .custom-project .view-project-event .view-footer a + a, .custom-project .view-project-event .view-footer .page-careers .field-name-field-what-waiting-links .field-items .field-item .btn-group a + a, .btn-group .page-careers .field-name-field-job-with-partners-link .field-items .field-item .custom-project .view-project-event .view-footer a + a, .custom-project .view-project-event .view-footer .btn-group .page-careers .field-name-field-job-with-partners-link .field-items .field-item a + a, .page-careers .field-name-field-job-with-partners-link .field-items .field-item .btn-group .custom-project .view-project-event .view-footer a + a, .custom-project .view-project-event .view-footer .page-careers .field-name-field-job-with-partners-link .field-items .field-item .btn-group a + a, .btn-group .custom-project .view-project-event .view-footer a + a, .custom-project .view-project-event .view-footer .btn-group a + a, .btn-group .project-call-to-action .field-item .custom-project .view-project-event .view-footer a + a, .custom-project .view-project-event .view-footer .btn-group .project-call-to-action .field-item a + a, .project-call-to-action .field-item .btn-group .custom-project .view-project-event .view-footer a + a, .custom-project .view-project-event .view-footer .project-call-to-action .field-item .btn-group a + a, .btn-group .page-node-add-problem .custom-project .view-project-event .view-footer input.form-submit + a, .custom-project .view-project-event .view-footer .btn-group .page-node-add-problem input.form-submit + a, .page-node-add-problem .btn-group .custom-project .view-project-event .view-footer input.form-submit + a, .custom-project .view-project-event .view-footer .page-node-add-problem .btn-group input.form-submit + a, .btn-group .page-node-add-problem .custom-project .view-project-event .view-footer .geolocation-client-location + a, .custom-project .view-project-event .view-footer .btn-group .page-node-add-problem .geolocation-client-location + a, .page-node-add-problem .btn-group .custom-project .view-project-event .view-footer .geolocation-client-location + a, .custom-project .view-project-event .view-footer .page-node-add-problem .btn-group .geolocation-client-location + a, .btn-group .page-node-add-problem .custom-project .view-project-event .view-footer .geolocation-address-geocode + a, .custom-project .view-project-event .view-footer .btn-group .page-node-add-problem .geolocation-address-geocode + a, .page-node-add-problem .btn-group .custom-project .view-project-event .view-footer .geolocation-address-geocode + a, .custom-project .view-project-event .view-footer .page-node-add-problem .btn-group .geolocation-address-geocode + a, .btn-group #block-conf-eform-caree-page-side-slide .custom-project .view-project-event .view-footer .owl-nav > div + a, .custom-project .view-project-event .view-footer .btn-group #block-conf-eform-caree-page-side-slide .owl-nav > div + a, #block-conf-eform-caree-page-side-slide .btn-group .custom-project .view-project-event .view-footer .owl-nav > div + a, .custom-project .view-project-event .view-footer #block-conf-eform-caree-page-side-slide .btn-group .owl-nav > div + a, .btn-group .project-call-to-action .field-item .btn + a, .project-call-to-action .field-item .btn-group .btn + a, .btn-group .project-call-to-action .field-item .pagination-classic > li > a + a, .project-call-to-action .field-item .btn-group .pagination-classic > li > a + a, .btn-group .project-call-to-action .field-item
+.pagination-classic > li > span + a, .project-call-to-action .field-item .btn-group
+.pagination-classic > li > span + a, .btn-group .page-careers .field-name-field-search-rotator-links .field-items .project-call-to-action .field-item:first-child a + a, .project-call-to-action .btn-group .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child a + a, .page-careers .field-name-field-search-rotator-links .field-items .project-call-to-action .field-item:first-child .btn-group a + a, .project-call-to-action .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child .btn-group a + a, .btn-group .page-careers .field-name-field-what-waiting-links .field-items .project-call-to-action .field-item a + a, .project-call-to-action .btn-group .page-careers .field-name-field-what-waiting-links .field-items .field-item a + a, .page-careers .field-name-field-what-waiting-links .field-items .project-call-to-action .field-item .btn-group a + a, .project-call-to-action .page-careers .field-name-field-what-waiting-links .field-items .field-item .btn-group a + a, .btn-group .page-careers .field-name-field-job-with-partners-link .field-items .project-call-to-action .field-item a + a, .project-call-to-action .btn-group .page-careers .field-name-field-job-with-partners-link .field-items .field-item a + a, .page-careers .field-name-field-job-with-partners-link .field-items .project-call-to-action .field-item .btn-group a + a, .project-call-to-action .page-careers .field-name-field-job-with-partners-link .field-items .field-item .btn-group a + a, .btn-group .custom-project .view-project-event .view-footer .project-call-to-action .field-item a + a, .project-call-to-action .field-item .btn-group .custom-project .view-project-event .view-footer a + a, .custom-project .view-project-event .view-footer .btn-group .project-call-to-action .field-item a + a, .project-call-to-action .field-item .custom-project .view-project-event .view-footer .btn-group a + a, .btn-group .project-call-to-action .field-item a + a, .project-call-to-action .field-item .btn-group a + a, .btn-group .page-node-add-problem .project-call-to-action .field-item input.form-submit + a, .project-call-to-action .field-item .btn-group .page-node-add-problem input.form-submit + a, .page-node-add-problem .btn-group .project-call-to-action .field-item input.form-submit + a, .project-call-to-action .field-item .page-node-add-problem .btn-group input.form-submit + a, .btn-group .page-node-add-problem .project-call-to-action .field-item .geolocation-client-location + a, .project-call-to-action .field-item .btn-group .page-node-add-problem .geolocation-client-location + a, .page-node-add-problem .btn-group .project-call-to-action .field-item .geolocation-client-location + a, .project-call-to-action .field-item .page-node-add-problem .btn-group .geolocation-client-location + a, .btn-group .page-node-add-problem .project-call-to-action .field-item .geolocation-address-geocode + a, .project-call-to-action .field-item .btn-group .page-node-add-problem .geolocation-address-geocode + a, .page-node-add-problem .btn-group .project-call-to-action .field-item .geolocation-address-geocode + a, .project-call-to-action .field-item .page-node-add-problem .btn-group .geolocation-address-geocode + a, .btn-group #block-conf-eform-caree-page-side-slide .project-call-to-action .field-item .owl-nav > div + a, .project-call-to-action .field-item .btn-group #block-conf-eform-caree-page-side-slide .owl-nav > div + a, #block-conf-eform-caree-page-side-slide .btn-group .project-call-to-action .field-item .owl-nav > div + a, .project-call-to-action .field-item #block-conf-eform-caree-page-side-slide .btn-group .owl-nav > div + a, .btn-group .page-node-add-problem .btn + input.form-submit, .page-node-add-problem .btn-group .btn + input.form-submit, .btn-group .page-node-add-problem .pagination-classic > li > a + input.form-submit, .page-node-add-problem .btn-group .pagination-classic > li > a + input.form-submit, .btn-group .page-node-add-problem
+.pagination-classic > li > span + input.form-submit, .page-node-add-problem .btn-group
+.pagination-classic > li > span + input.form-submit, .btn-group .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child .page-node-add-problem a + input.form-submit, .page-node-add-problem .btn-group .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child a + input.form-submit, .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child .btn-group .page-node-add-problem a + input.form-submit, .page-node-add-problem .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child .btn-group a + input.form-submit, .btn-group .page-careers .field-name-field-what-waiting-links .field-items .field-item .page-node-add-problem a + input.form-submit, .page-node-add-problem .btn-group .page-careers .field-name-field-what-waiting-links .field-items .field-item a + input.form-submit, .page-careers .field-name-field-what-waiting-links .field-items .field-item .btn-group .page-node-add-problem a + input.form-submit, .page-node-add-problem .page-careers .field-name-field-what-waiting-links .field-items .field-item .btn-group a + input.form-submit, .btn-group .page-careers .field-name-field-job-with-partners-link .field-items .field-item .page-node-add-problem a + input.form-submit, .page-node-add-problem .btn-group .page-careers .field-name-field-job-with-partners-link .field-items .field-item a + input.form-submit, .page-careers .field-name-field-job-with-partners-link .field-items .field-item .btn-group .page-node-add-problem a + input.form-submit, .page-node-add-problem .page-careers .field-name-field-job-with-partners-link .field-items .field-item .btn-group a + input.form-submit, .btn-group .custom-project .view-project-event .view-footer .page-node-add-problem a + input.form-submit, .page-node-add-problem .btn-group .custom-project .view-project-event .view-footer a + input.form-submit, .custom-project .view-project-event .view-footer .btn-group .page-node-add-problem a + input.form-submit, .page-node-add-problem .custom-project .view-project-event .view-footer .btn-group a + input.form-submit, .btn-group .project-call-to-action .field-item .page-node-add-problem a + input.form-submit, .page-node-add-problem .btn-group .project-call-to-action .field-item a + input.form-submit, .project-call-to-action .field-item .btn-group .page-node-add-problem a + input.form-submit, .page-node-add-problem .project-call-to-action .field-item .btn-group a + input.form-submit, .btn-group .page-node-add-problem input.form-submit + input.form-submit, .page-node-add-problem .btn-group input.form-submit + input.form-submit, .btn-group .page-node-add-problem .geolocation-client-location + input.form-submit, .page-node-add-problem .btn-group .geolocation-client-location + input.form-submit, .btn-group .page-node-add-problem .geolocation-address-geocode + input.form-submit, .page-node-add-problem .btn-group .geolocation-address-geocode + input.form-submit, .btn-group #block-conf-eform-caree-page-side-slide .page-node-add-problem .owl-nav > div + input.form-submit, .page-node-add-problem .btn-group #block-conf-eform-caree-page-side-slide .owl-nav > div + input.form-submit, #block-conf-eform-caree-page-side-slide .btn-group .page-node-add-problem .owl-nav > div + input.form-submit, .page-node-add-problem #block-conf-eform-caree-page-side-slide .btn-group .owl-nav > div + input.form-submit, .btn-group .page-node-add-problem .btn + .geolocation-client-location, .page-node-add-problem .btn-group .btn + .geolocation-client-location, .btn-group .page-node-add-problem .pagination-classic > li > a + .geolocation-client-location, .page-node-add-problem .btn-group .pagination-classic > li > a + .geolocation-client-location, .btn-group .page-node-add-problem
+.pagination-classic > li > span + .geolocation-client-location, .page-node-add-problem .btn-group
+.pagination-classic > li > span + .geolocation-client-location, .btn-group .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child .page-node-add-problem a + .geolocation-client-location, .page-node-add-problem .btn-group .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child a + .geolocation-client-location, .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child .btn-group .page-node-add-problem a + .geolocation-client-location, .page-node-add-problem .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child .btn-group a + .geolocation-client-location, .btn-group .page-careers .field-name-field-what-waiting-links .field-items .field-item .page-node-add-problem a + .geolocation-client-location, .page-node-add-problem .btn-group .page-careers .field-name-field-what-waiting-links .field-items .field-item a + .geolocation-client-location, .page-careers .field-name-field-what-waiting-links .field-items .field-item .btn-group .page-node-add-problem a + .geolocation-client-location, .page-node-add-problem .page-careers .field-name-field-what-waiting-links .field-items .field-item .btn-group a + .geolocation-client-location, .btn-group .page-careers .field-name-field-job-with-partners-link .field-items .field-item .page-node-add-problem a + .geolocation-client-location, .page-node-add-problem .btn-group .page-careers .field-name-field-job-with-partners-link .field-items .field-item a + .geolocation-client-location, .page-careers .field-name-field-job-with-partners-link .field-items .field-item .btn-group .page-node-add-problem a + .geolocation-client-location, .page-node-add-problem .page-careers .field-name-field-job-with-partners-link .field-items .field-item .btn-group a + .geolocation-client-location, .btn-group .custom-project .view-project-event .view-footer .page-node-add-problem a + .geolocation-client-location, .page-node-add-problem .btn-group .custom-project .view-project-event .view-footer a + .geolocation-client-location, .custom-project .view-project-event .view-footer .btn-group .page-node-add-problem a + .geolocation-client-location, .page-node-add-problem .custom-project .view-project-event .view-footer .btn-group a + .geolocation-client-location, .btn-group .project-call-to-action .field-item .page-node-add-problem a + .geolocation-client-location, .page-node-add-problem .btn-group .project-call-to-action .field-item a + .geolocation-client-location, .project-call-to-action .field-item .btn-group .page-node-add-problem a + .geolocation-client-location, .page-node-add-problem .project-call-to-action .field-item .btn-group a + .geolocation-client-location, .btn-group .page-node-add-problem input.form-submit + .geolocation-client-location, .page-node-add-problem .btn-group input.form-submit + .geolocation-client-location, .btn-group .page-node-add-problem .geolocation-client-location + .geolocation-client-location, .page-node-add-problem .btn-group .geolocation-client-location + .geolocation-client-location, .btn-group .page-node-add-problem .geolocation-address-geocode + .geolocation-client-location, .page-node-add-problem .btn-group .geolocation-address-geocode + .geolocation-client-location, .btn-group #block-conf-eform-caree-page-side-slide .page-node-add-problem .owl-nav > div + .geolocation-client-location, .page-node-add-problem .btn-group #block-conf-eform-caree-page-side-slide .owl-nav > div + .geolocation-client-location, #block-conf-eform-caree-page-side-slide .btn-group .page-node-add-problem .owl-nav > div + .geolocation-client-location, .page-node-add-problem #block-conf-eform-caree-page-side-slide .btn-group .owl-nav > div + .geolocation-client-location, .btn-group .page-node-add-problem .btn + .geolocation-address-geocode, .page-node-add-problem .btn-group .btn + .geolocation-address-geocode, .btn-group .page-node-add-problem .pagination-classic > li > a + .geolocation-address-geocode, .page-node-add-problem .btn-group .pagination-classic > li > a + .geolocation-address-geocode, .btn-group .page-node-add-problem
+.pagination-classic > li > span + .geolocation-address-geocode, .page-node-add-problem .btn-group
+.pagination-classic > li > span + .geolocation-address-geocode, .btn-group .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child .page-node-add-problem a + .geolocation-address-geocode, .page-node-add-problem .btn-group .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child a + .geolocation-address-geocode, .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child .btn-group .page-node-add-problem a + .geolocation-address-geocode, .page-node-add-problem .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child .btn-group a + .geolocation-address-geocode, .btn-group .page-careers .field-name-field-what-waiting-links .field-items .field-item .page-node-add-problem a + .geolocation-address-geocode, .page-node-add-problem .btn-group .page-careers .field-name-field-what-waiting-links .field-items .field-item a + .geolocation-address-geocode, .page-careers .field-name-field-what-waiting-links .field-items .field-item .btn-group .page-node-add-problem a + .geolocation-address-geocode, .page-node-add-problem .page-careers .field-name-field-what-waiting-links .field-items .field-item .btn-group a + .geolocation-address-geocode, .btn-group .page-careers .field-name-field-job-with-partners-link .field-items .field-item .page-node-add-problem a + .geolocation-address-geocode, .page-node-add-problem .btn-group .page-careers .field-name-field-job-with-partners-link .field-items .field-item a + .geolocation-address-geocode, .page-careers .field-name-field-job-with-partners-link .field-items .field-item .btn-group .page-node-add-problem a + .geolocation-address-geocode, .page-node-add-problem .page-careers .field-name-field-job-with-partners-link .field-items .field-item .btn-group a + .geolocation-address-geocode, .btn-group .custom-project .view-project-event .view-footer .page-node-add-problem a + .geolocation-address-geocode, .page-node-add-problem .btn-group .custom-project .view-project-event .view-footer a + .geolocation-address-geocode, .custom-project .view-project-event .view-footer .btn-group .page-node-add-problem a + .geolocation-address-geocode, .page-node-add-problem .custom-project .view-project-event .view-footer .btn-group a + .geolocation-address-geocode, .btn-group .project-call-to-action .field-item .page-node-add-problem a + .geolocation-address-geocode, .page-node-add-problem .btn-group .project-call-to-action .field-item a + .geolocation-address-geocode, .project-call-to-action .field-item .btn-group .page-node-add-problem a + .geolocation-address-geocode, .page-node-add-problem .project-call-to-action .field-item .btn-group a + .geolocation-address-geocode, .btn-group .page-node-add-problem input.form-submit + .geolocation-address-geocode, .page-node-add-problem .btn-group input.form-submit + .geolocation-address-geocode, .btn-group .page-node-add-problem .geolocation-client-location + .geolocation-address-geocode, .page-node-add-problem .btn-group .geolocation-client-location + .geolocation-address-geocode, .btn-group .page-node-add-problem .geolocation-address-geocode + .geolocation-address-geocode, .page-node-add-problem .btn-group .geolocation-address-geocode + .geolocation-address-geocode, .btn-group #block-conf-eform-caree-page-side-slide .page-node-add-problem .owl-nav > div + .geolocation-address-geocode, .page-node-add-problem .btn-group #block-conf-eform-caree-page-side-slide .owl-nav > div + .geolocation-address-geocode, #block-conf-eform-caree-page-side-slide .btn-group .page-node-add-problem .owl-nav > div + .geolocation-address-geocode, .page-node-add-problem #block-conf-eform-caree-page-side-slide .btn-group .owl-nav > div + .geolocation-address-geocode, .btn-group #block-conf-eform-caree-page-side-slide .owl-nav > .btn + div, #block-conf-eform-caree-page-side-slide .btn-group .owl-nav > .btn + div, .btn-group #block-conf-eform-caree-page-side-slide .pagination-classic > li.owl-nav > a + div, #block-conf-eform-caree-page-side-slide .btn-group .pagination-classic > li.owl-nav > a + div, .btn-group #block-conf-eform-caree-page-side-slide
+.pagination-classic > li.owl-nav > span + div, #block-conf-eform-caree-page-side-slide .btn-group
+.pagination-classic > li.owl-nav > span + div, .btn-group .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child #block-conf-eform-caree-page-side-slide .owl-nav > a + div, #block-conf-eform-caree-page-side-slide .btn-group .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child .owl-nav > a + div, .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child .btn-group #block-conf-eform-caree-page-side-slide .owl-nav > a + div, #block-conf-eform-caree-page-side-slide .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child .btn-group .owl-nav > a + div, .btn-group .page-careers .field-name-field-what-waiting-links .field-items .field-item #block-conf-eform-caree-page-side-slide .owl-nav > a + div, #block-conf-eform-caree-page-side-slide .btn-group .page-careers .field-name-field-what-waiting-links .field-items .field-item .owl-nav > a + div, .page-careers .field-name-field-what-waiting-links .field-items .field-item .btn-group #block-conf-eform-caree-page-side-slide .owl-nav > a + div, #block-conf-eform-caree-page-side-slide .page-careers .field-name-field-what-waiting-links .field-items .field-item .btn-group .owl-nav > a + div, .btn-group .page-careers .field-name-field-job-with-partners-link .field-items .field-item #block-conf-eform-caree-page-side-slide .owl-nav > a + div, #block-conf-eform-caree-page-side-slide .btn-group .page-careers .field-name-field-job-with-partners-link .field-items .field-item .owl-nav > a + div, .page-careers .field-name-field-job-with-partners-link .field-items .field-item .btn-group #block-conf-eform-caree-page-side-slide .owl-nav > a + div, #block-conf-eform-caree-page-side-slide .page-careers .field-name-field-job-with-partners-link .field-items .field-item .btn-group .owl-nav > a + div, .btn-group .custom-project .view-project-event .view-footer #block-conf-eform-caree-page-side-slide .owl-nav > a + div, #block-conf-eform-caree-page-side-slide .btn-group .custom-project .view-project-event .view-footer .owl-nav > a + div, .custom-project .view-project-event .view-footer .btn-group #block-conf-eform-caree-page-side-slide .owl-nav > a + div, #block-conf-eform-caree-page-side-slide .custom-project .view-project-event .view-footer .btn-group .owl-nav > a + div, .btn-group .project-call-to-action .field-item #block-conf-eform-caree-page-side-slide .owl-nav > a + div, #block-conf-eform-caree-page-side-slide .btn-group .project-call-to-action .field-item .owl-nav > a + div, .project-call-to-action .field-item .btn-group #block-conf-eform-caree-page-side-slide .owl-nav > a + div, #block-conf-eform-caree-page-side-slide .project-call-to-action .field-item .btn-group .owl-nav > a + div, .btn-group .page-node-add-problem #block-conf-eform-caree-page-side-slide .owl-nav > input.form-submit + div, #block-conf-eform-caree-page-side-slide .btn-group .page-node-add-problem .owl-nav > input.form-submit + div, .page-node-add-problem .btn-group #block-conf-eform-caree-page-side-slide .owl-nav > input.form-submit + div, #block-conf-eform-caree-page-side-slide .page-node-add-problem .btn-group .owl-nav > input.form-submit + div, .btn-group .page-node-add-problem #block-conf-eform-caree-page-side-slide .owl-nav > .geolocation-client-location + div, #block-conf-eform-caree-page-side-slide .btn-group .page-node-add-problem .owl-nav > .geolocation-client-location + div, .page-node-add-problem .btn-group #block-conf-eform-caree-page-side-slide .owl-nav > .geolocation-client-location + div, #block-conf-eform-caree-page-side-slide .page-node-add-problem .btn-group .owl-nav > .geolocation-client-location + div, .btn-group .page-node-add-problem #block-conf-eform-caree-page-side-slide .owl-nav > .geolocation-address-geocode + div, #block-conf-eform-caree-page-side-slide .btn-group .page-node-add-problem .owl-nav > .geolocation-address-geocode + div, .page-node-add-problem .btn-group #block-conf-eform-caree-page-side-slide .owl-nav > .geolocation-address-geocode + div, #block-conf-eform-caree-page-side-slide .page-node-add-problem .btn-group .owl-nav > .geolocation-address-geocode + div, .btn-group #block-conf-eform-caree-page-side-slide .owl-nav > div + div, #block-conf-eform-caree-page-side-slide .btn-group .owl-nav > div + div,
+.btn-group-lg .btn + .btn,
+.btn-group-lg .pagination-classic > li > a + .btn,
+.btn-group-lg
+.pagination-classic > li > span + .btn,
+.btn-group-lg .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child a + .btn, .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child
+.btn-group-lg a + .btn,
+.btn-group-lg .page-careers .field-name-field-what-waiting-links .field-items .field-item a + .btn, .page-careers .field-name-field-what-waiting-links .field-items .field-item
+.btn-group-lg a + .btn,
+.btn-group-lg .page-careers .field-name-field-job-with-partners-link .field-items .field-item a + .btn, .page-careers .field-name-field-job-with-partners-link .field-items .field-item
+.btn-group-lg a + .btn,
+.btn-group-lg .custom-project .view-project-event .view-footer a + .btn, .custom-project .view-project-event .view-footer
+.btn-group-lg a + .btn,
+.btn-group-lg .project-call-to-action .field-item a + .btn, .project-call-to-action .field-item
+.btn-group-lg a + .btn,
+.btn-group-lg .page-node-add-problem input.form-submit + .btn, .page-node-add-problem
+.btn-group-lg input.form-submit + .btn,
+.btn-group-lg .page-node-add-problem .geolocation-client-location + .btn, .page-node-add-problem
+.btn-group-lg .geolocation-client-location + .btn,
+.btn-group-lg .page-node-add-problem .geolocation-address-geocode + .btn, .page-node-add-problem
+.btn-group-lg .geolocation-address-geocode + .btn,
+.btn-group-lg #block-conf-eform-caree-page-side-slide .owl-nav > div + .btn, #block-conf-eform-caree-page-side-slide
+.btn-group-lg .owl-nav > div + .btn,
+.btn-group-lg .pagination-classic > li > .btn + a,
+.btn-group-lg .pagination-classic > li > a + a,
+.btn-group-lg
+.pagination-classic > li > span + a,
+.btn-group-lg .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child .pagination-classic > li > a + a, .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child
+.btn-group-lg .pagination-classic > li > a + a,
+.btn-group-lg .page-careers .field-name-field-what-waiting-links .field-items .field-item .pagination-classic > li > a + a, .page-careers .field-name-field-what-waiting-links .field-items .field-item
+.btn-group-lg .pagination-classic > li > a + a,
+.btn-group-lg .page-careers .field-name-field-job-with-partners-link .field-items .field-item .pagination-classic > li > a + a, .page-careers .field-name-field-job-with-partners-link .field-items .field-item
+.btn-group-lg .pagination-classic > li > a + a,
+.btn-group-lg .custom-project .view-project-event .view-footer .pagination-classic > li > a + a, .custom-project .view-project-event .view-footer
+.btn-group-lg .pagination-classic > li > a + a,
+.btn-group-lg .project-call-to-action .field-item .pagination-classic > li > a + a, .project-call-to-action .field-item
+.btn-group-lg .pagination-classic > li > a + a,
+.btn-group-lg .page-node-add-problem .pagination-classic > li > input.form-submit + a, .page-node-add-problem
+.btn-group-lg .pagination-classic > li > input.form-submit + a,
+.btn-group-lg .page-node-add-problem .pagination-classic > li > .geolocation-client-location + a, .page-node-add-problem
+.btn-group-lg .pagination-classic > li > .geolocation-client-location + a,
+.btn-group-lg .page-node-add-problem .pagination-classic > li > .geolocation-address-geocode + a, .page-node-add-problem
+.btn-group-lg .pagination-classic > li > .geolocation-address-geocode + a,
+.btn-group-lg #block-conf-eform-caree-page-side-slide .pagination-classic > li.owl-nav > div + a, #block-conf-eform-caree-page-side-slide
+.btn-group-lg .pagination-classic > li.owl-nav > div + a,
+.btn-group-lg
+.pagination-classic > li > .btn + span,
+.btn-group-lg .pagination-classic > li > a + span,
+.btn-group-lg
+.pagination-classic > li > span + span,
+.btn-group-lg .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child
+.pagination-classic > li > a + span, .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child
+.btn-group-lg
+.pagination-classic > li > a + span,
+.btn-group-lg .page-careers .field-name-field-what-waiting-links .field-items .field-item
+.pagination-classic > li > a + span, .page-careers .field-name-field-what-waiting-links .field-items .field-item
+.btn-group-lg
+.pagination-classic > li > a + span,
+.btn-group-lg .page-careers .field-name-field-job-with-partners-link .field-items .field-item
+.pagination-classic > li > a + span, .page-careers .field-name-field-job-with-partners-link .field-items .field-item
+.btn-group-lg
+.pagination-classic > li > a + span,
+.btn-group-lg .custom-project .view-project-event .view-footer
+.pagination-classic > li > a + span, .custom-project .view-project-event .view-footer
+.btn-group-lg
+.pagination-classic > li > a + span,
+.btn-group-lg .project-call-to-action .field-item
+.pagination-classic > li > a + span, .project-call-to-action .field-item
+.btn-group-lg
+.pagination-classic > li > a + span,
+.btn-group-lg .page-node-add-problem
+.pagination-classic > li > input.form-submit + span, .page-node-add-problem
+.btn-group-lg
+.pagination-classic > li > input.form-submit + span,
+.btn-group-lg .page-node-add-problem
+.pagination-classic > li > .geolocation-client-location + span, .page-node-add-problem
+.btn-group-lg
+.pagination-classic > li > .geolocation-client-location + span,
+.btn-group-lg .page-node-add-problem
+.pagination-classic > li > .geolocation-address-geocode + span, .page-node-add-problem
+.btn-group-lg
+.pagination-classic > li > .geolocation-address-geocode + span,
+.btn-group-lg #block-conf-eform-caree-page-side-slide
+.pagination-classic > li.owl-nav > div + span, #block-conf-eform-caree-page-side-slide
+.btn-group-lg
+.pagination-classic > li.owl-nav > div + span,
+.btn-group-lg .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child .btn + a, .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child
+.btn-group-lg .btn + a,
+.btn-group-lg .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child .pagination-classic > li > a + a, .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child
+.btn-group-lg .pagination-classic > li > a + a,
+.btn-group-lg .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child
+.pagination-classic > li > span + a, .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child
+.btn-group-lg
+.pagination-classic > li > span + a,
+.btn-group-lg .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child a + a, .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child
+.btn-group-lg a + a,
+.btn-group-lg .page-careers .field-name-field-what-waiting-links .field-name-field-search-rotator-links .field-items .field-item:first-child a + a,
+.btn-group-lg .page-careers .field-name-field-search-rotator-links .field-name-field-what-waiting-links .field-items .field-item:first-child a + a, .page-careers .field-name-field-what-waiting-links .field-name-field-search-rotator-links .field-items .field-item:first-child
+.btn-group-lg a + a, .page-careers .field-name-field-search-rotator-links .field-name-field-what-waiting-links .field-items .field-item:first-child
+.btn-group-lg a + a,
+.btn-group-lg .page-careers .field-name-field-job-with-partners-link .field-name-field-search-rotator-links .field-items .field-item:first-child a + a,
+.btn-group-lg .page-careers .field-name-field-search-rotator-links .field-name-field-job-with-partners-link .field-items .field-item:first-child a + a, .page-careers .field-name-field-job-with-partners-link .field-name-field-search-rotator-links .field-items .field-item:first-child
+.btn-group-lg a + a, .page-careers .field-name-field-search-rotator-links .field-name-field-job-with-partners-link .field-items .field-item:first-child
+.btn-group-lg a + a,
+.btn-group-lg .custom-project .view-project-event .view-footer .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child a + a, .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child
+.btn-group-lg .custom-project .view-project-event .view-footer a + a, .custom-project .view-project-event .view-footer
+.btn-group-lg .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child a + a, .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child .custom-project .view-project-event .view-footer
+.btn-group-lg a + a,
+.btn-group-lg .project-call-to-action .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child a + a, .page-careers .field-name-field-search-rotator-links .field-items
+.btn-group-lg .project-call-to-action .field-item:first-child a + a, .project-call-to-action .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child
+.btn-group-lg a + a, .page-careers .field-name-field-search-rotator-links .field-items .project-call-to-action .field-item:first-child
+.btn-group-lg a + a,
+.btn-group-lg .page-node-add-problem .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child input.form-submit + a, .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child
+.btn-group-lg .page-node-add-problem input.form-submit + a, .page-node-add-problem
+.btn-group-lg .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child input.form-submit + a, .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child .page-node-add-problem
+.btn-group-lg input.form-submit + a,
+.btn-group-lg .page-node-add-problem .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child .geolocation-client-location + a, .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child
+.btn-group-lg .page-node-add-problem .geolocation-client-location + a, .page-node-add-problem
+.btn-group-lg .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child .geolocation-client-location + a, .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child .page-node-add-problem
+.btn-group-lg .geolocation-client-location + a,
+.btn-group-lg .page-node-add-problem .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child .geolocation-address-geocode + a, .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child
+.btn-group-lg .page-node-add-problem .geolocation-address-geocode + a, .page-node-add-problem
+.btn-group-lg .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child .geolocation-address-geocode + a, .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child .page-node-add-problem
+.btn-group-lg .geolocation-address-geocode + a,
+.btn-group-lg #block-conf-eform-caree-page-side-slide .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child .owl-nav > div + a, .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child
+.btn-group-lg #block-conf-eform-caree-page-side-slide .owl-nav > div + a, #block-conf-eform-caree-page-side-slide
+.btn-group-lg .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child .owl-nav > div + a, .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child #block-conf-eform-caree-page-side-slide
+.btn-group-lg .owl-nav > div + a,
+.btn-group-lg .page-careers .field-name-field-what-waiting-links .field-items .field-item .btn + a, .page-careers .field-name-field-what-waiting-links .field-items .field-item
+.btn-group-lg .btn + a,
+.btn-group-lg .page-careers .field-name-field-what-waiting-links .field-items .field-item .pagination-classic > li > a + a, .page-careers .field-name-field-what-waiting-links .field-items .field-item
+.btn-group-lg .pagination-classic > li > a + a,
+.btn-group-lg .page-careers .field-name-field-what-waiting-links .field-items .field-item
+.pagination-classic > li > span + a, .page-careers .field-name-field-what-waiting-links .field-items .field-item
+.btn-group-lg
+.pagination-classic > li > span + a,
+.btn-group-lg .page-careers .field-name-field-search-rotator-links .field-name-field-what-waiting-links .field-items .field-item:first-child a + a,
+.btn-group-lg .page-careers .field-name-field-what-waiting-links .field-name-field-search-rotator-links .field-items .field-item:first-child a + a, .page-careers .field-name-field-search-rotator-links .field-name-field-what-waiting-links .field-items .field-item:first-child
+.btn-group-lg a + a, .page-careers .field-name-field-what-waiting-links .field-name-field-search-rotator-links .field-items .field-item:first-child
+.btn-group-lg a + a,
+.btn-group-lg .page-careers .field-name-field-what-waiting-links .field-items .field-item a + a, .page-careers .field-name-field-what-waiting-links .field-items .field-item
+.btn-group-lg a + a,
+.btn-group-lg .page-careers .field-name-field-job-with-partners-link .field-name-field-what-waiting-links .field-items .field-item a + a,
+.btn-group-lg .page-careers .field-name-field-what-waiting-links .field-name-field-job-with-partners-link .field-items .field-item a + a, .page-careers .field-name-field-job-with-partners-link .field-name-field-what-waiting-links .field-items .field-item
+.btn-group-lg a + a, .page-careers .field-name-field-what-waiting-links .field-name-field-job-with-partners-link .field-items .field-item
+.btn-group-lg a + a,
+.btn-group-lg .custom-project .view-project-event .view-footer .page-careers .field-name-field-what-waiting-links .field-items .field-item a + a, .page-careers .field-name-field-what-waiting-links .field-items .field-item
+.btn-group-lg .custom-project .view-project-event .view-footer a + a, .custom-project .view-project-event .view-footer
+.btn-group-lg .page-careers .field-name-field-what-waiting-links .field-items .field-item a + a, .page-careers .field-name-field-what-waiting-links .field-items .field-item .custom-project .view-project-event .view-footer
+.btn-group-lg a + a,
+.btn-group-lg .project-call-to-action .page-careers .field-name-field-what-waiting-links .field-items .field-item a + a, .page-careers .field-name-field-what-waiting-links .field-items
+.btn-group-lg .project-call-to-action .field-item a + a, .project-call-to-action .page-careers .field-name-field-what-waiting-links .field-items .field-item
+.btn-group-lg a + a, .page-careers .field-name-field-what-waiting-links .field-items .project-call-to-action .field-item
+.btn-group-lg a + a,
+.btn-group-lg .page-node-add-problem .page-careers .field-name-field-what-waiting-links .field-items .field-item input.form-submit + a, .page-careers .field-name-field-what-waiting-links .field-items .field-item
+.btn-group-lg .page-node-add-problem input.form-submit + a, .page-node-add-problem
+.btn-group-lg .page-careers .field-name-field-what-waiting-links .field-items .field-item input.form-submit + a, .page-careers .field-name-field-what-waiting-links .field-items .field-item .page-node-add-problem
+.btn-group-lg input.form-submit + a,
+.btn-group-lg .page-node-add-problem .page-careers .field-name-field-what-waiting-links .field-items .field-item .geolocation-client-location + a, .page-careers .field-name-field-what-waiting-links .field-items .field-item
+.btn-group-lg .page-node-add-problem .geolocation-client-location + a, .page-node-add-problem
+.btn-group-lg .page-careers .field-name-field-what-waiting-links .field-items .field-item .geolocation-client-location + a, .page-careers .field-name-field-what-waiting-links .field-items .field-item .page-node-add-problem
+.btn-group-lg .geolocation-client-location + a,
+.btn-group-lg .page-node-add-problem .page-careers .field-name-field-what-waiting-links .field-items .field-item .geolocation-address-geocode + a, .page-careers .field-name-field-what-waiting-links .field-items .field-item
+.btn-group-lg .page-node-add-problem .geolocation-address-geocode + a, .page-node-add-problem
+.btn-group-lg .page-careers .field-name-field-what-waiting-links .field-items .field-item .geolocation-address-geocode + a, .page-careers .field-name-field-what-waiting-links .field-items .field-item .page-node-add-problem
+.btn-group-lg .geolocation-address-geocode + a,
+.btn-group-lg #block-conf-eform-caree-page-side-slide .page-careers .field-name-field-what-waiting-links .field-items .field-item .owl-nav > div + a, .page-careers .field-name-field-what-waiting-links .field-items .field-item
+.btn-group-lg #block-conf-eform-caree-page-side-slide .owl-nav > div + a, #block-conf-eform-caree-page-side-slide
+.btn-group-lg .page-careers .field-name-field-what-waiting-links .field-items .field-item .owl-nav > div + a, .page-careers .field-name-field-what-waiting-links .field-items .field-item #block-conf-eform-caree-page-side-slide
+.btn-group-lg .owl-nav > div + a,
+.btn-group-lg .page-careers .field-name-field-job-with-partners-link .field-items .field-item .btn + a, .page-careers .field-name-field-job-with-partners-link .field-items .field-item
+.btn-group-lg .btn + a,
+.btn-group-lg .page-careers .field-name-field-job-with-partners-link .field-items .field-item .pagination-classic > li > a + a, .page-careers .field-name-field-job-with-partners-link .field-items .field-item
+.btn-group-lg .pagination-classic > li > a + a,
+.btn-group-lg .page-careers .field-name-field-job-with-partners-link .field-items .field-item
+.pagination-classic > li > span + a, .page-careers .field-name-field-job-with-partners-link .field-items .field-item
+.btn-group-lg
+.pagination-classic > li > span + a,
+.btn-group-lg .page-careers .field-name-field-search-rotator-links .field-name-field-job-with-partners-link .field-items .field-item:first-child a + a,
+.btn-group-lg .page-careers .field-name-field-job-with-partners-link .field-name-field-search-rotator-links .field-items .field-item:first-child a + a, .page-careers .field-name-field-search-rotator-links .field-name-field-job-with-partners-link .field-items .field-item:first-child
+.btn-group-lg a + a, .page-careers .field-name-field-job-with-partners-link .field-name-field-search-rotator-links .field-items .field-item:first-child
+.btn-group-lg a + a,
+.btn-group-lg .page-careers .field-name-field-what-waiting-links .field-name-field-job-with-partners-link .field-items .field-item a + a,
+.btn-group-lg .page-careers .field-name-field-job-with-partners-link .field-name-field-what-waiting-links .field-items .field-item a + a, .page-careers .field-name-field-what-waiting-links .field-name-field-job-with-partners-link .field-items .field-item
+.btn-group-lg a + a, .page-careers .field-name-field-job-with-partners-link .field-name-field-what-waiting-links .field-items .field-item
+.btn-group-lg a + a,
+.btn-group-lg .page-careers .field-name-field-job-with-partners-link .field-items .field-item a + a, .page-careers .field-name-field-job-with-partners-link .field-items .field-item
+.btn-group-lg a + a,
+.btn-group-lg .custom-project .view-project-event .view-footer .page-careers .field-name-field-job-with-partners-link .field-items .field-item a + a, .page-careers .field-name-field-job-with-partners-link .field-items .field-item
+.btn-group-lg .custom-project .view-project-event .view-footer a + a, .custom-project .view-project-event .view-footer
+.btn-group-lg .page-careers .field-name-field-job-with-partners-link .field-items .field-item a + a, .page-careers .field-name-field-job-with-partners-link .field-items .field-item .custom-project .view-project-event .view-footer
+.btn-group-lg a + a,
+.btn-group-lg .project-call-to-action .page-careers .field-name-field-job-with-partners-link .field-items .field-item a + a, .page-careers .field-name-field-job-with-partners-link .field-items
+.btn-group-lg .project-call-to-action .field-item a + a, .project-call-to-action .page-careers .field-name-field-job-with-partners-link .field-items .field-item
+.btn-group-lg a + a, .page-careers .field-name-field-job-with-partners-link .field-items .project-call-to-action .field-item
+.btn-group-lg a + a,
+.btn-group-lg .page-node-add-problem .page-careers .field-name-field-job-with-partners-link .field-items .field-item input.form-submit + a, .page-careers .field-name-field-job-with-partners-link .field-items .field-item
+.btn-group-lg .page-node-add-problem input.form-submit + a, .page-node-add-problem
+.btn-group-lg .page-careers .field-name-field-job-with-partners-link .field-items .field-item input.form-submit + a, .page-careers .field-name-field-job-with-partners-link .field-items .field-item .page-node-add-problem
+.btn-group-lg input.form-submit + a,
+.btn-group-lg .page-node-add-problem .page-careers .field-name-field-job-with-partners-link .field-items .field-item .geolocation-client-location + a, .page-careers .field-name-field-job-with-partners-link .field-items .field-item
+.btn-group-lg .page-node-add-problem .geolocation-client-location + a, .page-node-add-problem
+.btn-group-lg .page-careers .field-name-field-job-with-partners-link .field-items .field-item .geolocation-client-location + a, .page-careers .field-name-field-job-with-partners-link .field-items .field-item .page-node-add-problem
+.btn-group-lg .geolocation-client-location + a,
+.btn-group-lg .page-node-add-problem .page-careers .field-name-field-job-with-partners-link .field-items .field-item .geolocation-address-geocode + a, .page-careers .field-name-field-job-with-partners-link .field-items .field-item
+.btn-group-lg .page-node-add-problem .geolocation-address-geocode + a, .page-node-add-problem
+.btn-group-lg .page-careers .field-name-field-job-with-partners-link .field-items .field-item .geolocation-address-geocode + a, .page-careers .field-name-field-job-with-partners-link .field-items .field-item .page-node-add-problem
+.btn-group-lg .geolocation-address-geocode + a,
+.btn-group-lg #block-conf-eform-caree-page-side-slide .page-careers .field-name-field-job-with-partners-link .field-items .field-item .owl-nav > div + a, .page-careers .field-name-field-job-with-partners-link .field-items .field-item
+.btn-group-lg #block-conf-eform-caree-page-side-slide .owl-nav > div + a, #block-conf-eform-caree-page-side-slide
+.btn-group-lg .page-careers .field-name-field-job-with-partners-link .field-items .field-item .owl-nav > div + a, .page-careers .field-name-field-job-with-partners-link .field-items .field-item #block-conf-eform-caree-page-side-slide
+.btn-group-lg .owl-nav > div + a,
+.btn-group-lg .custom-project .view-project-event .view-footer .btn + a, .custom-project .view-project-event .view-footer
+.btn-group-lg .btn + a,
+.btn-group-lg .custom-project .view-project-event .view-footer .pagination-classic > li > a + a, .custom-project .view-project-event .view-footer
+.btn-group-lg .pagination-classic > li > a + a,
+.btn-group-lg .custom-project .view-project-event .view-footer
+.pagination-classic > li > span + a, .custom-project .view-project-event .view-footer
+.btn-group-lg
+.pagination-classic > li > span + a,
+.btn-group-lg .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child .custom-project .view-project-event .view-footer a + a, .custom-project .view-project-event .view-footer
+.btn-group-lg .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child a + a, .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child
+.btn-group-lg .custom-project .view-project-event .view-footer a + a, .custom-project .view-project-event .view-footer .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child
+.btn-group-lg a + a,
+.btn-group-lg .page-careers .field-name-field-what-waiting-links .field-items .field-item .custom-project .view-project-event .view-footer a + a, .custom-project .view-project-event .view-footer
+.btn-group-lg .page-careers .field-name-field-what-waiting-links .field-items .field-item a + a, .page-careers .field-name-field-what-waiting-links .field-items .field-item
+.btn-group-lg .custom-project .view-project-event .view-footer a + a, .custom-project .view-project-event .view-footer .page-careers .field-name-field-what-waiting-links .field-items .field-item
+.btn-group-lg a + a,
+.btn-group-lg .page-careers .field-name-field-job-with-partners-link .field-items .field-item .custom-project .view-project-event .view-footer a + a, .custom-project .view-project-event .view-footer
+.btn-group-lg .page-careers .field-name-field-job-with-partners-link .field-items .field-item a + a, .page-careers .field-name-field-job-with-partners-link .field-items .field-item
+.btn-group-lg .custom-project .view-project-event .view-footer a + a, .custom-project .view-project-event .view-footer .page-careers .field-name-field-job-with-partners-link .field-items .field-item
+.btn-group-lg a + a,
+.btn-group-lg .custom-project .view-project-event .view-footer a + a, .custom-project .view-project-event .view-footer
+.btn-group-lg a + a,
+.btn-group-lg .project-call-to-action .field-item .custom-project .view-project-event .view-footer a + a, .custom-project .view-project-event .view-footer
+.btn-group-lg .project-call-to-action .field-item a + a, .project-call-to-action .field-item
+.btn-group-lg .custom-project .view-project-event .view-footer a + a, .custom-project .view-project-event .view-footer .project-call-to-action .field-item
+.btn-group-lg a + a,
+.btn-group-lg .page-node-add-problem .custom-project .view-project-event .view-footer input.form-submit + a, .custom-project .view-project-event .view-footer
+.btn-group-lg .page-node-add-problem input.form-submit + a, .page-node-add-problem
+.btn-group-lg .custom-project .view-project-event .view-footer input.form-submit + a, .custom-project .view-project-event .view-footer .page-node-add-problem
+.btn-group-lg input.form-submit + a,
+.btn-group-lg .page-node-add-problem .custom-project .view-project-event .view-footer .geolocation-client-location + a, .custom-project .view-project-event .view-footer
+.btn-group-lg .page-node-add-problem .geolocation-client-location + a, .page-node-add-problem
+.btn-group-lg .custom-project .view-project-event .view-footer .geolocation-client-location + a, .custom-project .view-project-event .view-footer .page-node-add-problem
+.btn-group-lg .geolocation-client-location + a,
+.btn-group-lg .page-node-add-problem .custom-project .view-project-event .view-footer .geolocation-address-geocode + a, .custom-project .view-project-event .view-footer
+.btn-group-lg .page-node-add-problem .geolocation-address-geocode + a, .page-node-add-problem
+.btn-group-lg .custom-project .view-project-event .view-footer .geolocation-address-geocode + a, .custom-project .view-project-event .view-footer .page-node-add-problem
+.btn-group-lg .geolocation-address-geocode + a,
+.btn-group-lg #block-conf-eform-caree-page-side-slide .custom-project .view-project-event .view-footer .owl-nav > div + a, .custom-project .view-project-event .view-footer
+.btn-group-lg #block-conf-eform-caree-page-side-slide .owl-nav > div + a, #block-conf-eform-caree-page-side-slide
+.btn-group-lg .custom-project .view-project-event .view-footer .owl-nav > div + a, .custom-project .view-project-event .view-footer #block-conf-eform-caree-page-side-slide
+.btn-group-lg .owl-nav > div + a,
+.btn-group-lg .project-call-to-action .field-item .btn + a, .project-call-to-action .field-item
+.btn-group-lg .btn + a,
+.btn-group-lg .project-call-to-action .field-item .pagination-classic > li > a + a, .project-call-to-action .field-item
+.btn-group-lg .pagination-classic > li > a + a,
+.btn-group-lg .project-call-to-action .field-item
+.pagination-classic > li > span + a, .project-call-to-action .field-item
+.btn-group-lg
+.pagination-classic > li > span + a,
+.btn-group-lg .page-careers .field-name-field-search-rotator-links .field-items .project-call-to-action .field-item:first-child a + a, .project-call-to-action
+.btn-group-lg .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child a + a, .page-careers .field-name-field-search-rotator-links .field-items .project-call-to-action .field-item:first-child
+.btn-group-lg a + a, .project-call-to-action .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child
+.btn-group-lg a + a,
+.btn-group-lg .page-careers .field-name-field-what-waiting-links .field-items .project-call-to-action .field-item a + a, .project-call-to-action
+.btn-group-lg .page-careers .field-name-field-what-waiting-links .field-items .field-item a + a, .page-careers .field-name-field-what-waiting-links .field-items .project-call-to-action .field-item
+.btn-group-lg a + a, .project-call-to-action .page-careers .field-name-field-what-waiting-links .field-items .field-item
+.btn-group-lg a + a,
+.btn-group-lg .page-careers .field-name-field-job-with-partners-link .field-items .project-call-to-action .field-item a + a, .project-call-to-action
+.btn-group-lg .page-careers .field-name-field-job-with-partners-link .field-items .field-item a + a, .page-careers .field-name-field-job-with-partners-link .field-items .project-call-to-action .field-item
+.btn-group-lg a + a, .project-call-to-action .page-careers .field-name-field-job-with-partners-link .field-items .field-item
+.btn-group-lg a + a,
+.btn-group-lg .custom-project .view-project-event .view-footer .project-call-to-action .field-item a + a, .project-call-to-action .field-item
+.btn-group-lg .custom-project .view-project-event .view-footer a + a, .custom-project .view-project-event .view-footer
+.btn-group-lg .project-call-to-action .field-item a + a, .project-call-to-action .field-item .custom-project .view-project-event .view-footer
+.btn-group-lg a + a,
+.btn-group-lg .project-call-to-action .field-item a + a, .project-call-to-action .field-item
+.btn-group-lg a + a,
+.btn-group-lg .page-node-add-problem .project-call-to-action .field-item input.form-submit + a, .project-call-to-action .field-item
+.btn-group-lg .page-node-add-problem input.form-submit + a, .page-node-add-problem
+.btn-group-lg .project-call-to-action .field-item input.form-submit + a, .project-call-to-action .field-item .page-node-add-problem
+.btn-group-lg input.form-submit + a,
+.btn-group-lg .page-node-add-problem .project-call-to-action .field-item .geolocation-client-location + a, .project-call-to-action .field-item
+.btn-group-lg .page-node-add-problem .geolocation-client-location + a, .page-node-add-problem
+.btn-group-lg .project-call-to-action .field-item .geolocation-client-location + a, .project-call-to-action .field-item .page-node-add-problem
+.btn-group-lg .geolocation-client-location + a,
+.btn-group-lg .page-node-add-problem .project-call-to-action .field-item .geolocation-address-geocode + a, .project-call-to-action .field-item
+.btn-group-lg .page-node-add-problem .geolocation-address-geocode + a, .page-node-add-problem
+.btn-group-lg .project-call-to-action .field-item .geolocation-address-geocode + a, .project-call-to-action .field-item .page-node-add-problem
+.btn-group-lg .geolocation-address-geocode + a,
+.btn-group-lg #block-conf-eform-caree-page-side-slide .project-call-to-action .field-item .owl-nav > div + a, .project-call-to-action .field-item
+.btn-group-lg #block-conf-eform-caree-page-side-slide .owl-nav > div + a, #block-conf-eform-caree-page-side-slide
+.btn-group-lg .project-call-to-action .field-item .owl-nav > div + a, .project-call-to-action .field-item #block-conf-eform-caree-page-side-slide
+.btn-group-lg .owl-nav > div + a,
+.btn-group-lg .page-node-add-problem .btn + input.form-submit, .page-node-add-problem
+.btn-group-lg .btn + input.form-submit,
+.btn-group-lg .page-node-add-problem .pagination-classic > li > a + input.form-submit, .page-node-add-problem
+.btn-group-lg .pagination-classic > li > a + input.form-submit,
+.btn-group-lg .page-node-add-problem
+.pagination-classic > li > span + input.form-submit, .page-node-add-problem
+.btn-group-lg
+.pagination-classic > li > span + input.form-submit,
+.btn-group-lg .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child .page-node-add-problem a + input.form-submit, .page-node-add-problem
+.btn-group-lg .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child a + input.form-submit, .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child
+.btn-group-lg .page-node-add-problem a + input.form-submit, .page-node-add-problem .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child
+.btn-group-lg a + input.form-submit,
+.btn-group-lg .page-careers .field-name-field-what-waiting-links .field-items .field-item .page-node-add-problem a + input.form-submit, .page-node-add-problem
+.btn-group-lg .page-careers .field-name-field-what-waiting-links .field-items .field-item a + input.form-submit, .page-careers .field-name-field-what-waiting-links .field-items .field-item
+.btn-group-lg .page-node-add-problem a + input.form-submit, .page-node-add-problem .page-careers .field-name-field-what-waiting-links .field-items .field-item
+.btn-group-lg a + input.form-submit,
+.btn-group-lg .page-careers .field-name-field-job-with-partners-link .field-items .field-item .page-node-add-problem a + input.form-submit, .page-node-add-problem
+.btn-group-lg .page-careers .field-name-field-job-with-partners-link .field-items .field-item a + input.form-submit, .page-careers .field-name-field-job-with-partners-link .field-items .field-item
+.btn-group-lg .page-node-add-problem a + input.form-submit, .page-node-add-problem .page-careers .field-name-field-job-with-partners-link .field-items .field-item
+.btn-group-lg a + input.form-submit,
+.btn-group-lg .custom-project .view-project-event .view-footer .page-node-add-problem a + input.form-submit, .page-node-add-problem
+.btn-group-lg .custom-project .view-project-event .view-footer a + input.form-submit, .custom-project .view-project-event .view-footer
+.btn-group-lg .page-node-add-problem a + input.form-submit, .page-node-add-problem .custom-project .view-project-event .view-footer
+.btn-group-lg a + input.form-submit,
+.btn-group-lg .project-call-to-action .field-item .page-node-add-problem a + input.form-submit, .page-node-add-problem
+.btn-group-lg .project-call-to-action .field-item a + input.form-submit, .project-call-to-action .field-item
+.btn-group-lg .page-node-add-problem a + input.form-submit, .page-node-add-problem .project-call-to-action .field-item
+.btn-group-lg a + input.form-submit,
+.btn-group-lg .page-node-add-problem input.form-submit + input.form-submit, .page-node-add-problem
+.btn-group-lg input.form-submit + input.form-submit,
+.btn-group-lg .page-node-add-problem .geolocation-client-location + input.form-submit, .page-node-add-problem
+.btn-group-lg .geolocation-client-location + input.form-submit,
+.btn-group-lg .page-node-add-problem .geolocation-address-geocode + input.form-submit, .page-node-add-problem
+.btn-group-lg .geolocation-address-geocode + input.form-submit,
+.btn-group-lg #block-conf-eform-caree-page-side-slide .page-node-add-problem .owl-nav > div + input.form-submit, .page-node-add-problem
+.btn-group-lg #block-conf-eform-caree-page-side-slide .owl-nav > div + input.form-submit, #block-conf-eform-caree-page-side-slide
+.btn-group-lg .page-node-add-problem .owl-nav > div + input.form-submit, .page-node-add-problem #block-conf-eform-caree-page-side-slide
+.btn-group-lg .owl-nav > div + input.form-submit,
+.btn-group-lg .page-node-add-problem .btn + .geolocation-client-location, .page-node-add-problem
+.btn-group-lg .btn + .geolocation-client-location,
+.btn-group-lg .page-node-add-problem .pagination-classic > li > a + .geolocation-client-location, .page-node-add-problem
+.btn-group-lg .pagination-classic > li > a + .geolocation-client-location,
+.btn-group-lg .page-node-add-problem
+.pagination-classic > li > span + .geolocation-client-location, .page-node-add-problem
+.btn-group-lg
+.pagination-classic > li > span + .geolocation-client-location,
+.btn-group-lg .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child .page-node-add-problem a + .geolocation-client-location, .page-node-add-problem
+.btn-group-lg .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child a + .geolocation-client-location, .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child
+.btn-group-lg .page-node-add-problem a + .geolocation-client-location, .page-node-add-problem .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child
+.btn-group-lg a + .geolocation-client-location,
+.btn-group-lg .page-careers .field-name-field-what-waiting-links .field-items .field-item .page-node-add-problem a + .geolocation-client-location, .page-node-add-problem
+.btn-group-lg .page-careers .field-name-field-what-waiting-links .field-items .field-item a + .geolocation-client-location, .page-careers .field-name-field-what-waiting-links .field-items .field-item
+.btn-group-lg .page-node-add-problem a + .geolocation-client-location, .page-node-add-problem .page-careers .field-name-field-what-waiting-links .field-items .field-item
+.btn-group-lg a + .geolocation-client-location,
+.btn-group-lg .page-careers .field-name-field-job-with-partners-link .field-items .field-item .page-node-add-problem a + .geolocation-client-location, .page-node-add-problem
+.btn-group-lg .page-careers .field-name-field-job-with-partners-link .field-items .field-item a + .geolocation-client-location, .page-careers .field-name-field-job-with-partners-link .field-items .field-item
+.btn-group-lg .page-node-add-problem a + .geolocation-client-location, .page-node-add-problem .page-careers .field-name-field-job-with-partners-link .field-items .field-item
+.btn-group-lg a + .geolocation-client-location,
+.btn-group-lg .custom-project .view-project-event .view-footer .page-node-add-problem a + .geolocation-client-location, .page-node-add-problem
+.btn-group-lg .custom-project .view-project-event .view-footer a + .geolocation-client-location, .custom-project .view-project-event .view-footer
+.btn-group-lg .page-node-add-problem a + .geolocation-client-location, .page-node-add-problem .custom-project .view-project-event .view-footer
+.btn-group-lg a + .geolocation-client-location,
+.btn-group-lg .project-call-to-action .field-item .page-node-add-problem a + .geolocation-client-location, .page-node-add-problem
+.btn-group-lg .project-call-to-action .field-item a + .geolocation-client-location, .project-call-to-action .field-item
+.btn-group-lg .page-node-add-problem a + .geolocation-client-location, .page-node-add-problem .project-call-to-action .field-item
+.btn-group-lg a + .geolocation-client-location,
+.btn-group-lg .page-node-add-problem input.form-submit + .geolocation-client-location, .page-node-add-problem
+.btn-group-lg input.form-submit + .geolocation-client-location,
+.btn-group-lg .page-node-add-problem .geolocation-client-location + .geolocation-client-location, .page-node-add-problem
+.btn-group-lg .geolocation-client-location + .geolocation-client-location,
+.btn-group-lg .page-node-add-problem .geolocation-address-geocode + .geolocation-client-location, .page-node-add-problem
+.btn-group-lg .geolocation-address-geocode + .geolocation-client-location,
+.btn-group-lg #block-conf-eform-caree-page-side-slide .page-node-add-problem .owl-nav > div + .geolocation-client-location, .page-node-add-problem
+.btn-group-lg #block-conf-eform-caree-page-side-slide .owl-nav > div + .geolocation-client-location, #block-conf-eform-caree-page-side-slide
+.btn-group-lg .page-node-add-problem .owl-nav > div + .geolocation-client-location, .page-node-add-problem #block-conf-eform-caree-page-side-slide
+.btn-group-lg .owl-nav > div + .geolocation-client-location,
+.btn-group-lg .page-node-add-problem .btn + .geolocation-address-geocode, .page-node-add-problem
+.btn-group-lg .btn + .geolocation-address-geocode,
+.btn-group-lg .page-node-add-problem .pagination-classic > li > a + .geolocation-address-geocode, .page-node-add-problem
+.btn-group-lg .pagination-classic > li > a + .geolocation-address-geocode,
+.btn-group-lg .page-node-add-problem
+.pagination-classic > li > span + .geolocation-address-geocode, .page-node-add-problem
+.btn-group-lg
+.pagination-classic > li > span + .geolocation-address-geocode,
+.btn-group-lg .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child .page-node-add-problem a + .geolocation-address-geocode, .page-node-add-problem
+.btn-group-lg .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child a + .geolocation-address-geocode, .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child
+.btn-group-lg .page-node-add-problem a + .geolocation-address-geocode, .page-node-add-problem .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child
+.btn-group-lg a + .geolocation-address-geocode,
+.btn-group-lg .page-careers .field-name-field-what-waiting-links .field-items .field-item .page-node-add-problem a + .geolocation-address-geocode, .page-node-add-problem
+.btn-group-lg .page-careers .field-name-field-what-waiting-links .field-items .field-item a + .geolocation-address-geocode, .page-careers .field-name-field-what-waiting-links .field-items .field-item
+.btn-group-lg .page-node-add-problem a + .geolocation-address-geocode, .page-node-add-problem .page-careers .field-name-field-what-waiting-links .field-items .field-item
+.btn-group-lg a + .geolocation-address-geocode,
+.btn-group-lg .page-careers .field-name-field-job-with-partners-link .field-items .field-item .page-node-add-problem a + .geolocation-address-geocode, .page-node-add-problem
+.btn-group-lg .page-careers .field-name-field-job-with-partners-link .field-items .field-item a + .geolocation-address-geocode, .page-careers .field-name-field-job-with-partners-link .field-items .field-item
+.btn-group-lg .page-node-add-problem a + .geolocation-address-geocode, .page-node-add-problem .page-careers .field-name-field-job-with-partners-link .field-items .field-item
+.btn-group-lg a + .geolocation-address-geocode,
+.btn-group-lg .custom-project .view-project-event .view-footer .page-node-add-problem a + .geolocation-address-geocode, .page-node-add-problem
+.btn-group-lg .custom-project .view-project-event .view-footer a + .geolocation-address-geocode, .custom-project .view-project-event .view-footer
+.btn-group-lg .page-node-add-problem a + .geolocation-address-geocode, .page-node-add-problem .custom-project .view-project-event .view-footer
+.btn-group-lg a + .geolocation-address-geocode,
+.btn-group-lg .project-call-to-action .field-item .page-node-add-problem a + .geolocation-address-geocode, .page-node-add-problem
+.btn-group-lg .project-call-to-action .field-item a + .geolocation-address-geocode, .project-call-to-action .field-item
+.btn-group-lg .page-node-add-problem a + .geolocation-address-geocode, .page-node-add-problem .project-call-to-action .field-item
+.btn-group-lg a + .geolocation-address-geocode,
+.btn-group-lg .page-node-add-problem input.form-submit + .geolocation-address-geocode, .page-node-add-problem
+.btn-group-lg input.form-submit + .geolocation-address-geocode,
+.btn-group-lg .page-node-add-problem .geolocation-client-location + .geolocation-address-geocode, .page-node-add-problem
+.btn-group-lg .geolocation-client-location + .geolocation-address-geocode,
+.btn-group-lg .page-node-add-problem .geolocation-address-geocode + .geolocation-address-geocode, .page-node-add-problem
+.btn-group-lg .geolocation-address-geocode + .geolocation-address-geocode,
+.btn-group-lg #block-conf-eform-caree-page-side-slide .page-node-add-problem .owl-nav > div + .geolocation-address-geocode, .page-node-add-problem
+.btn-group-lg #block-conf-eform-caree-page-side-slide .owl-nav > div + .geolocation-address-geocode, #block-conf-eform-caree-page-side-slide
+.btn-group-lg .page-node-add-problem .owl-nav > div + .geolocation-address-geocode, .page-node-add-problem #block-conf-eform-caree-page-side-slide
+.btn-group-lg .owl-nav > div + .geolocation-address-geocode,
+.btn-group-lg #block-conf-eform-caree-page-side-slide .owl-nav > .btn + div, #block-conf-eform-caree-page-side-slide
+.btn-group-lg .owl-nav > .btn + div,
+.btn-group-lg #block-conf-eform-caree-page-side-slide .pagination-classic > li.owl-nav > a + div, #block-conf-eform-caree-page-side-slide
+.btn-group-lg .pagination-classic > li.owl-nav > a + div,
+.btn-group-lg #block-conf-eform-caree-page-side-slide
+.pagination-classic > li.owl-nav > span + div, #block-conf-eform-caree-page-side-slide
+.btn-group-lg
+.pagination-classic > li.owl-nav > span + div,
+.btn-group-lg .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child #block-conf-eform-caree-page-side-slide .owl-nav > a + div, #block-conf-eform-caree-page-side-slide
+.btn-group-lg .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child .owl-nav > a + div, .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child
+.btn-group-lg #block-conf-eform-caree-page-side-slide .owl-nav > a + div, #block-conf-eform-caree-page-side-slide .page-careers .field-name-field-search-rotator-links .field-items .field-item:first-child
+.btn-group-lg .owl-nav > a + div,
+.btn-group-lg .page-careers .field-name-field-what-waiting-links .field-items .field-item #block-conf-eform-caree-page-side-slide .owl-nav > a + div, #block-conf-eform-caree-page-side-slide
+.btn-group-lg .page-careers .field-name-field-what-waiting-links .field-items .field-item .owl-nav > a + div, .page-careers .field-name-field-what-waiting-links .field-items .field-item
+.btn-group-lg #block-conf-eform-caree-page-side-slide .owl-nav > a + div, #block-conf-eform-caree-page-side-slide .page-careers .field-name-field-what-waiting-links .field-items .field-item
+.btn-group-lg .owl-nav > a + div,
+.btn-group-lg .page-careers .field-name-field-job-with-partners-link .field-items .field-item #block-conf-eform-caree-page-side-slide .owl-nav > a + div, #block-conf-eform-caree-page-side-slide
+.btn-group-lg .page-careers .field-name-field-job-with-partners-link .field-items .field-item .owl-nav > a + div, .page-careers .field-name-field-job-with-partners-link .field-items .field-item
+.btn-group-lg #block-conf-eform-caree-page-side-slide .owl-nav > a + div, #block-conf-eform-caree-page-side-slide .page-careers .field-name-field-job-with-partners-link .field-items .field-item
+.btn-group-lg .owl-nav > a + div,
+.btn-group-lg .custom-project .view-project-event .view-footer #block-conf-eform-caree-page-side-slide .owl-nav > a + div, #block-conf-eform-caree-page-side-slide
+.btn-group-lg .custom-project .view-project-event .view-footer .owl-nav > a + div, .custom-project .view-project-event .view-footer
+.btn-group-lg #block-conf-eform-caree-page-side-slide .owl-nav > a + div, #block-conf-eform-caree-page-side-slide .custom-project .view-project-event .view-footer
+.btn-group-lg .owl-nav > a + div,
+.btn-group-lg .project-call-to-action .field-item #block-conf-eform-caree-page-side-slide .owl-nav > a + div, #block-conf-eform-caree-page-side-slide
+.btn-group-lg .project-call-to-action .field-item .owl-nav > a + div, .project-call-to-action .field-item
+.btn-group-lg #block-conf-eform-caree-page-side-slide .owl-nav > a + div, #block-conf-eform-caree-page-side-slide .project-call-to-action .field-item
+.btn-group-lg .owl-nav > a + div,
+.btn-group-lg .page-node-add-problem #block-conf-eform-caree-page-side-slide .owl-nav > input.form-submit + div, #block-conf-eform-caree-page-side-slide
+.btn-group-lg .page-node-add-problem .owl-nav > input.form-submit + div, .page-node-add-problem
+.btn-group-lg #block-conf-eform-caree-page-side-slide .owl-nav > input.form-submit + div, #block-conf-eform-caree-page-side-slide .page-node-add-problem
+.btn-group-lg .owl-nav > input.form-submit + div,
+.btn-group-lg .page-node-add-problem #block-conf-eform-caree-page-side-slide .owl-nav > .geolocation-client-location + div, #block-conf-eform-caree-page-side-slide
+.btn-group-lg .page-node-add-problem .owl-nav > .geolocation-client-location + div, .page-node-add-problem
+.btn-group-lg #block-conf-eform-caree-page-side-slide .owl-nav > .geolocation-client-location + div, #block-conf-eform-caree-page-side-slide .page-node-add-problem
+.btn-group-lg .owl-nav > .geolocation-client-location + div,
+.btn-group-lg .page-node-add-problem #block-conf-eform-caree-page-side-slide .owl-nav > .geolocation-address-geocode + div, #block-conf-eform-caree-page-side-slide
+.btn-group-lg .page-node-add-problem .owl-nav > .geolocation-address-geocode + div, .page-node-add-problem
+.btn-group-lg #block-conf-eform-caree-page-side-slide .owl-nav > .geolocation-address-geocode + div, #block-conf-eform-caree-page-side-slide .page-node-add-problem
+.btn-group-lg .owl-nav > .geolocation-address-geocode + div,
+.btn-group-lg #block-conf-eform-caree-page-side-slide .owl-nav > div + div, #block-conf-eform-caree-page-side-slide
+.btn-group-lg .owl-nav > div + div {
+  margin-left: -2px; }
+    </pre>
+  </section>
+</div>
 
 <div class="slide"  style="background: hsl(340, 68%, 21%); ">
   <header><h1>Goal:</h1></header>
@@ -1286,6 +1903,36 @@ from 2007/2011 to 2017 (in Mbps), by quarter <span style="opacity: 0.3">4x</span
    &lt;/tbody&gt;
  &lt;/table&gt;</pre> </section>
 </div>
+
+
+<div class="slide intro"  style="background: hsl(320, 90%, 59%);">
+  <h2 style="font-size: 6.5vw;">User Experience</h2>
+  <h1 style="font-size: 8vw">Accessibility</h1>
+</div>
+
+
+<div class="slide">
+  <header>
+    <h1>Best Practices</h1>
+  </header>
+  <section class="content">
+    <ul>
+      <li>Think about accessibility for EVERY decision</li>
+      <li>Turn off the sound and unplug your mouse</li>
+      <li>Test changes (as part of build process?)</li>
+      <li>Use semantic HTML (links for links, with href!)</li>
+      <li>Don't f**k is up with CSS</li>
+
+<p>If all engineers are responsible for thinking about these tenets, you save time and money by not refactoring and not having a separate teams for each.
+  </section>
+</div>
+
+
+
+
+
+
+
 
 
 <div class="slide">
