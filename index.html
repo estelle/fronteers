@@ -206,7 +206,7 @@ video {
     <li class="temphidden">CSS</li>
     <li class="temphidden">JavaScript</li>
     <li class="temphidden">Other markup (XML, SVG, etc)</li>
-    <li class="temphidden">Media, etc.</li>
+    <li class="temphidden">Binary files (fonts, images, etc.)</li>
   </ul>
 </section>
 </div>
@@ -231,13 +231,13 @@ video {
 </div>
 
 
-
+<!--
 <div class="slide invert" style="background: left / contain no-repeat url(images/push.jpg) hsl(359, 0%, 96%);" role="img" aria-description="a really long, convoluted if statement with a mind bender pushing in the indentation">
   <header>
   </header>
   <section class="content">
   </section>
-</div>
+</div>-->
 
 
 
@@ -754,6 +754,51 @@ video {
 </section>
 </div>
 
+
+
+
+
+
+
+
+    <div class="slide"  style="background: hsl(30, 90%, 59%);">
+      <header><h1>Tips</h1></header>
+        <section class="content">
+          <ol>
+            <li>Make the site squishy
+              <ul><li>breakpoints based on design</li></ul></li>
+            <li>Reduce http requests / latency</li>
+            <li>Reduce weight of page</li>
+            <li>Avoid <a href="http://estelle.github.io/webperf/">CSS performance gotchas</a></li>
+            <li>Ensure legibility</li>
+            <li>Serve the right size images</li>
+            <li><a href="http://estelle.github.io/forms">Right input methods</a></li></li>
+            <li>Effective content strategy</li>
+            <li>Design mobile first</li>
+          </ol>
+
+        </section>
+    </div>
+
+
+<div class="slide invert">
+    <header>
+      <h1>Latency</h1>
+    </header>
+    <section>
+        <img src="images/latency.gif" style="margin: 40px auto; box-shadow: none;" alt="Computer asks DNS server for IP address, then goes to IP to get website">
+        <ul>
+            <li><strong>Issue:</strong> Requests take longer to complete</li>
+            <li><strong>Solution:</strong> Reducing requests improves performance</li>
+            <li><strong>Solution:</strong> HTTP/2</li>
+
+        </ul>
+    </section></div>
+
+
+
+
+
 <div class="slide tweet" style="background: hsl(240, 90%, 59%);">
   <blockquote class="twitter-tweet" data-lang="en"><q lang="en" dir="ltr">I remember when 3G was primary mobile speed. It was slow but still worked, so why now when my phone says 3G it becomes completely useless?</q>
     <cite>&mdash; Stephen Gundee     </cite>
@@ -841,7 +886,7 @@ from 2007/2011 to 2017 (in Mbps), by quarter <span style="opacity: 0.3">4x</span
 <header class="notTheSame">
   <h2>JavaScript<br/>Bytes</h2>
   <h2>!==</h2>
-  <h2>Media<br/>Bytes</h2>
+  <h2>Other<br/>Bytes</h2>
 </header>
 </div>
 
@@ -890,12 +935,6 @@ from 2007/2011 to 2017 (in Mbps), by quarter <span style="opacity: 0.3">4x</span
 
 
 
-<div class="slide">
-  <header><h1>Responsiveness &amp; Smoothness</h1></header>
-  <ol class="large" style="margin-left: 100px; text-align: left"><li>User Interaction
-  <ul class="large"><li>Aim for a 100ms response time!</li></ul></li>
-  <li>Re-rendering time<ul><li>60FPS = 16.67ms per frame</li></ul></li></ol>
-</div>
 
 
 <div class="slide invert">
@@ -932,6 +971,24 @@ from 2007/2011 to 2017 (in Mbps), by quarter <span style="opacity: 0.3">4x</span
 
 
 
+<div class="slide">
+  <header><h1>User Interaction</h1></header>
+  <ol style="font-size: 2em">
+    <li>Responsiveness
+      <ul class="large">
+        <li>Aim for a 100ms response time!</li>
+      </ul>
+    </li>
+  <li>Smoothness
+    <ul><li>Scrolling</li>
+        <li>Re-rendering time
+            <ul>
+              <li>60FPS = 16.67ms per frame</li>
+            </ul>
+          </li>
+        </ul>
+      </ol>
+</div>
 
 
 
@@ -1031,18 +1088,18 @@ from 2007/2011 to 2017 (in Mbps), by quarter <span style="opacity: 0.3">4x</span
 </div>
 
 
-<div class="slide"  style="background: hsl(340, 68%, 21%);">
-  <header><h1>Goal:</h1>
+<div class="slide"  style="background: hsl(340, 68%, 21%); ">
+  <header><h1>Goal:</h1></header>
     <section class="content">
       <p>Decrease ... </p>
-      <ol class="large">
+      <ol>
         <li>size of requests</li>
         <li>number of requests</li>
         <li>number of DNS lookups</li>
         <li>impact of your scripts</li>
       </ol>
       <p>Increase ... </p>
-      <ol class="large">
+      <ol>
         <li>semantic HTML</li>
         <li>thinking about front end engineering requirements</li>
       </ol>
@@ -1256,48 +1313,6 @@ from 2007/2011 to 2017 (in Mbps), by quarter <span style="opacity: 0.3">4x</span
 
 
 
-
-<div class="slide"  style="background: hsl(0, 90%, 59%);">
-  <header><h1 class="slash">Make fewer <br/>HTTP requests &amp;<br/>DNS lookups</h1></header>
-    <section class="content">
-    </section>
-</div>
-
-
-<div class="slide invert">
-    <header>
-      <h1>Latency</h1>
-    </header>
-    <section>
-        <img src="images/latency.gif" style="margin: 40px auto; box-shadow: none;" alt="Computer asks DNS server for IP address, then goes to IP to get website">
-        <ul>
-            <li><strong>Issue:</strong> Requests take longer to complete</li>
-            <li><strong>Solution:</strong> Reducing requests improves performance</li>
-            <li><strong>Solution:</strong> HTTP/2</li>
-
-        </ul>
-    </section></div>
-
-
-
-    <div class="slide"  style="background: hsl(30, 90%, 59%);">
-      <header><h1>Yes, you want to...</h1></header>
-        <section class="content">
-          <ol>
-            <li>Make the site squishy
-              <ul><li>breakpoints based on design</li></ul></li>
-            <li>Reduce http requests / latency</li>
-            <li>Reduce weight of page</li>
-            <li>Avoid <a href="http://estelle.github.io/webperf/">CSS performance gotchas</a></li>
-            <li>Ensure legibility</li>
-            <li>Serve the right size images</li>
-            <li><a href="http://estelle.github.io/forms">Right input methods</a></li></li>
-            <li>Effective content strategy</li>
-            <li>Design mobile first</li>
-          </ol>
-
-        </section>
-    </div>
 
 
 
