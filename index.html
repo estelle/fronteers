@@ -183,6 +183,11 @@ ol.large > li:first-line {
 <section class="content" style="display: flex; flex-flow: column; justify-content: space-between; height: calc(100vh - 50px);">
 <div>
 
+
+
+
+
+
     <h1>Estelle Weyl</h1>
     <h2><a href="http://www.standardista.com">www.standardista.com</a><br>
     <h2><a href="https://www.PerfMattersConf.com">www.PerfMattersConf.com</a><br>
@@ -203,6 +208,22 @@ ol.large > li:first-line {
 </section>
 </div>
 
+
+
+<div class="slide invert">
+<header>  <h1></h1></header>
+<section class="content">
+          <p style="font-size: 1em;">Evangelina was right</p>
+          <ul>
+            <li class="fragment visible" data-fragment-index="0">Separation of concerns</li>
+            <!-- In the era of JSX... -->
+            <li class="fragment visible" data-fragment-index="1">Content is the queen</li>
+            <li class="fragment visible" data-fragment-index="2">"Move fast, break things" - NOT on [our] watch.</li>
+            <!-- Content should make sense without styles, but don't break it with CSS -->
+            <li class="fragment visible" data-fragment-index="3">Uncle Ben was right.</li>
+          </ul>
+        </section>
+</div>
 
 
 
@@ -693,7 +714,7 @@ ol.large > li:first-line {
     <h1>What is Load Time?</h1>
   </header>
   
-<img src="images/what_is_fast.svg" alt="a made up histogram in a bell curve shape with a long tail" style="height: 120vh">
+<img src="images/bellcurve.png" alt="a made up histogram in a bell curve shape with a long tail" style="height: 120vh">
 
 </div>
 
@@ -936,7 +957,13 @@ Between first meaningful paint and visually ready</li>
 
 
 
-
+<div class="slide intro">
+  <header>
+    <h1 style="font-size: 8vw">Measure what matters!</h1>
+  </header>
+  <section class="content">
+  </section>
+</div>
 
 
 
@@ -1943,6 +1970,7 @@ Initially download only what a page needs: include only functions used by page</
       <li>Turn off the sound and unplug your mouse</li>
       <li>Test changes (as part of build process?)</li>
       <li>Use semantic HTML (links for links, with href!)</li>
+      <li>Declare the language</li>
       <li>Don't f**k is up with CSS</li>
 
 <p>If all engineers are responsible for thinking about these tenets, you save time and money by not refactoring and not having a separate teams for each.
@@ -1979,13 +2007,13 @@ Initially download only what a page needs: include only functions used by page</
   </header><!-- /header -->
     <section class="content">
    <ol>
-    <li><em>Understand</em> your tools, languages and features you are adding, or may add, to your code.</li>
+    <li class="temphidden"><em>Understand</em> your tools, languages and features you are adding, or may add, to your code.</li>
 
-    <li><em>Always</em> consider all six tenets of user experience as you code. <span class="temphidden">(a.k.a. <em>Engineer</em>!)</span></li>
+    <li class="temphidden"><em>Always</em> consider all six tenets of user experience as you code. <span class="temphidden">(a.k.a. <em>Engineer</em>!)</span></li>
 
-    <li>Taking the time to <em>do it right the first time</em> is FAST TO CODE. Refactoring is NOT.</li>
+    <li class="temphidden">Taking the time to <em>do it right the first time</em> is FAST TO CODE. Refactoring is NOT.</li>
 
-    <li>Control your <em>tools</em>. Don't let them <em>control</em> you.</li>
+    <li class="temphidden">Control your <em>tools</em>. Don't let them <em>control</em> you.</li>
 
   </ol>
     </section>
