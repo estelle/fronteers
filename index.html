@@ -346,7 +346,7 @@ ol.large > li:first-line {
 </div>
 
 
-<div class="slide intro" style="background: hsl(290, 90%, 59%);">
+<div class="slide intro" style="background: hsl(290, 90%, 39%);">
   <header>
     <h1 style="font-size: 8vw">The most performance JavaScript is omitted the omitted JavaScript.</h1>
   </header>
@@ -367,9 +367,11 @@ ol.large > li:first-line {
 
 
 
-<div class="slide intro" style="background: hsl(10, 90%, 59%);">
+<div class="slide intro" style="background: hsl(10, 90%, 39%);">
   <header>
-    <h1 style="font-size: 8vw">Control your tools. Don't let them control you.</h1>
+    <h1 style="font-size: 8vw">Control your tools</h1>
+
+    <h2 style="font-size: 6.5vw"> Don't let them control you.</h1>
   </header>
 </div>
 
@@ -408,10 +410,112 @@ ol.large > li:first-line {
 <section class="content" style="display: flex; align-items: center; justify-content: space-between; height: 50vh; text-align: center">
   <h1>Web <br/>Performance</h1><h1>Developer<br/> Experience</h1>
 </section></div>-->
+<div class="slide intro"  style="background: hsl(320, 90%, 39%);">
+  <h2 style="font-size: 5vw;">The low hanging fruit of</h2>
+  <h1 style="font-size: 6.5vw">Web Performance</h1>
+  <h2 style="font-size: 8vw;">Media</h2>
+</div>
 
 
 
-<div class="slide intro"  style="background: hsl(320, 90%, 59%);">
+<div class="slide"  style="background: hsl(250, 90%, 39%);">
+  <header><h1>Responsive Images: More than Squishy</h1></header>
+    <section class="content">
+      <ol>
+        <li>Decrease file size: easily decrease bytes by 70+%:
+          <ul>
+            <li>Compress all images</li>
+            <li>GZip everything</li>
+            <li>Include WebP as &lt;source> or <em>srcset</em></li>
+          </ul>
+         </li>
+        <li>Don't download what you won't use
+          <ul>
+            <li>Lazy load</li>
+            <li><code>display: none;</code> on parent of background image</li>
+
+          </ul>
+        </li>
+        <li>Only load the size you need
+          <ul>
+            <li>&lt;picture> <sup><a href="http://caniuse.com/#search=picture" target="play">caniuse</a></sup></li>
+            <li>&lt;img srcset> <sup>[<a href="http://caniuse.com/#search=srcset" target="play">caniuse</a>, <a href="https://www.webkit.org/blog/2910/improved-support-for-high-resolution-displays-with-the-srcset-image-attribute/">1</a>, <a href="http://dev.opera.com/blog/opera-21/">2</a>]</sup></li>
+          </ul>
+
+        </li>
+      </ol>
+    </section>
+</div>
+
+
+
+
+<div class="slide"  style="background: hsl(290, 90%, 39%);">
+<header><h1><code>&lt;picture>, &lt;source> &amp; srcset</code></h1></header>
+<pre>&lt;picture>
+  &lt;source type="image/webp"
+            srcset="small.webp 500w,
+                    large.webp 1000w">
+  &lt;source srcset="large.jpg" 
+          media="(min-width: 1000px)">
+  &lt;source srcset="small.jpg" 
+          media="(min-width: 500px)">
+  &lt;img src="default.jpg"
+       srcset="highresolution.jpg 2x" 
+       alt="do not forget the alt">
+&lt;/picture></pre>
+
+</div>
+
+
+
+
+
+<div class="slide"  style="background: hsl(310, 90%, 39%);">
+<header><h1>Right Size Your Images</h1></header>
+
+<ul class="cloudfour">
+<li style="transform: translatey(-300px)"><pre style="margin-right: -120px;">240 x 240 = 57,600
+200 x 200 = 40,000
+            17,600</pre>
+<img src="images/small.png" width="100"></li>
+<li style="transform: translatex(-30px)"><pre>440 x 440 = 193,600
+400 x 400 = 160,000
+             33,600</pre><img src="images/medium.png" width="200"></li>
+<li style="transform: translatex(-10px)"><pre>640 x 640 = 409,600
+600 x 600 = 360,000
+             49,000</pre><img src="images/big.png" width="300"></li>
+<li><pre>840 x 840 = 705,600
+800 x 800 = 640,000
+             65,600</pre><img src="images/huge.png" width="400"></li>
+</ul>
+<p><a href="http://blog.cloudfour.com/responsive-images-101-part-9-image-breakpoints/" class="objectlink">CloudFour: image breakpoints</a>
+</div>
+
+
+<div class="slide invert">
+  <header>
+    <h1>Optimize Videos</h1>
+  </header>
+  <section class="content flex" >
+      <ol style="margin-right: -200px; z-index: 10; white-space: nowrap;">
+      <li>Omit videos</li>
+      <li>Compress them</li>
+      <li>Optimize source order</li>
+      <li>Remove muted audio</li>
+    </ol>
+  <img src="images/video.svg" alt="timeline of video weight on the web. Average of 2.5MB, with 10MB for top 10% of sites." style="z-index: 1">
+    
+  </style>>
+
+      
+  </section>
+</div>
+
+
+
+
+<div class="slide intro"  style="background: hsl(320, 90%, 39%);">
   <h2 style="font-size: 6.5vw;">"Fast to Load"</h2>
   <h1 style="font-size: 8vw">Web Performance</h1>
 </div>
@@ -489,6 +593,7 @@ ol.large > li:first-line {
     <section class="content"><p style="font-size: 4vw">By keeping your client side code small and lightweight, you can literally open your product up to new markets.</p>
     </section>
 </div>
+
 
 
 
@@ -605,7 +710,7 @@ ol.large > li:first-line {
 </div>
 
 
-<div class="slide"  style="background: hsl(270, 90%, 59%);">
+<div class="slide"  style="background: hsl(270, 90%, 39%);">
   <header>
     <h1>Performance</h1>
   </header>
@@ -772,23 +877,34 @@ Between first meaningful paint and visually ready</li>
 </section>
 </div>
 
+<div class="slide invert">
+    <header>
+      <h1>Latency</h1>
+    </header>
+    <section>
+        <img src="images/latency.gif" style="margin: 40px auto; box-shadow: none;" alt="Computer asks DNS server for IP address, then goes to IP to get website">
+        <ul>
+            <li><strong>Issue:</strong> Requests take longer to complete</li>
+            <li><strong>Solution:</strong> Reducing requests improves performance</li>
+            <li><strong>Solution:</strong> HTTP/2</li>
+
+        </ul>
+    </section></div>
 
 
-<div class="slide" style="background: hsl(340, 90%, 59%);">
+<div class="slide" style="background: hsl(340, 90%, 39%);">
   <header>
-    <h1>Web Performance</h1>
+    <h1>Web/JS Performance</h1>
   </header>
   <section class="content">
-  <dl>
-  <dt>Download</dt>
-  <dd class="temphidden"># of resources: images, fonts, HTML, scripts, and CSS loaded</dd>
-  <dt class="temphidden">Parse</dt>
-  <dd class="temphidden">File size of above resources</dd>
-  <dt class="temphidden">Execute</dt>
-  <dd class="temphidden">Parsing &amp; Painting</dd>
-  <dt class="temphidden">Perceived Performance</dt>
-  <dd class="temphidden">Users perception of the speed of the load and reaction time.</dd> 
-  </dl>
+  <ul class="bulleted">
+  <li>Download: 
+  <span style="opacity: 0.7; font-size: 0.6"># of resources & bytes: images, fonts, HTML, scripts, CSS</li>
+  <li class="">Compile</li>
+  <li class="">Parse</li>
+  <li class="">Execute</li>
+  <li class="" style="border-top: 1px solid">Perceived Performance: 
+  <span class=""  style="opacity: 0.7; font-size: 0.6">Users perception of the speed of the load and reaction time.</span></li></span>
   <div>
 </div>
   </section>
@@ -799,7 +915,7 @@ Between first meaningful paint and visually ready</li>
 
 
 
-   <!-- <div class="slide"  style="background: hsl(30, 90%, 59%);">
+   <!-- <div class="slide"  style="background: hsl(30, 90%, 39%);">
       <header><h1>Tips</h1></header>
         <section class="content">
           <ol>
@@ -819,25 +935,12 @@ Between first meaningful paint and visually ready</li>
     </div> -->
 
 
-<div class="slide invert">
-    <header>
-      <h1>Latency</h1>
-    </header>
-    <section>
-        <img src="images/latency.gif" style="margin: 40px auto; box-shadow: none;" alt="Computer asks DNS server for IP address, then goes to IP to get website">
-        <ul>
-            <li><strong>Issue:</strong> Requests take longer to complete</li>
-            <li><strong>Solution:</strong> Reducing requests improves performance</li>
-            <li><strong>Solution:</strong> HTTP/2</li>
-
-        </ul>
-    </section></div>
 
 
 
 
 
-<div class="slide tweet" style="background: hsl(240, 90%, 59%);">
+<div class="slide tweet" style="background: hsl(240, 90%, 39%);">
   <blockquote class="twitter-tweet" data-lang="en"><q lang="en" dir="ltr">I remember when 3G was primary mobile speed. It was slow but still worked, so why now when my phone says 3G it becomes completely useless?</q>
     <cite>&mdash; Stephen Gundee     </cite>
 </blockquote>
@@ -922,9 +1025,9 @@ from 2007/2011 to 2017 (in Mbps), by quarter <span style="opacity: 0.3">4x</span
 
 <div class="slide intro"  style="background:  hsl(200, 68%, 21%);">
 <header class="notTheSame">
-  <h2>JavaScript<br/>Bytes</h2>
+  <h2>JavaScript Kb</h2>
   <h2>!==</h2>
-  <h2>Other<br/>Bytes</h2>
+  <h2>Other Kb</h2>
 </header>
 </div>
 
@@ -950,11 +1053,12 @@ from 2007/2011 to 2017 (in Mbps), by quarter <span style="opacity: 0.3">4x</span
   <header><h1>JavaScript!</h1></header>
     <section class="content">
 <ul>
-<li>All scripts loaded and parsed (even if not used)</li>
+<li>Minimize JavaScript: All scripts loaded and parsed (even if not used)</li>
 <li>Reduce JS to only what is needed</li>
 <li>Are libraries really necessary?
 <ul>
-  <li>Include only functions used by page</li>
+  <li>Split and defer code -- 
+Initially download only what a page needs: include only functions used by page</li>
   <li>Original Goal: Equalize across browsers</li>
 <li>Simplify or increase complexity?</li>
 <li>Increase energy use.</li>
@@ -964,24 +1068,38 @@ from 2007/2011 to 2017 (in Mbps), by quarter <span style="opacity: 0.3">4x</span
  </div>
 
 
-<div class="slide" style="background: hsl(280, 90%, 59%);">
-  <header>
-    <h1>Recommendation</h1>
-  </header>
-  <section class="content">
-    <ul>
-<li>Minimize JavaScript</li>
-<li>Give users a great experience -- 
-Initially download only what a page needs</li>
-<li>Split and defer code</li>
-</ul>
-  </section>
+
+
+<div class="slide" style="background: #bd081c">
+<header><h1>Pinterest</header>
+<section>
+  <img src="images/pinterest.png" alt="pinterest" style="width: 25%; float: right; border: none;">
+  <ul class="bulleted">
+    <li>JS file sizes:  2.5MB to < 200KB</li>
+  
+    <li>Time-to-Interactive: 23 s to 5.6 s</li> 
+  
+    <li>Revenue: up 44%</li>
+  
+    <li>Sign-ups: up 753%</li>
+  
+    <li>Weekly active mobile users: up 103%</li>
+
+  </ul>
+  <p>PWA Profits?</p>
+  <ul><li>Ads: + 44%</li>
+    <li>Clickthrus: + 50$</li>
+    <li>Engagement: + 60%</li></ul>
+
+<p>See: <a href="https://medium.com/dev-channel/a-pinterest-progressive-web-app-performance-case-study-3bd6ed2e6154">Pinterest PWA Case Study</a></p>
+</section>
 </div>
 
 
 
+
 <div class="slide">
-  <header><h1>User Interaction</h1></header>
+  <header><h1>Avoid blocking the main thread</h1></header>
   <ol style="font-size: 2em">
     <li>Responsiveness
       <ul>
@@ -1000,13 +1118,13 @@ Initially download only what a page needs</li>
 </div>
 
 
-<div class="slide intro"  style="background: hsl(320, 90%, 59%);">
+<div class="slide intro"  style="background: hsl(320, 90%, 39%);">
   <h2 style="font-size: 8vw;">Battery</h2>
 </div>
 
 
 
-<div class="slide tweet" style="background: hsl(370, 90%, 59%);">
+<div class="slide tweet" style="background: hsl(370, 90%, 39%);">
   <blockquote class="twitter-tweet" lang="en"><q>Is your battery draining too fast? Turn off everything that makes your smart phone smart. That&#39;ll fix it.</q>
     <cite>&mdash; Scott Hanselman     </cite>
 </blockquote>
@@ -1051,108 +1169,6 @@ Initially download only what a page needs</li>
 
 
 
-<div class="slide intro"  style="background: hsl(20, 90%, 59%);">
-  <h2 style="font-size: 8vw;">Media</h2>
-</div>
-
-
-
-<div class="slide"  style="background: hsl(250, 90%, 59%);">
-  <header><h1>Responsive Images: More than Squishy</h1></header>
-    <section class="content">
-      <ol>
-        <li>Decrease file size: easily decrease bytes by 70+%:
-          <ul>
-            <li>Compress all images</li>
-            <li>GZip everything</li>
-            <li>Include WebP as &lt;source> or <em>srcset</em></li>
-          </ul>
-         </li>
-        <li>Don't download what you won't use
-          <ul>
-            <li>Lazy load</li>
-            <li><code>display: none;</code> on parent of background image</li>
-
-          </ul>
-        </li>
-        <li>Only load the size you need
-          <ul>
-            <li>&lt;picture> <sup><a href="http://caniuse.com/#search=picture" target="play">caniuse</a></sup></li>
-            <li>&lt;img srcset> <sup>[<a href="http://caniuse.com/#search=srcset" target="play">caniuse</a>, <a href="https://www.webkit.org/blog/2910/improved-support-for-high-resolution-displays-with-the-srcset-image-attribute/">1</a>, <a href="http://dev.opera.com/blog/opera-21/">2</a>]</sup></li>
-          </ul>
-
-        </li>
-      </ol>
-    </section>
-</div>
-
-
-
-
-<div class="slide"  style="background: hsl(220, 90%, 59%);">
-<header><h1><code>&lt;picture>, &lt;source> &amp; srcset</code></h1></header>
-<pre>&lt;picture>
-  &lt;source type="image/webp"
-            srcset="small.webp 500w,
-                    large.webp 1000w">
-  &lt;source srcset="large.jpg" 
-          media="(min-width: 1000px)">
-  &lt;source srcset="small.jpg" 
-          media="(min-width: 500px)">
-  &lt;img src="default.jpg"
-       srcset="highresolution.jpg 2x" 
-       alt="do not forget the alt">
-&lt;/picture></pre>
-
-</div>
-
-
-
-
-
-<div class="slide"  style="background: hsl(310, 90%, 59%);">
-<header><h1>Right Size Your Images</h1></header>
-
-<ul class="cloudfour">
-<li style="transform: translatey(-300px)"><pre style="margin-right: -120px;">240 x 240 = 57,600
-200 x 200 = 40,000
-            17,600</pre>
-<img src="images/small.png" width="100"></li>
-<li style="transform: translatex(-30px)"><pre>440 x 440 = 193,600
-400 x 400 = 160,000
-             33,600</pre><img src="images/medium.png" width="200"></li>
-<li style="transform: translatex(-10px)"><pre>640 x 640 = 409,600
-600 x 600 = 360,000
-             49,000</pre><img src="images/big.png" width="300"></li>
-<li><pre>840 x 840 = 705,600
-800 x 800 = 640,000
-             65,600</pre><img src="images/huge.png" width="400"></li>
-</ul>
-<p><a href="http://blog.cloudfour.com/responsive-images-101-part-9-image-breakpoints/" class="objectlink">CloudFour: image breakpoints</a>
-</div>
-
-
-<div class="slide invert">
-  <header>
-    <h1>Optimize Videos</h1>
-  </header>
-  <section class="content flex" >
-      <ol style="margin-right: -200px; z-index: 10; white-space: nowrap;">
-      <li>Omit videos</li>
-      <li>Compress them</li>
-      <li>Optimize source order</li>
-      <li>Remove muted audio</li>
-    </ol>
-  <img src="images/video.svg" alt="timeline of video weight on the web. Average of 2.5MB, with 10MB for top 10% of sites." style="z-index: 1">
-    
-  </style>>
-
-      
-  </section>
-</div>
-
-
-
 <div class="slide invert">
   <header>
     <h1  style="text-align: center">File Size</h1>
@@ -1165,7 +1181,7 @@ Initially download only what a page needs</li>
 
 
 
-<div class="slide intro"  style="background: hsl(60, 90%, 59%);">
+<div class="slide intro"  style="background: hsl(60, 90%, 39%);">
   <h2 style="font-size: 8vw; color: black">CSS?</h2>
 </div>
 
@@ -1182,7 +1198,7 @@ Initially download only what a page needs</li>
 
 <div class="slide"   style="background: hsl(60, 68%, 21%); ">
   <header>
-    <h1>Control Your Processors</h1>
+    <h1>Control Your Tools</h1>
   </header>
   <section class="content">
 <pre class="fadeout">@<b style="color:hsl(60, 68%, 21%)">-webkit-</b>keyframes fadeOutAndMoveDown {
@@ -1705,6 +1721,20 @@ Initially download only what a page needs</li>
   </section>
 </div>
 
+
+
+
+
+<div class="slide intro"  style="background:  hsl(300, 68%, 21%);">
+<header><h1>Understand your dependencies and <br/>why you're adding them.</h1>
+  <div style="font-size: 30vh">⚖</div>
+  <p style="opacity: 0.1">full-stack/php</p>
+</header>
+</div>
+
+
+
+
 <div class="slide"  style="background: hsl(340, 68%, 21%); ">
   <header><h1>Goal:</h1></header>
     <section class="content">
@@ -1724,13 +1754,6 @@ Initially download only what a page needs</li>
 </div>
 
 
-
-<div class="slide intro"  style="background:  hsl(300, 68%, 21%);">
-<header><h1>Understand your dependencies and <br/>why you're adding them.</h1>
-  <div style="font-size: 30vh">⚖</div>
-  <p style="opacity: 0.1">full-stack/php</p>
-</header>
-</div>
 
 
 
@@ -1761,7 +1784,7 @@ Initially download only what a page needs</li>
 
 
 
-<div class="slide intro"  style="background: hsl(320, 90%, 59%);">
+<div class="slide intro"  style="background: hsl(320, 90%, 39%);">
   <h2 style="font-size: 6.5vw;">"Fast to Code"</h2>
   <h1 style="font-size: 8vw">Engineering Performance</h1>
 </div>
@@ -1778,24 +1801,22 @@ Initially download only what a page needs</li>
 
 </section></div>
 
-<div class="slide">
-  <header>
-    <h1>Biggest Bottleneck?</h1>
-  </header>
-  <section class="content">
-    <h2 class="temphidden">Developers (Ourselves)</h2>
-  </section>
-</div>
 
 
 
 <div class="slide" style="background:  hsl(240, 68%, 21%);">
   <header>
-    <h1>Biggest Bottleneck?</h1>
+    <h1>Biggest Bottlenecks?</h1>
   </header>
   <section class="content">
     <img style="float: right; image-rendering: pixelated; width: 40vw" src="images/architecture.jpeg" alt="architect looking at plans">
-    <ul class="bulleted">
+    <p>Who?</p>
+
+    <ul>
+      <li class="temphidden">Developers (Ourselves)</li>
+    </ul>
+    <p  class="temphidden">What?</p>
+    <ul>
     <li class="temphidden">Architecture</li>
     <li class="temphidden">Consistency</li>
     <li class="temphidden">Comments</li>
@@ -1816,6 +1837,16 @@ Initially download only what a page needs</li>
 
 
 
+<!-- file size for visa js -->
+<div class="slide invert">
+  <header>
+    <h1  style="text-align: center">Architecture</h1>
+  </header>
+  <section class="content">
+    <img src="images/v7.png" style="min-height: 80vh;" alt="http headers for a javascript file that is 2.264M">
+  </section>
+</div>
+
 
 
 <div class="slide object invert">
@@ -1825,15 +1856,6 @@ Initially download only what a page needs</li>
 </div>
 
 
-
-
-
-<div class="slide invert" style="background: left / contain no-repeat url(images/push.jpg) hsl(359, 0%, 96%);" role="img" aria-description="a really long, convoluted if statement with a mind bender pushing in the indentation">
-  <header>
-  </header>
-  <section class="content">
-  </section>
-</div>
 
 
 
@@ -1856,7 +1878,7 @@ Initially download only what a page needs</li>
 
 
 
-<div class="slide intro"  style="background: hsl(10, 90%, 59%);">
+<div class="slide intro"  style="background: hsl(10, 90%, 39%);">
   <h2 style="font-size: 6.5vw;"></h2>
   <h1 style="font-size: 8vw">display: grid;</h1>
 </div>
@@ -1870,7 +1892,7 @@ Initially download only what a page needs</li>
 </div>
 
 
-<div class="slide"  style="background: hsl(350, 90%, 59%);">
+<div class="slide"  style="background: hsl(350, 90%, 39%);">
   <header>
     <h1>ARIA as a backup</h1>
   </header>
@@ -1905,7 +1927,7 @@ Initially download only what a page needs</li>
 </div>
 
 
-<div class="slide intro"  style="background: hsl(320, 90%, 59%);">
+<div class="slide intro"  style="background: hsl(320, 90%, 39%);">
   <h2 style="font-size: 6.5vw;">User Experience</h2>
   <h1 style="font-size: 8vw">Accessibility</h1>
 </div>
@@ -1938,9 +1960,18 @@ Initially download only what a page needs</li>
 <div class="slide">
   <header><h1 class="slash">Performance Budget!</h1></header>
     <section class="content">
+      <p>Plan ahead</p>
+    </section>
+</div>
+
+
+<div class="slide">
+    <section class="content">
     <blockquote>Good design is not about making something pretty. It is about making something usable and intuitive – the beauty of the product will be a result of these things.</blockquote> <p>-- <a href="http://lukejones.me/archives/good-design-aint-pretty">Luke Jones</a></p>
     </section>
 </div>
+
+
 
 <div class="slide tldr">
   <header>
@@ -1953,6 +1984,8 @@ Initially download only what a page needs</li>
     <li><em>Always</em> consider all six tenets of user experience as you code. <span class="temphidden">(a.k.a. <em>Engineer</em>!)</span></li>
 
     <li>Taking the time to <em>do it right the first time</em> is FAST TO CODE. Refactoring is NOT.</li>
+
+    <li>Control your <em>tools</em>. Don't let them <em>control</em> you.</li>
 
   </ol>
     </section>
@@ -1988,14 +2021,15 @@ Initially download only what a page needs</li>
     <h2><a href="https://www.PerfMattersConf.com">www.PerfMattersConf.com</a><br>
     </h2><h2><a href="http://www.twitter.com/estellevw">@estellevw</a><br><a href="http://www.twitter.com/standardista">@standardista</a></h2>
  </div>
- <div>
+<div style="margin: 0 -70px;">
     <div class="floatright books">
+      <img src="https://akamaicovers.oreilly.com/images/0636920021711/cat.gif" alt="Mobile HTML5" />
+      <img src="images/fem.png" alt="Front End Masters">
       <img src="https://akamaicovers.oreilly.com/images/9780987467485/cat.gif" alt="HTML5 and CSS3 for the Real World">
       <img src="https://akamaicovers.oreilly.com/images/0636920041658/cat.gif" alt="Animations and Transitions with CSS"/>
-      <img src="https://akamaicovers.oreilly.com/images/0636920021711/cat.gif" alt="Mobile HTML5" />
       <img src="https://akamaicovers.oreilly.com/images/0636920025955/cat.gif" alt="Web Performance Daybook"/>
-      <img src="https://covers.oreillystatic.com/images/0636920066682/cat.gif" alt="Flexbox in CSS"/>
       <img src="https://covers.oreillystatic.com/images/0636920012726/cat.gif" alt="CSS: The Definitive Guide">
+      <img src="https://covers.oreillystatic.com/images/0636920066682/cat.gif" alt="Flexbox in CSS"/>
     </div>
 </div>
 
@@ -2012,9 +2046,6 @@ Initially download only what a page needs</li>
   </ol>
     </section>
 </div>
-
-
-
 </section>
 </div>
 
